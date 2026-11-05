@@ -516,16 +516,19 @@ p, ul, ol { margin: 0; }
 .app-more { grid-column: 1 / -1; margin-top: var(--space-2); font-weight: 600; color: var(--link); font-size: 0.9375rem; }
 .app:has(h3 a):hover .app-more { text-decoration: underline; text-underline-offset: 3px; }
 
-.app-previews { grid-column: 1 / -1; display: flex; gap: var(--space-2); margin-top: var(--space-3); }
-.app-previews img {
-  flex: 1 1 0;
-  min-width: 0;
-  max-width: 9rem;
-  aspect-ratio: 390 / 560;
+.app-preview { grid-column: 1 / -1; margin-top: var(--space-3); }
+.app-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 390 / 420;
   object-fit: cover;
   object-position: top;
   border-radius: var(--radius-sm);
   box-shadow: 0 0 0 1px var(--line);
   background: var(--paper);
 }
-.app-policy { display: inline-flex; gap: var(--space-4); white-space: nowrap; }
+/* Open button on its own line, then the policy links together below it. */
+.app-policy { display: flex; flex-basis: 100%; gap: var(--space-4); white-space: nowrap; }
+/* A card with no page (in development) keeps its own height. */
+.app:not(:has(h3 a)) { align-self: start; }
