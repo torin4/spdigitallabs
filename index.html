@@ -2,80 +2,157 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>SP Digital Labs</title>
-<meta name="description" content="Small, focused apps for everyday life, made in Japan by SP Digital Labs.">
-<link rel="stylesheet" href="style.css">
+<meta name="description" content="Small, focused apps for everyday life, made in Japan by SP Digital Labs. No ads, no tracking.">
+<meta name="theme-color" content="#f7f8fa" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1117" media="(prefers-color-scheme: dark)">
+<meta property="og:title" content="SP Digital Labs">
+<meta property="og:description" content="Small, focused apps for everyday life, made in Japan.">
+<meta property="og:url" content="https://spdigitallabs.app/">
+<meta property="og:image" content="https://spdigitallabs.app/apple-touch-icon.png">
+<link rel="canonical" href="https://spdigitallabs.app/">
+<link rel="icon" href="/assets/sp-mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/mplus-rounded-1c-800-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
-<main>
-<header class="site">
-  <span class="mark" aria-hidden="true">SP</span>
-  <a href="./">SP Digital Labs</a>
-  <nav class="pages">
-    <a href="#apps">Apps</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="/"><img src="/assets/sp-mark.svg" alt="" width="32" height="32">SP Digital Labs</a>
+    <nav class="nav" aria-label="Main">
+      <ul>
+        <li><a href="#apps">Apps</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
-<h1>Small, focused apps for everyday life.</h1>
-<p class="lede">SP Digital Labs makes apps that each do one thing well, without ads or tracking. Made in Japan.</p>
+<main id="main">
+  <section class="wrap hero" aria-labelledby="hero-title">
+    <div>
+      <h1 id="hero-title">Small, focused apps for everyday life.</h1>
+      <p class="lede">SP Digital Labs makes apps that each do one thing well, built by an independent developer.</p>
+      <ul class="promises label" aria-label="What every app promises">
+        <li>No ads</li>
+        <li>No tracking</li>
+        <li>Made in Japan</li>
+      </ul>
+    </div>
+    <svg class="hero-art" viewBox="0 0 416 312" aria-hidden="true" focusable="false">
+      <rect class="t-indigo" x="0" y="0" width="192" height="88" rx="18"/>
+      <rect class="t-tint" x="208" y="0" width="88" height="88" rx="18"/>
+      <rect class="t-ink" x="312" y="0" width="88" height="88" rx="18"/>
+      <rect class="t-moss" x="0" y="104" width="88" height="88" rx="18"/>
+      <rect class="t-tint" x="104" y="104" width="88" height="88" rx="18"/>
+      <rect class="t-indigo" x="208" y="104" width="192" height="88" rx="18"/>
+      <rect class="t-ink" x="0" y="208" width="88" height="88" rx="18"/>
+      <rect class="t-indigo" x="104" y="208" width="88" height="88" rx="18"/>
+      <rect class="t-tint" x="208" y="208" width="88" height="88" rx="18"/>
+      <rect class="t-moss" x="312" y="208" width="88" height="88" rx="18"/>
+    </svg>
+  </section>
 
-<h2 id="apps">Apps</h2>
-<ul class="apps">
-  <li class="app">
-    <div class="app-head">
-      <h3><a href="dailyallowance/">Daily Allowance</a></h3>
-      <span class="status live">iPhone</span>
+  <section class="section" id="apps" aria-labelledby="apps-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="apps-title">Apps</h2>
+        <p>One app is available now. Five more are being built.</p>
+      </div>
+      <ul class="apps">
+        <li class="app featured">
+          <img class="app-icon" src="/assets/apps/dailyallowance.png" alt="" width="56" height="56">
+          <h3><a href="/dailyallowance/">Daily Allowance</a></h3>
+          <span class="label live">Available on iPhone</span>
+          <p class="app-desc">Know exactly how much you can spend today, after your bills are covered.</p>
+          <div class="app-links">
+            <a class="button" href="https://apps.apple.com/app/id6829595254">Get it on the App Store</a>
+            <a href="/dailyallowance/support.html">Support</a>
+            <a href="/dailyallowance/privacy.html">Privacy</a>
+            <a href="/dailyallowance/terms.html">Terms</a>
+          </div>
+        </li>
+        <li class="app">
+          <img class="app-icon" src="/assets/apps/strata.png" alt="" width="56" height="56">
+          <h3>Strata</h3>
+          <span class="label">In development</span>
+          <p class="app-desc">A Bible reading app that grounds each passage in its history, its meaning, and what it asks of you now.</p>
+        </li>
+        <li class="app">
+          <img class="app-icon" src="/assets/apps/understory.png" alt="" width="56" height="56">
+          <h3>Understory</h3>
+          <span class="label">In development</span>
+          <p class="app-desc">A quiet journal for the slow work beneath the surface, with optional faith-based reflection.</p>
+        </li>
+        <li class="app">
+          <img class="app-icon" src="/assets/apps/lift.png" alt="" width="56" height="56">
+          <h3>Lift</h3>
+          <span class="label">In development</span>
+          <p class="app-desc">A workout tracker that suggests your next weight from your own history, and explains why.</p>
+        </li>
+        <li class="app">
+          <img class="app-icon" src="/assets/apps/peak47.png" alt="" width="56" height="56">
+          <h3>Peak47</h3>
+          <span class="label">In development</span>
+          <p class="app-desc">Track your climbs to the highest point in each of Japan's 47 prefectures.</p>
+        </li>
+        <li class="app">
+          <img class="app-icon" src="/assets/apps/surfwindow.png" alt="" width="56" height="56">
+          <h3>Surf Window</h3>
+          <span class="label">In development</span>
+          <p class="app-desc">Go or no-go surf scores for 25 breaks in Shonan and Chiba, judged against each beach's own conditions.</p>
+        </li>
+      </ul>
     </div>
-    <p>Know exactly how much you can spend today, after your bills are covered.</p>
-    <p class="app-links"><a href="https://apps.apple.com/app/id6829595254">App Store</a> &middot; <a href="dailyallowance/support.html">Support</a> &middot; <a href="dailyallowance/privacy.html">Privacy</a> &middot; <a href="dailyallowance/terms.html">Terms</a></p>
-  </li>
-  <li class="app">
-    <div class="app-head">
-      <h3>Strata</h3>
-      <span class="status">In development</span>
-    </div>
-    <p>A Bible reading app that grounds each passage in its history, its meaning, and what it asks of you now.</p>
-  </li>
-  <li class="app">
-    <div class="app-head">
-      <h3>Understory</h3>
-      <span class="status">In development</span>
-    </div>
-    <p>A quiet journal for the slow work beneath the surface, with optional faith-based reflection.</p>
-  </li>
-  <li class="app">
-    <div class="app-head">
-      <h3>Lift</h3>
-      <span class="status">In development</span>
-    </div>
-    <p>A workout tracker that suggests your next weight from your own history, and explains why.</p>
-  </li>
-  <li class="app">
-    <div class="app-head">
-      <h3>Peak47</h3>
-      <span class="status">In development</span>
-    </div>
-    <p>Track your climbs to the highest point in each of Japan's 47 prefectures.</p>
-  </li>
-  <li class="app">
-    <div class="app-head">
-      <h3>Surf Window</h3>
-      <span class="status">In development</span>
-    </div>
-    <p>Go or no-go surf scores for 25 breaks in Shonan and Chiba, judged against each beach's own conditions.</p>
-  </li>
-</ul>
+  </section>
 
-<h2 id="about">About</h2>
-<p>SP Digital Labs is the name under which Joseph Suzuki Parker, an independent developer based in Japan, publishes apps. Each app has its own privacy policy and terms, linked above.</p>
-
-<h2 id="contact">Contact</h2>
-<p>Questions, feedback or support for any app: <a class="email" href="dailyallowance/support.html">torin2582 [at] gmail [dot] com</a></p>
-
-<footer>&copy; 2026 SP Digital Labs &middot; Joseph Suzuki Parker, Japan</footer>
+  <section class="section">
+    <div class="wrap split">
+      <div id="about">
+        <h2>About</h2>
+        <p>SP Digital Labs is the name under which Joseph Suzuki Parker, an independent developer based in Japan, publishes apps.</p>
+        <p>Each app is built to do its one job well, without ads or tracking. Each app has its own privacy policy and terms, linked from its page.</p>
+      </div>
+      <div id="contact">
+        <h2>Contact</h2>
+        <p>Questions, feedback or support for any app:</p>
+        <p class="email-row"><a class="email" href="/dailyallowance/support.html">torin2582 [at] gmail [dot] com</a></p>
+      </div>
+    </div>
+  </section>
 </main>
-<script src="email.js"></script>
+
+<footer class="site-footer">
+  <div class="wrap foot">
+    <div class="foot-about">
+      <a class="brand" href="/"><img src="/assets/sp-mark.svg" alt="" width="24" height="24">SP Digital Labs</a>
+      <p>Small, focused apps for everyday life, made in Japan.</p>
+    </div>
+    <nav aria-labelledby="foot-da">
+      <h2 id="foot-da">Daily Allowance</h2>
+      <ul>
+        <li><a href="/dailyallowance/support.html">Support</a></li>
+        <li><a href="/dailyallowance/privacy.html">Privacy Policy</a></li>
+        <li><a href="/dailyallowance/terms.html">Terms of Service</a></li>
+        <li><a href="/dailyallowance/delete-account.html">Delete your account</a></li>
+      </ul>
+    </nav>
+    <nav aria-labelledby="foot-studio">
+      <h2 id="foot-studio">Studio</h2>
+      <ul>
+        <li><a href="/#apps">Apps</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <p class="legal">&copy; 2026 SP Digital Labs, the name under which Joseph Suzuki Parker publishes apps. Japan.</p>
+  </div>
+</footer>
+<script src="/email.js"></script>
 </body>
 </html>
