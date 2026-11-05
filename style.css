@@ -34,6 +34,9 @@
   --indigo-tint: #d3dcf0;
   --moss: #3b6a34;
   --icon-filter: none;
+  --shadow-lift: 0 14px 30px -14px rgb(20 26 38 / 0.35), 0 2px 6px rgb(20 26 38 / 0.08);
+  --shadow-button: 0 6px 14px -8px rgb(20 26 38 / 0.45);
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
 
   --font-display: "M PLUS Rounded 1c", "Hiragino Maru Gothic ProN", -apple-system, BlinkMacSystemFont, sans-serif;
   --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Helvetica Neue", sans-serif;
@@ -67,6 +70,8 @@
     --indigo-tint: #26324f;
     --moss: #93c78a;
     --icon-filter: invert(1);
+    --shadow-lift: 0 16px 32px -14px rgb(0 0 0 / 0.75), 0 0 0 1px var(--line);
+    --shadow-button: 0 6px 16px -8px rgb(0 0 0 / 0.8);
   }
 }
 
@@ -280,7 +285,6 @@ p, ul, ol { margin: 0; }
   font-weight: 600;
   text-decoration: none;
 }
-.button:hover { filter: brightness(1.12); }
 .button svg { width: 1.125rem; height: 1.125rem; flex: none; }
 
 /* Studio home: hero */
@@ -362,7 +366,6 @@ p, ul, ol { margin: 0; }
 
 .app h3 { align-self: end; }
 .app h3 a { color: var(--ink); text-decoration: none; }
-.app h3 a:hover { text-decoration: underline; }
 .app .label { align-self: start; }
 .app .label.live { color: var(--moss); }
 .app-desc { grid-column: 1 / -1; margin-top: var(--space-2); }
@@ -426,9 +429,7 @@ p, ul, ol { margin: 0; }
 .foot .brand img { width: 1.5rem; height: 1.5rem; }
 .foot-about > * + * { margin-top: var(--space-2); }
 
-@media (prefers-reduced-motion: no-preference) {
-  .nav a, .button { transition: background-color 0.15s, color 0.15s, filter 0.15s; }
-}
+
 
 @media print {
   .site-header, .app-bar, .site-footer, .skip, .hero-art { display: none; }
@@ -440,7 +441,6 @@ p, ul, ol { margin: 0; }
   color: var(--ink);
   box-shadow: inset 0 0 0 1px var(--line);
 }
-.button.secondary:hover { filter: none; box-shadow: inset 0 0 0 2px var(--link); }
 
 /* App feature pages (/<app>/) */
 
@@ -511,10 +511,7 @@ p, ul, ol { margin: 0; }
 .app h3 a:focus-visible { outline: none; }
 .app h3 a:focus-visible::after { outline: 2px solid var(--link); outline-offset: 2px; }
 .app-links { position: relative; z-index: 1; }
-.app:has(h3 a) { cursor: pointer; transition: box-shadow 0.15s; }
-.app:has(h3 a):hover { box-shadow: 0 0 0 2px var(--line); }
-.app-more { grid-column: 1 / -1; margin-top: var(--space-2); font-weight: 600; color: var(--link); font-size: 0.9375rem; }
-.app:has(h3 a):hover .app-more { text-decoration: underline; text-underline-offset: 3px; }
+.app-more { grid-column: 1 / -1; margin-top: var(--space-2); display: inline-flex; align-items: center; gap: var(--space-1); justify-self: start; font-weight: 600; color: var(--link); font-size: 0.9375rem; }
 
 .app-preview { grid-column: 1 / -1; margin-top: var(--space-3); }
 .app-preview img {
@@ -532,3 +529,38 @@ p, ul, ol { margin: 0; }
 .app-policy { display: flex; flex-basis: 100%; gap: var(--space-4); white-space: nowrap; }
 /* A card with no page (in development) keeps its own height. */
 .app:not(:has(h3 a)) { align-self: start; }
+
+/* Interaction: hover, press and focus, sitewide. Standard practice: lift the
+   whole clickable card, a short ease-out (about 200ms), icons that move with
+   intent, and no movement for people who ask for reduced motion. */
+
+.icon { width: 1em; height: 1em; flex: none; }
+
+.app:has(h3 a) { cursor: pointer; }
+.app:has(h3 a):hover,
+.app:has(h3 a):focus-within { transform: translateY(-4px); box-shadow: var(--shadow-lift); }
+.app:has(h3 a):active { transform: translateY(-1px); }
+.app-more .icon { transition: transform 200ms var(--ease-out); }
+.app:has(h3 a):hover .app-more .icon,
+.app:has(h3 a):focus-within .app-more .icon { transform: translateX(3px); }
+
+.button .icon { width: 1rem; height: 1rem; }
+.button:hover { background: color-mix(in srgb, var(--indigo) 86%, white); transform: translateY(-1px); box-shadow: var(--shadow-button); }
+.button:active { transform: translateY(0); box-shadow: none; }
+.button.secondary:hover { background: var(--paper); box-shadow: inset 0 0 0 1.5px var(--link), var(--shadow-button); }
+.button.secondary:active { box-shadow: inset 0 0 0 1.5px var(--link); }
+
+a { transition: color 150ms var(--ease-out), text-decoration-color 150ms var(--ease-out); }
+
+.email-row .icon { width: 1.125rem; height: 1.125rem; color: var(--muted); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .app { transition: transform 200ms var(--ease-out), box-shadow 200ms var(--ease-out); }
+  .button { transition: background-color 150ms var(--ease-out), transform 150ms var(--ease-out), box-shadow 150ms var(--ease-out); }
+  .nav a { transition: background-color 150ms var(--ease-out), color 150ms var(--ease-out); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .app:has(h3 a):hover, .app:has(h3 a):focus-within, .app:has(h3 a):active,
+  .button:hover, .button:active,
+  .app:has(h3 a):hover .app-more .icon { transform: none; }
+}
