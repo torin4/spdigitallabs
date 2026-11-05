@@ -503,3 +503,29 @@ p, ul, ol { margin: 0; }
 .plans-note { margin-top: var(--space-3); color: var(--muted); font-size: 0.9375rem; max-width: var(--text); }
 
 .help-list { list-style: none; padding: 0; display: grid; gap: var(--space-2); }
+
+/* Whole app card opens the app's page. The title link's ::after covers the
+   card; the buttons and links inside sit above it and keep working. */
+.app { position: relative; }
+.app h3 a::after { content: ""; position: absolute; inset: 0; border-radius: inherit; z-index: 0; }
+.app h3 a:focus-visible { outline: none; }
+.app h3 a:focus-visible::after { outline: 2px solid var(--link); outline-offset: 2px; }
+.app-links { position: relative; z-index: 1; }
+.app:has(h3 a) { cursor: pointer; transition: box-shadow 0.15s; }
+.app:has(h3 a):hover { box-shadow: 0 0 0 2px var(--line); }
+.app-more { grid-column: 1 / -1; margin-top: var(--space-2); font-weight: 600; color: var(--link); font-size: 0.9375rem; }
+.app:has(h3 a):hover .app-more { text-decoration: underline; text-underline-offset: 3px; }
+
+.app-previews { grid-column: 1 / -1; display: flex; gap: var(--space-2); margin-top: var(--space-3); }
+.app-previews img {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 9rem;
+  aspect-ratio: 390 / 560;
+  object-fit: cover;
+  object-position: top;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 0 0 1px var(--line);
+  background: var(--paper);
+}
+.app-policy { display: inline-flex; gap: var(--space-4); white-space: nowrap; }
