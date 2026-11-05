@@ -564,3 +564,60 @@ a { transition: color 150ms var(--ease-out), text-decoration-color 150ms var(--e
   .button:hover, .button:active,
   .app:has(h3 a):hover .app-more .icon { transform: none; }
 }
+
+/* Homepage: simple showcase. Icon, name, one line; the whole card opens the
+   app's page (pattern used by small app studios such as Sindre Sorhus,
+   Panic and the Iconfactory). */
+.home-intro { padding-block: var(--space-7) var(--space-6); }
+.home-intro > * { max-width: var(--text); }
+.home-intro h1 { font-size: clamp(2.25rem, 1.5rem + 3.2vw, 3.5rem); line-height: 1.05; letter-spacing: -0.02em; }
+.home-intro .lede { margin-top: var(--space-3); }
+
+.home-apps { padding-bottom: var(--space-7); }
+.showcase { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--space-4); }
+@media (min-width: 48rem) { .showcase { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+.show-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  height: 100%;
+  padding: var(--space-5);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  color: var(--ink);
+  text-decoration: none;
+}
+.show-icon { width: 4.5rem; height: 4.5rem; flex: none; border-radius: var(--radius-tile); box-shadow: 0 0 0 1px var(--line); }
+.show-text { display: grid; gap: var(--space-1); min-width: 0; flex: 1; }
+.show-name { font-family: var(--font-display); font-weight: 800; font-size: 1.25rem; line-height: 1.2; }
+.show-line { color: var(--muted); }
+.show-meta { font-family: var(--font-mono); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.show-go { color: var(--muted); display: inline-flex; }
+.show-go .icon { width: 1.25rem; height: 1.25rem; }
+
+.show-card:hover, .show-card:focus-visible { transform: translateY(-4px); box-shadow: var(--shadow-lift); }
+.show-card:hover .show-go, .show-card:focus-visible .show-go { color: var(--link); }
+.show-card:hover .show-go .icon, .show-card:focus-visible .show-go .icon { transform: translateX(3px); }
+.show-card:active { transform: translateY(-1px); }
+.show-card:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; }
+@media (prefers-reduced-motion: no-preference) {
+  .show-card { transition: transform 200ms var(--ease-out), box-shadow 200ms var(--ease-out); }
+  .show-go .icon { transition: transform 200ms var(--ease-out); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .show-card:hover, .show-card:focus-visible, .show-card:active, .show-card:hover .show-go .icon { transform: none; }
+}
+
+.soon { margin-top: var(--space-5); color: var(--muted); }
+.soon img { width: 1.75rem; height: 1.75rem; border-radius: var(--radius-tile); vertical-align: middle; margin-right: var(--space-2); }
+.soon strong { color: var(--ink); }
+
+.home-contact { padding-block: var(--space-6) var(--space-7); border-top: 1px solid var(--line); }
+.home-contact h2 { margin-bottom: var(--space-2); }
+.home-contact .email-row { margin-top: var(--space-3); }
+
+.foot-simple { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-3) var(--space-5); padding-block: var(--space-5); }
+.foot-simple nav { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-4); }
+.foot-simple a { color: var(--ink); text-decoration: none; }
+.foot-simple a:hover { text-decoration: underline; }
