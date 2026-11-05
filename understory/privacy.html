@@ -77,7 +77,7 @@
   <li><strong>Spelling check</strong> sends the text being checked.</li>
   <li><strong>Voice-to-text</strong> records audio in your browser and sends it to be transcribed. The audio is not saved.</li>
 </ul>
-<p>We use Google's paid Gemini API service. Under its terms, Google does not use what we send to improve its products or train its models; it may keep it for a limited time to detect abuse, as its terms describe. Our server passes these requests on and returns the answers to you. It does not store your text or audio. Entries you mark as windthrow are never added to the companion's memory. If you turn the companion off in Preferences, nothing about your entries is sent to the AI service, and your consent is withdrawn; turning it back on asks again.</p>
+<p>We use Gemini through Google Cloud's Vertex AI service. Under Google Cloud's terms, Google does not use what we send to train its models; it may process it briefly to detect abuse, as its terms describe. Our server passes these requests on and returns the answers to you. It does not store your text or audio. Entries you mark as windthrow are never added to the companion's memory. If you turn the companion off in Preferences, nothing about your entries is sent to the AI service, and your consent is withdrawn; turning it back on asks again.</p>
 <p>We also keep a count of how many AI requests you make each month, to apply the monthly limit.</p>
 
 <h3>Sharing links</h3>
@@ -120,7 +120,7 @@
 <h2>Who we share it with</h2>
 <p>We share information only with the services that run Understory:</p>
 <ul>
-  <li><strong>Google</strong>: Firebase stores your account and data, and the Gemini API produces Premium's AI features from the text sent to it. <a href="https://firebase.google.com/support/privacy">Firebase privacy</a> · <a href="https://ai.google.dev/gemini-api/terms">Gemini API terms</a></li>
+  <li><strong>Google</strong>: Firebase stores your account and data, and Google Cloud's Vertex AI runs the Gemini models behind Premium's AI features. <a href="https://firebase.google.com/support/privacy">Firebase privacy</a> · <a href="https://cloud.google.com/terms/data-processing-addendum">Google Cloud data processing terms</a></li>
   <li><strong>Vercel</strong>, which hosts the app and runs its server. <a href="https://vercel.com/legal/privacy-policy">Vercel privacy</a></li>
   <li><strong>Stripe</strong>, which handles payments for Premium. <a href="https://stripe.com/privacy">Stripe privacy</a></li>
   <li>Anyone you give a sharing link to can read the entries in it.</li>
