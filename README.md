@@ -14,3 +14,11 @@ Plain static HTML, no build step. Preview locally with `python3 -m http.server` 
 - `404.html` - not-found page
 
 To add an app, add a card to the list in `index.html` and, once it needs legal pages, a folder like `dailyallowance/`.
+
+## Generated pages
+
+The app pages and their policies are built from `_generator/` (Python 3, no dependencies):
+
+    python3 _generator/build.py
+
+Edit the text in `_generator/<app>.py`, then rebuild. That regenerates `dailyallowance/index.html`, `strata/index.html`, and the Understory and Surf Window pages. The homepage and the Daily Allowance policy pages are written by hand. Jekyll skips folders starting with `_`, so `_generator/` is never published.
