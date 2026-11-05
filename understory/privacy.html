@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Privacy Policy - Understory</title>
+<meta name="description" content="How Understory collects, uses and protects your information.">
+<meta name="theme-color" content="#f7f8fa" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1117" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://spdigitallabs.app/understory/privacy.html">
+<link rel="icon" href="/assets/sp-mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/mplus-rounded-1c-800-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="/"><img src="/assets/sp-mark.svg" alt="" width="32" height="32">SP Digital Labs</a>
+    <nav class="nav" aria-label="Main">
+      <ul>
+        <li><a href="/#apps">Apps</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="app-bar">
+  <div class="wrap bar">
+    <a class="app-id" href="/understory/"><img src="/assets/apps/understory.png" alt="" width="28" height="28">Understory</a>
+    <nav class="nav" aria-label="Understory">
+      <ul>
+        <li><a href="/understory/">Overview</a></li>
+        <li><a href="/understory/privacy.html" aria-current="page">Privacy</a></li>
+        <li><a href="/understory/terms.html">Terms</a></li>
+        <li><a href="/understory/legal-notice.html">Legal notice</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<main id="main" class="wrap page">
+<h1>Privacy Policy</h1>
+<p class="updated">Last updated: November 5, 2026</p>
+
+<p>Understory is a private journaling web app at understory-journal.vercel.app, made by SP Digital Labs, the name under which Joseph Suzuki Parker, an independent developer based in Japan, publishes apps ("we", "us"). This policy explains what information Understory collects, why, who it is shared with, and the choices you have.</p>
+
+<div class="card">
+  <p><strong>The short version:</strong> your journal entries are encrypted in your browser with a key only you hold, so we can't read them. If you use Premium and keep the companion on, the text of an entry is sent, unencrypted and only for that moment, to Google's Gemini AI service to write the companion's replies; our server doesn't keep a copy, and Google doesn't use it to train its models. A few results, such as an entry's mood and themes, are stored without that encryption so your growth rings can be drawn. We don't show ads, don't use analytics, and don't sell your data. Payments go through Stripe, and we never see your card.</p>
+</div>
+
+<h2>Information we collect</h2>
+
+<h3>Your account</h3>
+<ul>
+  <li><strong>Email address</strong> and a <strong>user ID</strong> from Firebase Authentication, whether you sign up with an email and password or with Google.</li>
+  <li>Your <strong>preferences</strong>, such as the companion's voice and where its words are drawn from, and when you finished setting up.</li>
+  <li>We never see your sign-in password; Google Firebase handles it. If you sign up with email and password, that same password also unlocks your journal on your device (see below).</li>
+</ul>
+
+<h3>Your journal</h3>
+<ul>
+  <li><strong>Entries, notes ("spores") and the companion's memory ("heartwood")</strong> are encrypted in your browser before they are saved, with a key made from your passphrase. The key is also protected by a recovery code shown to you once. We only store the encrypted text and the protected key, so we can't read your writing, and we can't recover it if you lose both your passphrase and your recovery code.</li>
+  <li>Some details about each entry are stored <strong>without</strong> that encryption so the app can work: when it was written and changed, its word count, whether it was typed or spoken, its season, and whether it is finished or archived.</li>
+  <li>With Premium, each finished entry's <strong>mood reading</strong> is also stored without that encryption: its main mood and scores, up to five themes, and the reflection shown to you (a quotation and a short note). These draw your growth rings and stats.</li>
+</ul>
+
+<h3>The companion and other AI features (Premium)</h3>
+<p>Premium's AI features use Google's Gemini models. When they run, the text needed is decrypted in your browser and sent through our server to Google over an encrypted connection:</p>
+<ul>
+  <li><strong>When you finish an entry</strong>, its full text is sent to read its mood and, if the companion remembers is on, to update the companion's memory. This happens automatically when the companion is on.</li>
+  <li><strong>When you ask the companion</strong> to reflect, tend, glean, seek or chat, the text you're working on is sent, with the conversation so far, the companion's memory, and up to three short passages from your earlier entries that your device picks as related.</li>
+  <li><strong>Spelling check</strong> sends the text being checked.</li>
+  <li><strong>Voice-to-text</strong> records audio in your browser and sends it to be transcribed. The audio is not saved.</li>
+</ul>
+<p>We use Google's paid Gemini API service. Under its terms, Google does not use what we send to improve its products or train its models; it may keep it for a limited time to detect abuse, as its terms describe. Our server passes these requests on and returns the answers to you. It does not store your text or audio. Entries you mark as windthrow are never added to the companion's memory. If you turn the companion off in Preferences, nothing about your entries is sent to the AI service.</p>
+<p>We also keep a count of how many AI requests you make each month, to apply the monthly limit.</p>
+
+<h3>Sharing links</h3>
+<p>If you create a link to share entries, for example with a therapist, the entries you choose are encrypted with a new key that is part of the link itself. We store only the encrypted copy and when it expires. Anyone who has the link can read what you shared, so share it only with people you trust. You can set links to expire, and you can revoke a link at any time, which deletes our copy.</p>
+
+<h3>Payments</h3>
+<ul>
+  <li>Premium is paid through <strong>Stripe</strong>. We send Stripe your email address and user ID so it can link the subscription to your account.</li>
+  <li>We store your subscription's status, plan, renewal and trial dates, and Stripe's customer and subscription IDs.</li>
+  <li>We never receive your card or payment details; Stripe handles them.</li>
+</ul>
+
+<h3>Safety check</h3>
+<p>When you use the companion, our server checks the text for words that may suggest you are in crisis, and if it finds them, the app shows links to crisis helplines. This check isn't saved, and it isn't reported to anyone.</p>
+
+<h3>Device and browser</h3>
+<ul>
+  <li><strong>Microphone:</strong> used only when you choose voice-to-text. Understory doesn't use your camera or location.</li>
+  <li><strong>Stored in your browser:</strong> an offline copy of your journal data so the app works without a connection, encrypted drafts you haven't saved yet, and, if you set a device PIN, your journal key protected by that PIN.</li>
+  <li>Understory has no analytics, advertising or tracking tools.</li>
+  <li>The app loads its fonts from Google Fonts, so Google receives your IP address when the page loads.</li>
+</ul>
+
+<h2>How we use it</h2>
+<ul>
+  <li>To run Understory: keep your journal in sync, draw your growth rings and stats, and keep your account secure.</li>
+  <li>To produce the companion's replies, mood readings, transcriptions and spelling suggestions when Premium features run.</li>
+  <li>To process your subscription and apply its limits.</li>
+  <li>To answer your messages and requests.</li>
+</ul>
+<p>We don't use your information for advertising, and we don't sell it.</p>
+
+<h2>Where it is stored</h2>
+<p>Your data is stored in Google Firebase (Authentication and Cloud Firestore). The app and its server run on Vercel. These services may store and process data in the United States or other countries. Data is encrypted in transit and at rest, and your journal text is also encrypted with your own key as described above.</p>
+
+<h2>Who we share it with</h2>
+<p>We share information only with the services that run Understory:</p>
+<ul>
+  <li><strong>Google</strong>: Firebase stores your account and data, and the Gemini API produces Premium's AI features from the text sent to it. <a href="https://firebase.google.com/support/privacy">Firebase privacy</a> · <a href="https://ai.google.dev/gemini-api/terms">Gemini API terms</a></li>
+  <li><strong>Vercel</strong>, which hosts the app and runs its server. <a href="https://vercel.com/legal/privacy-policy">Vercel privacy</a></li>
+  <li><strong>Stripe</strong>, which handles payments for Premium. <a href="https://stripe.com/privacy">Stripe privacy</a></li>
+  <li>Anyone you give a sharing link to can read the entries in it.</li>
+</ul>
+<p>We may also disclose information if the law requires it.</p>
+
+<h2>How long we keep it</h2>
+<ul>
+  <li>Your account, journal and mood readings are kept until you delete them or your account.</li>
+  <li>Sharing links are kept until they expire or you revoke them.</li>
+  <li>Monthly AI usage counts are kept until you delete your account.</li>
+  <li>Stripe keeps payment records as the law requires.</li>
+</ul>
+
+<h2>Your choices and rights</h2>
+<ul>
+  <li>Turn the companion, its memory, and voice-to-text on or off in Preferences.</li>
+  <li>Delete an entry from your journal; this also deletes its mood reading.</li>
+  <li>Read, edit or clear the companion's memory in Preferences.</li>
+  <li>Save entries as a PDF from the app.</li>
+  <li>Revoke any sharing link.</li>
+  <li>Delete your account in Preferences &gt; Account &gt; Delete account. This permanently deletes your account, your journal, notes, mood readings, the companion's memory, your sharing links and your AI usage counts, cancels any Premium subscription, and clears Understory's data from that browser. If you can't sign in, email us from the address on your account and we will delete it within 30 days.</li>
+  <li>Depending on where you live, you may have further rights, such as to see, correct or object to how we use your information, or to complain to a data protection authority. Contact us and we will help.</li>
+</ul>
+
+<h2>Children</h2>
+<p>Understory is not directed at children under 13, and we don't knowingly collect their information. If you believe a child has given us information, contact us and we will delete it.</p>
+
+<h2>Changes to this policy</h2>
+<p>If we change this policy, we will update the date at the top. For significant changes, we will also tell you in the app.</p>
+
+<h2>Contact</h2>
+<p>Questions or requests about your privacy: <a class="email" href="/#contact">torin2582 [at] gmail [dot] com</a></p>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap foot">
+    <div class="foot-about">
+      <a class="brand" href="/"><img src="/assets/sp-mark.svg" alt="" width="24" height="24">SP Digital Labs</a>
+      <p>Understory is an app by SP Digital Labs.</p>
+    </div>
+    <nav aria-labelledby="foot-app">
+      <h2 id="foot-app">Understory</h2>
+      <ul>
+        <li><a href="/understory/">Overview</a></li>
+        <li><a href="/understory/privacy.html">Privacy Policy</a></li>
+        <li><a href="/understory/terms.html">Terms of Service</a></li>
+        <li><a href="/understory/legal-notice.html">Legal notice</a></li>
+      </ul>
+    </nav>
+    <nav aria-labelledby="foot-studio">
+      <h2 id="foot-studio">Studio</h2>
+      <ul>
+        <li><a href="/#apps">Apps</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <p class="legal">&copy; 2026 SP Digital Labs, the name under which Joseph Suzuki Parker publishes apps. Japan.</p>
+  </div>
+</footer>
+<script src="/email.js"></script>
+</body>
+</html>
