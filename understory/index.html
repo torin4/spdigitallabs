@@ -11,37 +11,26 @@
 <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/fonts/mplus-rounded-1c-800-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/style.css?v=20261105e">
+<link rel="stylesheet" href="/style.css?v=20261105f">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="site-header">
   <div class="wrap bar">
-    <a class="brand" href="/"><img src="/assets/logo.svg" alt="" width="32" height="32">SP Digital Labs</a>
-    <nav class="nav" aria-label="Main">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a class="brand" href="/"><img src="/assets/logo.svg" alt="" width="32" height="32"><span class="brand-text">SP Digital Labs</span></a>
+      <span class="crumb-sep" aria-hidden="true">/</span>
+      <a class="crumb-app" href="/understory/" aria-current="page"><img src="/assets/apps/understory.png" alt="" width="28" height="28">Understory</a>
+    </nav>
+    <nav class="nav" aria-label="Understory">
       <ul>
-        <li><a href="/#apps">Apps</a></li>
-        <li><a href="/#about">About</a></li>
-        <li><a href="/#contact">Contact</a></li>
+        <li><a href="/understory/privacy.html">Privacy</a></li>
+        <li><a href="/understory/terms.html">Terms</a></li>
       </ul>
     </nav>
   </div>
 </header>
-
-<div class="app-bar">
-  <div class="wrap bar">
-    <a class="app-id" href="/understory/"><img src="/assets/apps/understory.png" alt="" width="28" height="28">Understory</a>
-    <nav class="nav" aria-label="Understory">
-      <ul>
-        <li><a href="/understory/" aria-current="page">Overview</a></li>
-        <li><a href="/understory/privacy.html">Privacy</a></li>
-        <li><a href="/understory/terms.html">Terms</a></li>
-        <li><a href="/understory/legal-notice.html">Legal notice</a></li>
-      </ul>
-    </nav>
-  </div>
-</div>
 
 <main id="main" class="wrap app-page">
 <section class="app-hero" aria-labelledby="app-title">
@@ -54,25 +43,34 @@
   <div class="app-actions"><a class="button" href="https://understory-journal.vercel.app/">Open Understory<svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a><span class="label">Free to start · Works in any browser</span></div>
 </section>
 
-<section aria-labelledby="shots-title">
-  <h2 id="shots-title" class="visually-hidden">Screenshots</h2>
-<ul class="shots" aria-label="Screenshots">
-  <li><figure><img src="/assets/screens/understory-dashboard.jpg" alt="Understory dashboard with a button to lay down a ring, a spores box for quick notes, and a list of recent entries." width="390" height="844" loading="lazy"><figcaption>Your journal, private by default</figcaption></figure></li>
-  <li><figure><img src="/assets/screens/understory-companion.jpg" alt="An entry about leaving a city, with the companion's Root question below it and the writer's reply." width="390" height="844" loading="lazy"><figcaption>The companion asks one good question</figcaption></figure></li>
-  <li><figure><img src="/assets/screens/understory-reflection.jpg" alt="A reflection card offering a short Emily Dickinson passage and a gentle note for an entry read as sad." width="390" height="844" loading="lazy"><figcaption>A word to sit with, for each entry</figcaption></figure></li>
-  <li><figure><img src="/assets/screens/understory-rings.jpg" alt="Growth rings drawn like a tree's cross-section, with the most frequent moods and recurring themes below." width="390" height="844" loading="lazy"><figcaption>Every entry grows a ring</figcaption></figure></li>
+<section aria-label="Main features">
+<ul class="feature-rows">
+  <li class="feature-row">
+    <div class="feature-shot"><img src="/assets/screens/understory-dashboard.jpg" alt="Understory dashboard with a button to lay down a ring, spores and recent entries." width="390" height="844" loading="lazy"></div>
+    <div class="feature-copy"><h2>Private by design</h2><p>Every entry is encrypted in your browser before it's saved. Your passphrase and a one-time recovery code are the only keys, so no one else can read your journal, including us.</p></div>
+  </li>
+  <li class="feature-row">
+    <div class="feature-shot"><img src="/assets/screens/understory-companion.jpg" alt="An entry with the companion's Root question below it and the writer's reply." width="390" height="844" loading="lazy"></div>
+    <div class="feature-copy"><h2>A companion that waits to be asked</h2><p>With Premium, the companion answers only when you ask. Root asks you one question, Tend walks through a thought in four steps, Glean offers a short passage, and Seek answers briefly.</p></div>
+  </li>
+  <li class="feature-row">
+    <div class="feature-shot"><img src="/assets/screens/understory-reflection.jpg" alt="A reflection card with a short Emily Dickinson passage and a gentle note." width="390" height="844" loading="lazy"></div>
+    <div class="feature-copy"><h2>A word to sit with</h2><p>When you keep an entry, Understory reads its mood and offers a short passage and a few words for you, from secular or Christian sources, or both.</p></div>
+  </li>
+  <li class="feature-row">
+    <div class="feature-shot"><img src="/assets/screens/understory-rings.jpg" alt="Growth rings drawn like a tree's cross-section, with frequent moods and themes." width="390" height="844" loading="lazy"></div>
+    <div class="feature-copy"><h2>Every entry grows a ring</h2><p>Your entries become rings, drawn like a tree's cross-section, oldest at the heart. With Premium each ring takes its entry's mood, and your most frequent moods and themes appear beside it.</p></div>
+  </li>
 </ul>
 </section>
 
-<section aria-labelledby="features-title">
-  <h2 id="features-title" class="section-title">What it does</h2>
+<section aria-labelledby="more-title">
+  <h2 id="more-title" class="section-title">More</h2>
 <ul class="features">
-  <li><h3>Private by design</h3><p>Entries are end-to-end encrypted before they're saved. Your passphrase and a recovery code are the only keys, so no one else can read your journal, including us.</p></li>
-  <li><h3>Growth rings</h3><p>Every entry you finish becomes a ring, drawn like a tree's cross-section, oldest at the center. With Premium each ring takes the color of that entry's mood.</p></li>
-  <li><h3>Seasons for hard stretches</h3><p>Mark an entry fallow for a low time, a nurse log for a loss, or windthrow for venting you don't want to keep, so it stays out of your rings and stats.</p></li>
-  <li><h3>A companion that waits to be asked</h3><p>Premium's companion answers only when you ask: Root asks you a question, Tend walks through one thought in four steps, Glean offers a short passage, Seek answers briefly.</p></li>
-  <li><h3>Heartwood, its memory</h3><p>The companion can keep one slowly updated, encrypted remembering of your journal. Read it, edit it in your own words, or clear it whenever you like.</p></li>
-  <li><h3>Share with someone you trust</h3><p>Send chosen entries to a therapist or a friend with an encrypted link that can expire, and revoke it at any time. Save entries as a PDF too.</p></li>
+  <li><h3>Seasons for hard stretches</h3><p>Mark an entry fallow, a nurse log for a loss, or windthrow for venting you don't want to keep.</p></li>
+  <li><h3>Heartwood, its memory</h3><p>The companion can keep one encrypted remembering of your journal. Read it, edit it or clear it.</p></li>
+  <li><h3>Share with someone you trust</h3><p>Send chosen entries to a therapist or friend with an encrypted link that can expire.</p></li>
+  <li><h3>Speak instead of typing</h3><p>With Premium, dictate an entry and check its spelling without changing your words.</p></li>
 </ul>
 </section>
 
@@ -98,29 +96,14 @@
 </main>
 
 <footer class="site-footer">
-  <div class="wrap foot">
-    <div class="foot-about">
-      <a class="brand" href="/"><img src="/assets/logo.svg" alt="" width="24" height="24">SP Digital Labs</a>
-      <p>Understory is an app by SP Digital Labs.</p>
-    </div>
-    <nav aria-labelledby="foot-app">
-      <h2 id="foot-app">Understory</h2>
-      <ul>
-        <li><a href="/understory/">Overview</a></li>
-        <li><a href="/understory/privacy.html">Privacy Policy</a></li>
-        <li><a href="/understory/terms.html">Terms of Service</a></li>
-        <li><a href="/understory/legal-notice.html">特定商取引法に基づく表記</a></li>
-      </ul>
+  <div class="wrap foot-simple">
+    <p>&copy; 2026 SP Digital Labs, the name under which Joseph Suzuki Parker publishes apps. Japan.</p>
+    <nav aria-label="Understory links">
+      <a href="/understory/privacy.html">Privacy Policy</a>
+      <a href="/understory/terms.html">Terms of Service</a>
+      <a href="/understory/legal-notice.html">特定商取引法に基づく表記</a>
+      <a href="/#contact">Contact</a>
     </nav>
-    <nav aria-labelledby="foot-studio">
-      <h2 id="foot-studio">Studio</h2>
-      <ul>
-        <li><a href="/#apps">Apps</a></li>
-        <li><a href="/#about">About</a></li>
-        <li><a href="/#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <p class="legal">&copy; 2026 SP Digital Labs, the name under which Joseph Suzuki Parker publishes apps. Japan.</p>
   </div>
 </footer>
 <script src="/email.js"></script>

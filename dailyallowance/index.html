@@ -11,87 +11,94 @@
 <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/fonts/mplus-rounded-1c-800-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/style.css?v=20261105e">
+<link rel="stylesheet" href="/style.css?v=20261105f">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="site-header">
   <div class="wrap bar">
-    <a class="brand" href="/"><img src="/assets/logo.svg" alt="" width="32" height="32">SP Digital Labs</a>
-    <nav class="nav" aria-label="Main">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a class="brand" href="/"><img src="/assets/logo.svg" alt="" width="32" height="32"><span class="brand-text">SP Digital Labs</span></a>
+      <span class="crumb-sep" aria-hidden="true">/</span>
+      <a class="crumb-app" href="/dailyallowance/" aria-current="page"><img src="/assets/apps/dailyallowance.png" alt="" width="28" height="28">Daily Allowance</a>
+    </nav>
+    <nav class="nav" aria-label="Daily Allowance">
       <ul>
-        <li><a href="/#apps">Apps</a></li>
-        <li><a href="/#about">About</a></li>
-        <li><a href="/#contact">Contact</a></li>
+        <li><a href="/dailyallowance/support.html">Support</a></li>
+        <li><a href="/dailyallowance/privacy.html">Privacy</a></li>
+        <li><a href="/dailyallowance/terms.html">Terms</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-<div class="app-bar">
-  <div class="wrap bar">
-    <a class="app-id" href="/dailyallowance/"><img src="/assets/apps/dailyallowance.png" alt="" width="28" height="28">Daily Allowance</a>
-    <nav class="nav" aria-label="Daily Allowance">
-      <ul>
-        <li><a href="/dailyallowance/" aria-current="page">Overview</a></li>
-        <li><a href="/dailyallowance/support.html">Support</a></li>
-        <li><a href="/dailyallowance/privacy.html">Privacy</a></li>
-        <li><a href="/dailyallowance/terms.html">Terms</a></li>
-        <li><a href="/dailyallowance/delete-account.html">Delete account</a></li>
-      </ul>
-    </nav>
+<main id="main" class="wrap app-page">
+<section class="app-hero" aria-labelledby="app-title">
+  <div class="app-hero-id">
+    <img src="/assets/apps/dailyallowance.png" alt="" width="64" height="64">
+    <div><span class="app-hero-name">Daily Allowance</span><span class="label live">Available on iPhone</span></div>
   </div>
-</div>
+  <h1 id="app-title">Know exactly how much you can spend today.</h1>
+  <p class="lede">Daily Allowance turns your income and bills into one simple daily number, then keeps track of the rest: what you spent, what you saved, and how this month compares.</p>
+  <div class="app-actions"><a class="button" href="https://apps.apple.com/app/id6829595254">Get it on the App Store<svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a><span class="label">Free · Premium optional</span></div>
+</section>
 
-<main id="main" class="wrap page">
-
-<h1>Know exactly how much you can spend today.</h1>
-<p class="lede">Daily Allowance turns your income and bills into one simple daily number, and keeps track of the rest.</p>
-
-<p><a class="button" href="https://apps.apple.com/app/id6829595254">Get it on the App Store<svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a></p>
-
-<ul class="shots" aria-label="Screenshots">
-  <li><figure><img src="/assets/screens/dailyallowance-home.jpg?v=2" alt="Daily Allowance home screen showing a Daily Balance of $96.33, a chart of the next few days, and today's entries." width="390" height="848" loading="lazy"><figcaption>Your daily number, at a glance</figcaption></figure></li>
-  <li><figure><img src="/assets/screens/dailyallowance-categories.jpg?v=2" alt="Analytics screen with a category breakdown of October spending: housing, transportation and utilities." width="390" height="848" loading="lazy"><figcaption>Where the money went</figcaption></figure></li>
-  <li><figure><img src="/assets/screens/dailyallowance-heatmap.jpg?v=2" alt="Calendar heatmap of October with each day green or red for under or over the daily allowance." width="390" height="848" loading="lazy"><figcaption>Every day, over or under</figcaption></figure></li>
-  <li><figure><img src="/assets/screens/dailyallowance-insights.jpg?v=2" alt="AI insights report summarizing five days of November spending against October's pace." width="390" height="848" loading="lazy"><figcaption>AI reports in plain language (Premium)</figcaption></figure></li>
+<section aria-label="Main features">
+<ul class="feature-rows">
+  <li class="feature-row">
+    <div class="feature-shot"><img src="/assets/screens/dailyallowance-home.jpg?v=2" alt="Home screen showing a Daily Balance of $96.33, a chart of the coming days, and today's entries." width="390" height="844" loading="lazy"></div>
+    <div class="feature-copy"><h2>One number for today</h2><p>Add your regular income and bills once. Daily Allowance spreads what's left across the month and shows what you can spend today, carrying anything unspent into tomorrow.</p></div>
+  </li>
+  <li class="feature-row">
+    <div class="feature-shot"><img src="/assets/screens/dailyallowance-categories.jpg?v=2" alt="Analytics with a category breakdown of a month's spending." width="390" height="844" loading="lazy"></div>
+    <div class="feature-copy"><h2>See where it went</h2><p>Spending by category, with the change from last month for each, so the big shifts stand out at a glance.</p></div>
+  </li>
+  <li class="feature-row">
+    <div class="feature-shot"><img src="/assets/screens/dailyallowance-heatmap.jpg?v=2" alt="Calendar heatmap with each day green for under the allowance or red for over." width="390" height="844" loading="lazy"></div>
+    <div class="feature-copy"><h2>Every day, over or under</h2><p>A calendar of the month with each day colored by whether you stayed under your allowance, and by how much.</p></div>
+  </li>
+  <li class="feature-row">
+    <div class="feature-shot"><img src="/assets/screens/dailyallowance-insights.jpg?v=2" alt="An AI insights report summarizing a month's spending pace." width="390" height="844" loading="lazy"></div>
+    <div class="feature-copy"><h2>Reports in plain language</h2><p>With Premium, ask questions about your spending or get a short monthly report, written from your totals. It can be wrong, so it says so, and it isn't financial advice.</p></div>
+  </li>
 </ul>
+</section>
 
-<h2>Help and policies</h2>
-<ul>
-  <li><a href="support.html">Support and questions</a></li>
-  <li><a href="privacy.html">Privacy Policy</a></li>
-  <li><a href="terms.html">Terms of Service</a></li>
-  <li><a href="delete-account.html">Delete your account</a></li>
+<section aria-labelledby="more-title">
+  <h2 id="more-title" class="section-title">More</h2>
+<ul class="features">
+  <li><h3>Kitty Bank</h3><p>Move what you didn't spend into savings and watch it build toward your goal.</p></li>
+  <li><h3>Share a budget</h3><p>With Premium, budget together with up to five people on their own phones.</p></li>
+  <li><h3>Home screen widget</h3><p>See your balance and add an entry without opening the app.</p></li>
+  <li><h3>Works offline</h3><p>Entries save on your phone and sync when you're back online.</p></li>
+  <li><h3>Your currency and language</h3><p>Pick your currency, and use the app in English, Japanese and several other languages.</p></li>
+  <li><h3>Export to CSV</h3><p>Back up your entries as a spreadsheet whenever you like.</p></li>
 </ul>
+</section>
 
+<section aria-labelledby="help-title">
+  <h2 id="help-title" class="section-title">Help and policies</h2>
+  <ul class="help-list">
+    <li><a href="/dailyallowance/support.html">Support and questions</a></li>
+    <li><a href="/dailyallowance/privacy.html">Privacy Policy</a></li>
+    <li><a href="/dailyallowance/terms.html">Terms of Service</a></li>
+    <li><a href="/dailyallowance/delete-account.html">Delete your account</a></li>
+    <li>Questions: <a class="email" href="/#contact">torin2582 [at] gmail [dot] com</a></li>
+  </ul>
+</section>
 </main>
 
 <footer class="site-footer">
-  <div class="wrap foot">
-    <div class="foot-about">
-      <a class="brand" href="/"><img src="/assets/logo.svg" alt="" width="24" height="24">SP Digital Labs</a>
-      <p>Daily Allowance is an app by SP Digital Labs.</p>
-    </div>
-    <nav aria-labelledby="foot-da">
-      <h2 id="foot-da">Daily Allowance</h2>
-      <ul>
-        <li><a href="/dailyallowance/support.html">Support</a></li>
-        <li><a href="/dailyallowance/privacy.html">Privacy Policy</a></li>
-        <li><a href="/dailyallowance/terms.html">Terms of Service</a></li>
-        <li><a href="/dailyallowance/delete-account.html">Delete your account</a></li>
-      </ul>
+  <div class="wrap foot-simple">
+    <p>&copy; 2026 SP Digital Labs, the name under which Joseph Suzuki Parker publishes apps. Japan.</p>
+    <nav aria-label="Daily Allowance links">
+      <a href="/dailyallowance/support.html">Support</a>
+      <a href="/dailyallowance/privacy.html">Privacy Policy</a>
+      <a href="/dailyallowance/terms.html">Terms of Service</a>
+      <a href="/dailyallowance/delete-account.html">Delete your account</a>
+      <a href="/#contact">Contact</a>
     </nav>
-    <nav aria-labelledby="foot-studio">
-      <h2 id="foot-studio">Studio</h2>
-      <ul>
-        <li><a href="/#apps">Apps</a></li>
-        <li><a href="/#about">About</a></li>
-        <li><a href="/#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <p class="legal">&copy; 2026 SP Digital Labs, the name under which Joseph Suzuki Parker publishes apps. Japan.</p>
   </div>
 </footer>
 <script src="/email.js"></script>

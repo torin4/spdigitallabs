@@ -621,3 +621,52 @@ a { transition: color 150ms var(--ease-out), text-decoration-color 150ms var(--e
 .foot-simple nav { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-4); }
 .foot-simple a { color: var(--ink); text-decoration: none; }
 .foot-simple a:hover { text-decoration: underline; }
+
+/* App pages: one header. Breadcrumb (studio / app) left, the app's links right. */
+.crumbs { display: flex; align-items: center; gap: var(--space-2); min-width: 0; }
+.crumb-sep { color: var(--muted); font-size: 1.25rem; }
+.crumb-app {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 44px;
+  color: var(--ink);
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.0625rem;
+  white-space: nowrap;
+}
+.crumb-app img { width: 1.75rem; height: 1.75rem; border-radius: var(--radius-tile); box-shadow: 0 0 0 1px var(--line); }
+.crumb-app:hover { color: var(--link); }
+@media (max-width: 40rem) {
+  .crumbs .brand-text { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+}
+
+/* Feature rows: each main feature beside its screenshot, alternating sides. */
+.feature-rows { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--space-7); max-width: 54rem; }
+.feature-row { display: grid; gap: var(--space-5); align-items: center; }
+.feature-shot img {
+  display: block;
+  width: 100%;
+  max-width: 16rem;
+  height: auto;
+  aspect-ratio: 390 / 844;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 1.75rem;
+  box-shadow: 0 0 0 1px var(--line), var(--shadow-lift);
+  background: var(--surface);
+}
+.feature-copy { display: grid; gap: var(--space-3); max-width: 34rem; }
+.feature-copy h2 { font-size: clamp(1.375rem, 1.1rem + 1vw, 1.75rem); }
+.feature-copy p { color: var(--muted); font-size: 1.125rem; line-height: 1.6; }
+@media (min-width: 48rem) {
+  .feature-row { grid-template-columns: 16rem minmax(0, 1fr); gap: var(--space-7); }
+  .feature-row:nth-child(even) { grid-template-columns: minmax(0, 1fr) 16rem; }
+  .feature-row:nth-child(even) .feature-shot { order: 2; }
+}
+@media (max-width: 47.99rem) {
+  .feature-shot img { max-width: 15rem; margin-inline: auto; }
+}
+.section-title-lg { font-size: clamp(1.375rem, 1.1rem + 1vw, 1.75rem); margin-bottom: var(--space-5); }

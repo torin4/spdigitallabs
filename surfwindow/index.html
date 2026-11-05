@@ -11,36 +11,26 @@
 <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/fonts/mplus-rounded-1c-800-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/style.css?v=20261105e">
+<link rel="stylesheet" href="/style.css?v=20261105f">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="site-header">
   <div class="wrap bar">
-    <a class="brand" href="/"><img src="/assets/logo.svg" alt="" width="32" height="32">SP Digital Labs</a>
-    <nav class="nav" aria-label="Main">
-      <ul>
-        <li><a href="/#apps">Apps</a></li>
-        <li><a href="/#about">About</a></li>
-        <li><a href="/#contact">Contact</a></li>
-      </ul>
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a class="brand" href="/"><img src="/assets/logo.svg" alt="" width="32" height="32"><span class="brand-text">SP Digital Labs</span></a>
+      <span class="crumb-sep" aria-hidden="true">/</span>
+      <a class="crumb-app" href="/surfwindow/" aria-current="page"><img src="/assets/apps/surfwindow.png" alt="" width="28" height="28">Surf Window</a>
     </nav>
-  </div>
-</header>
-
-<div class="app-bar">
-  <div class="wrap bar">
-    <a class="app-id" href="/surfwindow/"><img src="/assets/apps/surfwindow.png" alt="" width="28" height="28">Surf Window</a>
     <nav class="nav" aria-label="Surf Window">
       <ul>
-        <li><a href="/surfwindow/" aria-current="page">Overview</a></li>
         <li><a href="/surfwindow/privacy.html">Privacy</a></li>
         <li><a href="/surfwindow/terms.html">Terms</a></li>
       </ul>
     </nav>
   </div>
-</div>
+</header>
 
 <main id="main" class="wrap app-page">
 <section class="app-hero" aria-labelledby="app-title">
@@ -53,24 +43,29 @@
   <div class="app-actions"><a class="button" href="https://surfwindow.jp/">Open Surf Window<svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a><span class="label">No account needed</span></div>
 </section>
 
-<section aria-labelledby="shots-title">
-  <h2 id="shots-title" class="visually-hidden">Screenshots</h2>
-<ul class="shots" aria-label="Screenshots">
-  <li><figure><img src="/assets/screens/surfwindow-home.jpg" alt="Surf Window home screen listing saved breaks with scores: Iioka 79 good, Sunrise 77 good, Kugenuma 58 decent." width="390" height="844" loading="lazy"><figcaption>Your breaks, scored right now</figcaption></figure></li>
-  <li><figure><img src="/assets/screens/surfwindow-break.jpg" alt="Iioka break page with a wind and swell map showing the swell window, a tide curve, and a score of 79 good." width="390" height="844" loading="lazy"><figcaption>Swell window, wind and tide for one break</figcaption></figure></li>
-  <li><figure><img src="/assets/screens/surfwindow-forecast.jpg" alt="Forecast tab with daily wave heights and a seven-day, hour-by-hour chart of swell and period." width="390" height="844" loading="lazy"><figcaption>Seven days, hour by hour</figcaption></figure></li>
+<section aria-label="Main features">
+<ul class="feature-rows">
+  <li class="feature-row">
+    <div class="feature-shot"><img src="/assets/screens/surfwindow-home.jpg" alt="Surf Window home screen listing saved breaks with scores." width="390" height="844" loading="lazy"></div>
+    <div class="feature-copy"><h2>A score for every break</h2><p>Surf Window scores live swell, wind and tide against each beach's own profile, so every hour gets a number out of 100 and a plain sentence saying what's helping and what's holding it back.</p></div>
+  </li>
+  <li class="feature-row">
+    <div class="feature-shot"><img src="/assets/screens/surfwindow-break.jpg" alt="A break page with a wind and swell map, the swell window and a tide curve." width="390" height="844" loading="lazy"></div>
+    <div class="feature-copy"><h2>See the swell window</h2><p>A live wind and swell map shows which directions each break can actually receive, so you can see why one beach works and the next one doesn't.</p></div>
+  </li>
+  <li class="feature-row">
+    <div class="feature-shot"><img src="/assets/screens/surfwindow-forecast.jpg" alt="Forecast tab with daily wave heights and a seven-day chart." width="390" height="844" loading="lazy"></div>
+    <div class="feature-copy"><h2>Seven days, hour by hour</h2><p>Swell at the beach, period, wind, tide and wave power on one timeline, with the best windows of the week picked out for you.</p></div>
+  </li>
 </ul>
 </section>
 
-<section aria-labelledby="features-title">
-  <h2 id="features-title" class="section-title">What it does</h2>
+<section aria-labelledby="more-title">
+  <h2 id="more-title" class="section-title">More</h2>
 <ul class="features">
-  <li><h3>A score, not just data</h3><p>Each hour gets a score out of 100 for that beach, based on its own swell window, the wind it likes and the tide it works on.</p></li>
-  <li><h3>The reason behind it</h3><p>Every score comes with a plain sentence saying what's helping and what's holding the session back: size, wind or tide.</p></li>
-  <li><h3>Seven days, hour by hour</h3><p>Swell at the beach, period, wind, tide and wave power on one timeline, with the best windows of the week picked out.</p></li>
-  <li><h3>See the swell window</h3><p>A live wind and swell map shows which directions a break can actually receive, so you can see why one beach works and the next doesn't.</p></li>
-  <li><h3>Reports from the sand</h3><p>Surfers at the beach can report what it's really doing in three taps. Reports appear beside the forecast, under a handle, never an email.</p></li>
-  <li><h3>Honest about danger</h3><p>Hours that are only for experts are flagged, and every break has notes on its hazards. Your location stays on your phone.</p></li>
+  <li><h3>Reports from the sand</h3><p>Surfers at the beach report what it's really doing in three taps, shown beside the forecast.</p></li>
+  <li><h3>Honest about danger</h3><p>Hours for experts only are flagged, and every break has notes on its hazards.</p></li>
+  <li><h3>Japanese and English</h3><p>Every screen is in both languages. No account needed, and your location stays on your phone.</p></li>
 </ul>
 </section>
 
@@ -86,28 +81,15 @@
 </main>
 
 <footer class="site-footer">
-  <div class="wrap foot">
-    <div class="foot-about">
-      <a class="brand" href="/"><img src="/assets/logo.svg" alt="" width="24" height="24">SP Digital Labs</a>
-      <p>Surf Window is an app by SP Digital Labs.</p>
-    </div>
-    <nav aria-labelledby="foot-app">
-      <h2 id="foot-app">Surf Window</h2>
-      <ul>
-        <li><a href="/surfwindow/">Overview</a></li>
-        <li><a href="/surfwindow/privacy.html">Privacy Policy</a></li>
-        <li><a href="/surfwindow/terms.html">Terms of Service</a></li>
-      </ul>
+  <div class="wrap foot-simple">
+    <p>&copy; 2026 SP Digital Labs, the name under which Joseph Suzuki Parker publishes apps. Japan.</p>
+    <nav aria-label="Surf Window links">
+      <a href="/surfwindow/privacy.html">Privacy Policy</a>
+      <a href="/surfwindow/privacy-ja.html">プライバシーポリシー</a>
+      <a href="/surfwindow/terms.html">Terms of Service</a>
+      <a href="/surfwindow/terms-ja.html">利用規約</a>
+      <a href="/#contact">Contact</a>
     </nav>
-    <nav aria-labelledby="foot-studio">
-      <h2 id="foot-studio">Studio</h2>
-      <ul>
-        <li><a href="/#apps">Apps</a></li>
-        <li><a href="/#about">About</a></li>
-        <li><a href="/#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <p class="legal">&copy; 2026 SP Digital Labs, the name under which Joseph Suzuki Parker publishes apps. Japan.</p>
   </div>
 </footer>
 <script src="/email.js"></script>

@@ -11,38 +11,27 @@
 <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/fonts/mplus-rounded-1c-800-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/style.css?v=20261105e">
+<link rel="stylesheet" href="/style.css?v=20261105f">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="site-header">
   <div class="wrap bar">
-    <a class="brand" href="/"><img src="/assets/logo.svg" alt="" width="32" height="32">SP Digital Labs</a>
-    <nav class="nav" aria-label="Main">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a class="brand" href="/"><img src="/assets/logo.svg" alt="" width="32" height="32"><span class="brand-text">SP Digital Labs</span></a>
+      <span class="crumb-sep" aria-hidden="true">/</span>
+      <a class="crumb-app" href="/dailyallowance/"><img src="/assets/apps/dailyallowance.png" alt="" width="28" height="28">Daily Allowance</a>
+    </nav>
+    <nav class="nav" aria-label="Daily Allowance">
       <ul>
-        <li><a href="/#apps">Apps</a></li>
-        <li><a href="/#about">About</a></li>
-        <li><a href="/#contact">Contact</a></li>
+        <li><a href="/dailyallowance/support.html" aria-current="page">Support</a></li>
+        <li><a href="/dailyallowance/privacy.html">Privacy</a></li>
+        <li><a href="/dailyallowance/terms.html">Terms</a></li>
       </ul>
     </nav>
   </div>
 </header>
-
-<div class="app-bar">
-  <div class="wrap bar">
-    <a class="app-id" href="/dailyallowance/"><img src="/assets/apps/dailyallowance.png" alt="" width="28" height="28">Daily Allowance</a>
-    <nav class="nav" aria-label="Daily Allowance">
-      <ul>
-        <li><a href="/dailyallowance/">Overview</a></li>
-        <li><a href="/dailyallowance/support.html" aria-current="page">Support</a></li>
-        <li><a href="/dailyallowance/privacy.html">Privacy</a></li>
-        <li><a href="/dailyallowance/terms.html">Terms</a></li>
-        <li><a href="/dailyallowance/delete-account.html">Delete account</a></li>
-      </ul>
-    </nav>
-  </div>
-</div>
 
 <main id="main" class="wrap page">
 
@@ -110,29 +99,15 @@
 </main>
 
 <footer class="site-footer">
-  <div class="wrap foot">
-    <div class="foot-about">
-      <a class="brand" href="/"><img src="/assets/logo.svg" alt="" width="24" height="24">SP Digital Labs</a>
-      <p>Daily Allowance is an app by SP Digital Labs.</p>
-    </div>
-    <nav aria-labelledby="foot-da">
-      <h2 id="foot-da">Daily Allowance</h2>
-      <ul>
-        <li><a href="/dailyallowance/support.html">Support</a></li>
-        <li><a href="/dailyallowance/privacy.html">Privacy Policy</a></li>
-        <li><a href="/dailyallowance/terms.html">Terms of Service</a></li>
-        <li><a href="/dailyallowance/delete-account.html">Delete your account</a></li>
-      </ul>
+  <div class="wrap foot-simple">
+    <p>&copy; 2026 SP Digital Labs, the name under which Joseph Suzuki Parker publishes apps. Japan.</p>
+    <nav aria-label="Daily Allowance links">
+      <a href="/dailyallowance/support.html">Support</a>
+      <a href="/dailyallowance/privacy.html">Privacy Policy</a>
+      <a href="/dailyallowance/terms.html">Terms of Service</a>
+      <a href="/dailyallowance/delete-account.html">Delete your account</a>
+      <a href="/#contact">Contact</a>
     </nav>
-    <nav aria-labelledby="foot-studio">
-      <h2 id="foot-studio">Studio</h2>
-      <ul>
-        <li><a href="/#apps">Apps</a></li>
-        <li><a href="/#about">About</a></li>
-        <li><a href="/#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <p class="legal">&copy; 2026 SP Digital Labs, the name under which Joseph Suzuki Parker publishes apps. Japan.</p>
   </div>
 </footer>
 <script src="/email.js"></script>
