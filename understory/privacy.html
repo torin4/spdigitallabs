@@ -70,14 +70,14 @@
 </ul>
 
 <h3>The companion and other AI features (Premium)</h3>
-<p>Premium's AI features use Google's Gemini models. When they run, the text needed is decrypted in your browser and sent through our server to Google over an encrypted connection:</p>
+<p>Premium's AI features use Google's Gemini models. <strong>Nothing is sent until you agree.</strong> The first time a Premium AI feature would run, the app explains what is sent and where, and asks for your consent; we record when you agreed. When they run, the text needed is decrypted in your browser and sent through our server to Google over an encrypted connection:</p>
 <ul>
   <li><strong>When you finish an entry</strong>, its full text is sent to read its mood and, if the companion remembers is on, to update the companion's memory. This happens automatically when the companion is on.</li>
   <li><strong>When you ask the companion</strong> to reflect, tend, glean, seek or chat, the text you're working on is sent, with the conversation so far, the companion's memory, and up to three short passages from your earlier entries that your device picks as related.</li>
   <li><strong>Spelling check</strong> sends the text being checked.</li>
   <li><strong>Voice-to-text</strong> records audio in your browser and sends it to be transcribed. The audio is not saved.</li>
 </ul>
-<p>We use Google's paid Gemini API service. Under its terms, Google does not use what we send to improve its products or train its models; it may keep it for a limited time to detect abuse, as its terms describe. Our server passes these requests on and returns the answers to you. It does not store your text or audio. Entries you mark as windthrow are never added to the companion's memory. If you turn the companion off in Preferences, nothing about your entries is sent to the AI service.</p>
+<p>We use Google's paid Gemini API service. Under its terms, Google does not use what we send to improve its products or train its models; it may keep it for a limited time to detect abuse, as its terms describe. Our server passes these requests on and returns the answers to you. It does not store your text or audio. Entries you mark as windthrow are never added to the companion's memory. If you turn the companion off in Preferences, nothing about your entries is sent to the AI service, and your consent is withdrawn; turning it back on asks again.</p>
 <p>We also keep a count of how many AI requests you make each month, to apply the monthly limit.</p>
 
 <h3>Sharing links</h3>
@@ -110,6 +110,10 @@
 </ul>
 <p>We don't use your information for advertising, and we don't sell it.</p>
 
+<h2>Sensitive information and transfers abroad</h2>
+<p>What you write may include sensitive personal information, such as your health or your religious beliefs, and your settings may show the tradition you'd like the companion to draw from. Under Japan's Act on the Protection of Personal Information, we only send this to the AI service, and only store mood readings, with your explicit consent, which you give in the app and can withdraw at any time.</p>
+<p>Your data is processed by service providers in the United States (Google, Vercel and Stripe). The United States has no comprehensive federal privacy law equivalent to Japan's. These providers commit to protecting data under their own policies and contracts, linked below. By agreeing in the app, you consent to this transfer.</p>
+
 <h2>Where it is stored</h2>
 <p>Your data is stored in Google Firebase (Authentication and Cloud Firestore). The app and its server run on Vercel. These services may store and process data in the United States or other countries. Data is encrypted in transit and at rest, and your journal text is also encrypted with your own key as described above.</p>
 
@@ -133,7 +137,7 @@
 
 <h2>Your choices and rights</h2>
 <ul>
-  <li>Turn the companion, its memory, and voice-to-text on or off in Preferences.</li>
+  <li>Turn the companion, its memory, and voice-to-text on or off in Preferences. Turning the companion off withdraws your consent to the AI service.</li>
   <li>Delete an entry from your journal; this also deletes its mood reading.</li>
   <li>Read, edit or clear the companion's memory in Preferences.</li>
   <li>Save entries as a PDF from the app.</li>
