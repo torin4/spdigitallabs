@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>プライバシーポリシー - Surf Window</title>
+<meta name="description" content="Surf Window が取得する情報、その利用目的と提供先、お客様が選べること。">
+<meta name="theme-color" content="#f7f8fa" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1117" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://spdigitallabs.app/surfwindow/privacy-ja.html">
+<link rel="icon" href="/assets/sp-mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/mplus-rounded-1c-800-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="/"><img src="/assets/sp-mark.svg" alt="" width="32" height="32">SP Digital Labs</a>
+    <nav class="nav" aria-label="Main">
+      <ul>
+        <li><a href="/#apps">Apps</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="app-bar">
+  <div class="wrap bar">
+    <a class="app-id" href="/surfwindow/"><img src="/assets/apps/surfwindow.png" alt="" width="28" height="28">Surf Window</a>
+    <nav class="nav" aria-label="Surf Window">
+      <ul>
+        <li><a href="/surfwindow/">Overview</a></li>
+        <li><a href="/surfwindow/privacy.html">Privacy</a></li>
+        <li><a href="/surfwindow/terms.html">Terms</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<main id="main" class="wrap page">
+<h1>プライバシーポリシー</h1>
+<p class="updated">最終更新日：2026年11月5日 · <a href="/surfwindow/privacy.html" lang="en" hreflang="en">English</a></p>
+
+<p>Surf Window（surfwindow.jp）は、湘南・千葉のサーフポイントの波予報ウェブアプリです。日本の個人開発者 Joseph Suzuki Parker が屋号「SP Digital Labs」で提供しています（以下「当方」）。本ポリシーでは、Surf Window が取得する情報、その利用目的、提供先、およびお客様が選べることを説明します。</p>
+
+<div class="card">
+  <p><strong>要点：</strong>Surf Window はアカウントなしで使えます。Googleでログインすると、お気に入りのポイントと、お客様が決めたハンドル（表示名）を保存します。投稿した波情報はハンドルとともに公開されます。現在地は端末内でのみ使い、距離の表示と、報告の前に浜にいることの確認だけに利用します。アプリの使われ方の把握と不具合の修正のため、PostHog による分析（セッション録画を含む）を利用しています。広告は表示せず、データを販売することもありません。</p>
+</div>
+
+<h2>取得する情報</h2>
+
+<h3>ログインした場合</h3>
+<ul>
+  <li>ログインは任意で、Googleログインを使います。Firebase Authentication から<strong>ユーザーID</strong>を受け取ります。メールアドレスはアプリ内でお客様に表示されますが、当方のデータベースには保存しません。</li>
+  <li>お気に入りに入れたポイント、確認済みのポイント、および<strong>ハンドル</strong>（Googleの名前の最初の語を初期値とする、変更可能な短い公開名）を保存します。</li>
+</ul>
+
+<h3>波情報の報告</h3>
+<ul>
+  <li>報告を投稿すると、コンディションの評価、波のサイズ、タグ（グラッシー、混雑など最大4つ）、任意の短いメモ、ポイントと時刻、ハンドル、ユーザーIDを保存します。</li>
+  <li><strong>報告は公開されます。</strong>Surf Window の利用者は誰でも、ハンドル、評価、メモを見ることができます。報告にはユーザーIDも記録されます。メールアドレスが表示されることはありません。</li>
+  <li>報告は1つのポイントにつき1時間に1件までで、自分の報告はアプリ内でいつでも削除できます。</li>
+</ul>
+
+<h3>提案</h3>
+<p>修正や追加の提案を送ると、その内容、対象のポイント、ハンドル、ユーザーIDを保存します。内容を読めるのは当方のみです。</p>
+
+<h3>現在地</h3>
+<ul>
+  <li>現在地は、お客様が使用をタップしたときだけ取得します。端末内で、各ポイントまでの距離の表示と、報告前に浜の近くにいるかの確認に使います。</li>
+  <li>現在地は保存せず、当方、分析サービス、予報サービスのいずれにも送信しません。報告に現在地や距離は含まれず、浜の近くにいたかどうかの確認も端末内で行います。</li>
+  <li>現在地ボタンをもう一度タップすると、使用をやめられます。</li>
+</ul>
+
+<h3>分析とセッション録画</h3>
+<ul>
+  <li>Surf Window の使われ方の把握と不具合の発見のため、<strong>PostHog</strong> を利用しています。閲覧したページ、ポイントを開く・ログインする・報告を投稿するなどの操作（ハンドルやメモの内容は含みません）、アプリで起きたエラーを記録します。</li>
+  <li>PostHog は<strong>セッション録画</strong>（画面の表示をもとにアプリの使われ方を再現したもの）も作成します。入力した文字はすべて隠され、メールアドレス、地図上の現在地、各ポイントまでの距離、距離順に並んだ一覧は録画に含まれません。予報や公開されている報告など、その他の画面上の文字は録画に含まれることがあります。</li>
+  <li>ログインしている場合、PostHog は操作をユーザーIDに結び付けます（名前やメールアドレスではありません）。ログインしていない場合は、ブラウザに保存されたランダムな識別子を使います。</li>
+  <li>座標の情報は、分析データの送信前に取り除いています。</li>
+</ul>
+
+<h3>端末とブラウザ</h3>
+<ul>
+  <li>お気に入りと確認済みのポイントはブラウザに保存され、ログインなし・オフラインでも使えます。</li>
+  <li>すばやく表示しホーム画面に追加できるよう、アプリ本体とフォントをブラウザに保存します。</li>
+  <li>予報は <strong>Open-Meteo</strong> から、風の地図は <strong>Windy</strong> の埋め込み地図から、フォントは <strong>Google Fonts</strong> から、お客様のブラウザが直接取得します。そのため、これらのサービスはお客様のIPアドレスを受け取ります。伝えるのはポイントの位置だけで、お客様の現在地は伝えません。</li>
+</ul>
+
+<h2>利用目的</h2>
+<ul>
+  <li>Surf Window の提供（予報の表示、お気に入りの端末間同期、波情報の表示）</li>
+  <li>報告が浜にいる人からのものであることの確認</li>
+  <li>アプリの使われ方の把握、不具合の修正、改善</li>
+  <li>いただいた提案の確認と対応</li>
+</ul>
+<p>お客様の情報を広告に使うことはなく、販売することもありません。</p>
+
+<h2>外国にある第三者への提供</h2>
+<p>当方は、次の事業者に個人データの取扱いを委託しており、データはアメリカ合衆国その他の国で保存・処理されることがあります。</p>
+<ul>
+  <li><strong>Google LLC</strong>（アメリカ合衆国）：Firebase（アプリの配信、アカウント、報告、提案の保存）、Googleログイン、Google Fonts</li>
+  <li><strong>PostHog, Inc.</strong>（アメリカ合衆国）：分析とセッション録画</li>
+</ul>
+<p>アメリカ合衆国には、日本の個人情報保護法に相当する包括的な連邦の個人情報保護法はなく、州ごとの法律や分野ごとの規制があります。上記の事業者は、それぞれのプライバシーポリシーと契約に基づき、通信時と保存時の暗号化などの安全管理措置を講じています。</p>
+<ul>
+  <li><a href="https://firebase.google.com/support/privacy">Firebase のプライバシー</a> · <a href="https://policies.google.com/privacy">Google プライバシーポリシー</a></li>
+  <li><a href="https://posthog.com/privacy">PostHog プライバシーポリシー</a></li>
+  <li><a href="https://open-meteo.com/en/terms">Open-Meteo 利用規約</a> · <a href="https://account.windy.com/agreements/windy-privacy-policy">Windy プライバシーポリシー</a></li>
+</ul>
+<p>このほか、投稿した報告はハンドルとともにすべての利用者に公開されます。法令に基づく場合は、情報を開示することがあります。</p>
+
+<h2>保存期間</h2>
+<ul>
+  <li>お気に入りとハンドル：アカウントを削除するまで</li>
+  <li>報告：アプリ内では3時間表示され、お客様または当方が削除するまで保存</li>
+  <li>提案：対応が済むまで、またはアカウントを削除するまで</li>
+  <li>分析データとセッション録画：PostHog の契約プランが定める期間</li>
+</ul>
+
+<h2>お客様が選べること・開示等の請求</h2>
+<ul>
+  <li>ログインせずに、また現在地を使わずに Surf Window を使えます。</li>
+  <li>ハンドルの変更や、自分の報告の削除はアプリ内でできます。</li>
+  <li>ログアウトすると、そのブラウザからお気に入りとハンドルが消去されます。</li>
+  <li>ログイン中にアプリ下部の<strong>「アカウント削除」</strong>から、アカウント、お気に入り、ハンドル、投稿した報告、送った提案をすべて削除できます。ログインできない場合はメールでご連絡ください。30日以内に削除してご連絡します。</li>
+  <li>保有個人データの利用目的の通知、開示、訂正・追加・削除、利用停止・消去、第三者提供の停止のご請求は、下記のメールアドレスで受け付けます。ご本人確認のうえ、遅滞なく対応します。手数料はいただきません。</li>
+</ul>
+
+<h2>お子さまの情報</h2>
+<p>Surf Window は13歳未満のお子さまを対象としておらず、その情報を意図して取得することはありません。お子さまが情報を提供したと思われる場合はご連絡ください。削除します。</p>
+
+<h2>事業者情報</h2>
+<ul>
+  <li>事業者：Joseph Suzuki Parker（屋号：SP Digital Labs）</li>
+  <li>住所：ご請求があった場合、遅滞なく開示します。</li>
+</ul>
+
+<h2>本ポリシーの変更</h2>
+<p>本ポリシーを変更する場合は、冒頭の日付を更新します。</p>
+
+<h2>お問い合わせ</h2>
+<p>個人情報に関するご質問・ご請求：<a class="email" href="/#contact">torin2582 [at] gmail [dot] com</a></p>
+<p>日本語版と英語版の内容に相違がある場合は、日本語版が優先します。</p>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap foot">
+    <div class="foot-about">
+      <a class="brand" href="/"><img src="/assets/sp-mark.svg" alt="" width="24" height="24">SP Digital Labs</a>
+      <p>Surf Window is an app by SP Digital Labs.</p>
+    </div>
+    <nav aria-labelledby="foot-app">
+      <h2 id="foot-app">Surf Window</h2>
+      <ul>
+        <li><a href="/surfwindow/">Overview</a></li>
+        <li><a href="/surfwindow/privacy.html">Privacy Policy</a></li>
+        <li><a href="/surfwindow/terms.html">Terms of Service</a></li>
+      </ul>
+    </nav>
+    <nav aria-labelledby="foot-studio">
+      <h2 id="foot-studio">Studio</h2>
+      <ul>
+        <li><a href="/#apps">Apps</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <p class="legal">&copy; 2026 SP Digital Labs, the name under which Joseph Suzuki Parker publishes apps. Japan.</p>
+  </div>
+</footer>
+<script src="/email.js"></script>
+</body>
+</html>
