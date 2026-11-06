@@ -5,7 +5,7 @@ PRIVACY = f'''
 <h1>Privacy Policy</h1>
 <p class="updated">Last updated: November 5, 2026</p>
 
-<p>Understory is a private journaling web app at understory-journal.vercel.app, made by SP Digital Labs, the name under which Joseph Suzuki Parker, an independent developer based in Japan, publishes apps ("we", "us"). This policy explains what information Understory collects, why, who it is shared with, and the choices you have.</p>
+<p>Understory is a private journaling web app at understoryjournal.app, made by SP Digital Labs, the name under which Joseph Suzuki Parker, an independent developer based in Japan, publishes apps ("we", "us"). This policy explains what information Understory collects, why, who it is shared with, and the choices you have.</p>
 
 <div class="card">
   <p><strong>The short version:</strong> your journal entries are encrypted in your browser with a key only you hold, so we can't read them. If you use Premium and keep the companion on, the text of an entry is sent, unencrypted and only for that moment, to Google's Gemini AI service to write the companion's replies; our server doesn't keep a copy, and Google doesn't use it to train its models. A few results, such as an entry's mood and themes, are stored without that encryption so your growth rings can be drawn. We don't show ads, don't use analytics, and don't sell your data. Payments go through Stripe, and we never see your card.</p>
@@ -191,7 +191,7 @@ TERMS = f'''
 OVERVIEW = hero("understory", "Web app",
     "A quiet journal for the slow work beneath the surface.",
     "Understory is a private journal for grief, change, ordinary days, and everything that doesn't resolve on a schedule. Your entries are encrypted in your browser with a key only you hold. With Premium, a gentle companion helps you reflect, and every entry you keep grows a ring.",
-    '<a class=\"button\" href=\"https://understory-journal.vercel.app/\">Open Understory' + EXTERNAL + '</a><span class="label">Free to start · Works in any browser</span>') + f"""
+    '<a class=\"button\" href=\"https://understoryjournal.app/\">Open Understory' + EXTERNAL + '</a><span class="label">Free to start · Works in any browser</span>') + f"""
 
 <section aria-label="Main features">
 """ + feature_rows([
