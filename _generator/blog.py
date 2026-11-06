@@ -6,13 +6,25 @@ import re
 from datetime import date
 
 from chrome import head_tags
-from icons import ARROW_RIGHT
+from icons import ARROW_RIGHT, EXTERNAL
 from blog_posts import POSTS
 
 SITE = "https://spdigitallabs.app"
 AUTHOR = {"@type": "Person", "name": "Joseph Suzuki-Parker", "url": SITE + "/"}
 BLOG_TITLE = "Blog"
-BLOG_DESCRIPTION = "Plain, practical guides to everyday money: budgeting by the day, irregular income, saving for a goal, sharing a budget, and what to do when a month goes sideways."
+BLOG_DESCRIPTION = "Guides from every SP Digital Labs app: everyday money, reading Genesis in its history, journaling, and surf in Shonan and Chiba."
+
+# The hub lists every app's posts. Daily Allowance posts live here; the others
+# live on their app's own site and are listed from external_posts.json
+# (refresh it with fetch_blog_posts.py).
+APP_GROUPS = [
+    ("dailyallowance", "Daily Allowance", "/dailyallowance/", "Budgeting by the day", None),
+    ("strata", "Strata", "/strata/", "Reading Genesis with its history", "stratabible.app"),
+    ("understory", "Understory", "/understory/", "Journaling, privately", "understoryjournal.app"),
+    ("surfwindow", "Surf Window", "/surfwindow/", "Surf guides for Shonan and Chiba, in Japanese", "surfwindow.jp"),
+]
+with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "external_posts.json")) as _f:
+    EXTERNAL_POSTS = json.load(_f)
 
 
 def nice_date(iso):
@@ -136,33 +148,70 @@ def post_page(post, others):
     return path, document(title, html.escape(post["description"]), path, body, "article", extra)
 
 
-def index_page(posts):
-    path = "/blog/"
-    cards = "\n".join(f'''  <li>
+def local_card(p):
+    return f'''  <li>
     <a class="post-card" href="/blog/{p["slug"]}.html">
       <span class="post-card-meta"><time datetime="{p["date"]}">{nice_date(p["date"])}</time> · {minutes(p["body"])} min read</span>
       <span class="post-card-title">{p["title"]}</span>
       <span class="post-card-desc">{p["description"]}</span>
       <span class="post-card-go">Read{ARROW_RIGHT}</span>
     </a>
-  </li>''' for p in posts)
+  </li>'''
+
+
+def external_card(p, site):
+    lang = f' lang="{p["lang"]}"' if p.get("lang", "en") != "en" else ""
+    read = "Read in Japanese on" if p.get("lang") == "ja" else "Read on"
+    return f'''  <li>
+    <a class="post-card" href="{html.escape(p["url"])}" target="_blank" rel="noopener">
+      <span class="post-card-meta">{site}</span>
+      <span class="post-card-title"{lang}>{html.escape(p["title"])}</span>
+      <span class="post-card-desc"{lang}>{html.escape(p["description"])}</span>
+      <span class="post-card-go">{read} {site}{EXTERNAL}</span>
+    </a>
+  </li>'''
+
+
+def index_page(posts):
+    path = "/blog/"
+    jump = []
+    groups = []
+    for slug, name, page, line, site in APP_GROUPS:
+        cards = ([local_card(p) for p in posts] if site is None else
+                 [external_card(p, site) for p in EXTERNAL_POSTS if p["app"] == slug])
+        if not cards:
+            continue
+        jump.append(f'<a href="#{slug}">{name}</a>')
+        groups.append(f'''<section class="blog-group" id="{slug}" aria-labelledby="{slug}-title">
+  <header class="blog-group-head">
+    <img src="/assets/apps/{slug}.png" alt="" width="48" height="48">
+    <div>
+      <h2 id="{slug}-title"><a href="{page}">{name}</a></h2>
+      <p>{line}</p>
+    </div>
+  </header>
+  <ul class="post-list">
+{chr(10).join(cards)}
+  </ul>
+</section>''')
     blog_ld = {
         "@context": "https://schema.org", "@type": "Blog", "name": "SP Digital Labs Blog",
         "description": BLOG_DESCRIPTION, "url": SITE + path, "inLanguage": "en", "author": AUTHOR,
         "blogPost": [{"@type": "BlogPosting", "headline": p["title"], "datePublished": p["date"],
-                      "url": f"{SITE}/blog/{p['slug']}.html"} for p in posts],
+                      "url": f"{SITE}/blog/{p['slug']}.html"} for p in posts]
+                    + [{"@type": "BlogPosting", "headline": p["title"], "url": p["url"],
+                        **({"datePublished": p["date"]} if p["date"] else {})} for p in EXTERNAL_POSTS],
     }
     extra = ld(blog_ld) + ld(crumbs_ld([("Home", "/"), ("Blog", path)]))
     body = f'''<section class="blog-intro" aria-labelledby="blog-title">
   <h1 id="blog-title">Blog</h1>
-  <p class="lede">Plain, practical guides to everyday money: budgeting by the day, irregular income, saving for a goal, sharing a budget, and what to do when a month goes sideways. Written by Joseph Suzuki-Parker.</p>
+  <p class="lede">Guides and notes from every app: everyday money, reading Genesis with its history, journaling, and surfing in Shonan and Chiba. Written by Joseph Suzuki&#8209;Parker.</p>
+  <nav class="blog-jump" aria-label="Jump to an app">{"".join(jump)}</nav>
 </section>
 
-<section class="blog-list" aria-label="Posts">
-<ul class="post-list">
-{cards}
-</ul>
-</section>'''
+<div class="blog-list">
+{(chr(10)+chr(10)).join(groups)}
+</div>'''
     return path, document("Blog - SP Digital Labs", BLOG_DESCRIPTION, path, body, "website", extra)
 
 

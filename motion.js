@@ -12,7 +12,7 @@
     ".home-art", ".home-intro-text > *", ".soon", ".home-contact > *",
     "main > .wrap > section > *", ".app-page > section > *", ".app-page > header > *",
     ".page > *", ".post-head > *", ".post-cta", ".post-body > *", ".post-more",
-    ".blog-intro > *", ".about-side > *",
+    ".blog-intro > *", ".about-side > *", ".blog-group-head",
   ];
   var ITEMS = [".showcase > li", ".feature-row", ".features > *", ".plans > *", ".post-list > li", ".help-list > li"];
 

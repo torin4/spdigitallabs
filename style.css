@@ -816,3 +816,17 @@ a { transition: color 150ms var(--ease-out), text-decoration-color 150ms var(--e
   .motion .site-header, .motion .app-bar { animation: rv-fade 500ms var(--ease-out) both; }
   @keyframes rv-fade { from { opacity: 0; } to { opacity: 1; } }
 }
+
+/* Blog hub: one group per app */
+.blog-jump { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-4); }
+.blog-jump a { padding: 0.35rem 0.85rem; border-radius: 999px; background: var(--surface); color: var(--ink); text-decoration: none; font-weight: 600; font-size: 0.9375rem; }
+.blog-jump a:hover, .blog-jump a:focus-visible { color: var(--link); }
+.blog-group { scroll-margin-top: var(--space-5); }
+.blog-group + .blog-group { margin-top: var(--space-7); }
+.blog-group-head { display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-4); max-width: var(--text); }
+.blog-group-head img { width: 3rem; height: 3rem; border-radius: var(--radius-tile); box-shadow: 0 0 0 1px var(--line); flex: none; }
+.blog-group-head h2 { font-size: 1.5rem; line-height: 1.2; }
+.blog-group-head h2 a { color: inherit; text-decoration: none; }
+.blog-group-head h2 a:hover { color: var(--link); }
+.blog-group-head p { color: var(--muted); }
+.post-card-go .icon { width: 1em; height: 1em; }
