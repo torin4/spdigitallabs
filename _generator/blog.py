@@ -12,7 +12,7 @@ from blog_posts import POSTS
 SITE = "https://spdigitallabs.app"
 AUTHOR = {"@type": "Person", "name": "Joseph Suzuki-Parker", "url": SITE + "/"}
 BLOG_TITLE = "Blog"
-BLOG_DESCRIPTION = "Practical notes on everyday money and the apps from SP Digital Labs."
+BLOG_DESCRIPTION = "Plain, practical guides to everyday money: budgeting by the day, irregular income, saving for a goal, sharing a budget, and what to do when a month goes sideways."
 
 
 def nice_date(iso):
@@ -154,7 +154,7 @@ def index_page(posts):
     extra = ld(blog_ld) + ld(crumbs_ld([("Home", "/"), ("Blog", path)]))
     body = f'''<section class="blog-intro" aria-labelledby="blog-title">
   <h1 id="blog-title">Blog</h1>
-  <p class="lede">Practical notes on everyday money, starting with how to spend by the day. By Joseph Suzuki-Parker, who makes the apps at SP Digital Labs.</p>
+  <p class="lede">Plain, practical guides to everyday money: budgeting by the day, irregular income, saving for a goal, sharing a budget, and what to do when a month goes sideways. Written by Joseph Suzuki-Parker.</p>
 </section>
 
 <section class="blog-list" aria-label="Posts">

@@ -56,7 +56,7 @@ POSTS = [
 
 <h2>Who it suits less</h2>
 <ul>
-  <li><strong>People with very uneven income.</strong> Any fixed daily figure is a guess when you don't know next month's pay. It can still work if you base it on a cautious income figure and revisit it often.</li>
+  <li><strong>People with very uneven income.</strong> Any fixed daily figure is a guess when you don't know next month's pay. It can still work if you base it on a cautious income figure and revisit it often; <a href="/blog/budget-on-irregular-income.html">How to budget on an irregular or freelance income</a> shows how.</li>
   <li><strong>People whose flexible spending is mostly a few large, planned purchases.</strong> A $600 flight looks alarming against a $40 day. Rolling over copes with ordinary lumps, but big one-offs are better planned separately, as a bill spread over several months or paid from savings.</li>
   <li><strong>People who already budget by envelopes or categories and are happy with it.</strong> A daily allowance is another view of the same money. If your current system works, keep it.</li>
 </ul>
@@ -88,7 +88,7 @@ POSTS = [
   <li>Every two weeks: pay × 26 ÷ 12.</li>
 </ul>
 <p>Avoid multiplying weekly pay by four. A month is a little over four weeks, so × 4 leaves out four weeks of pay over a year, and your budget ends up tighter than it needs to be.</p>
-<p>If your income changes from month to month, use the lowest of your last few months rather than the average. Being pleasantly surprised is better than coming up short.</p>
+<p>If your income changes from month to month, use the lowest of your last few months rather than the average. Being pleasantly surprised is better than coming up short. <a href="/blog/budget-on-irregular-income.html">How to budget on an irregular or freelance income</a> covers this in more depth, with a buffer for the lean months.</p>
 
 <h2>Step 2: List the bills that come round on a schedule</h2>
 <p>Go through your statements and pick out everything that leaves on a schedule. For bills that vary, like electricity, use an average of the last few months.</p>
@@ -206,7 +206,7 @@ POSTS = [
 <p>Be honest with yourself about whether you'll keep it up. A day of strict denial followed by a "reward" is how a $70 problem becomes a $150 one. If quiet days tend to end that way for you, spread it out instead.</p>
 
 <h3>Cover it from savings</h3>
-<p>If the overspend was for something you're glad you did and you have savings set aside, moving money back to cover it is a reasonable choice. Just be clear with yourself that this is spending your savings. If it happens every month, the savings figure in your plan is more than you can actually afford.</p>
+<p>If the overspend was for something you're glad you did and you have savings set aside, moving money back to cover it is a reasonable choice. Just be clear with yourself that this is spending your savings. If it happens every month, the savings figure in your plan is more than you can actually afford. <a href="/blog/save-for-a-goal.html">How to save for a goal a little each day</a> covers setting that figure.</p>
 
 <p>What doesn't work is ignoring it. When unspent money rolls over, so does the shortfall. It stays in your balance until you make it up, whether you look at it or not.</p>
 
@@ -233,6 +233,177 @@ POSTS = [
   <li><strong>The calendar shows the pattern.</strong> In Analytics, a calendar colors each day of the month by whether you stayed under your allowance, so a run of red days is easy to spot.</li>
 </ul>
 <p>One bad day out of thirty, recorded honestly and made up over a week, barely changes the month.</p>
+""",
+},
+{
+"slug": "budget-on-irregular-income",
+"date": "2026-11-06",
+"title": "How to budget on an irregular or freelance income",
+"description": "When pay arrives in lumps, budget from a steady figure you pay yourself and keep the rest as a buffer. A worked example, and how to set it up in Daily Allowance.",
+"body": """
+<p class="lede">When your income arrives in lumps, a big month feels like permission to spend and a quiet month feels like an emergency. The fix is to stop budgeting from what arrives and budget from a steady figure you pay yourself instead.</p>
+
+<h2>Separate earning from spending</h2>
+<p>Freelancers, contractors, people paid by commission and people with seasonal work all have the same problem: the money comes in on its own schedule, but rent and groceries keep theirs. If you spend from whatever happens to be in the account, your spending rises and falls with your income, and a slow month lands hard.</p>
+<p>The steadier way is to put two layers between earning and spending:</p>
+<ul>
+  <li><strong>A buffer</strong> that every payment goes into when it arrives.</li>
+  <li><strong>A pay figure</strong>, a fixed monthly amount you move from the buffer to your everyday money, the way an employer would pay a salary.</li>
+</ul>
+<p>Good months top the buffer up. Slow months draw it down. Your everyday budget sees the same pay figure every month either way.</p>
+
+<h2>Step 1: Look back at what actually came in</h2>
+<p>Go through your statements for as many recent months as you can, six at the very least. If you pay your own tax, take off what you need to set aside for it first; how much that is depends on where you live and how you work, so check with your accountant or tax office. Here is an example after tax:</p>
+
+<div class="table-scroll">
+<table class="ledger">
+  <caption>Six months of income in the example</caption>
+  <thead><tr><th scope="col">Month</th><th scope="col">Came in</th></tr></thead>
+  <tbody>
+    <tr><th scope="row">January</th><td>$3,400</td></tr>
+    <tr><th scope="row">February</th><td>$1,100</td></tr>
+    <tr><th scope="row">March</th><td>$4,200</td></tr>
+    <tr><th scope="row">April</th><td>$0</td></tr>
+    <tr><th scope="row">May</th><td>$2,900</td></tr>
+    <tr><th scope="row">June</th><td>$3,600</td></tr>
+  </tbody>
+  <tfoot><tr><th scope="row">Average</th><td>$2,533</td></tr></tfoot>
+</table>
+</div>
+
+<h2>Step 2: Choose a pay figure below the average</h2>
+<p>The average, $2,533, is the most you could pay yourself if the next six months look like the last six. Paying yourself exactly that leaves no room for a run of bad luck, so pick something lower. In the example, the pay figure is <strong>$2,200 a month</strong>.</p>
+<p>How far below the average to go is a judgment call. The more your income swings, and the fewer months of history you have, the more cautious it's worth being. You can raise it later once the buffer has grown; cutting it after you've got used to it is harder.</p>
+
+<h2>Step 3: Work out the daily allowance from the pay figure</h2>
+<p>From here it's the same arithmetic as a salary. Take off your bills and anything you save, and divide what's left by the average month, 30.4375 days. With $1,320 of monthly bills:</p>
+<p class="sum">($2,200 − $1,320) ÷ 30.4375 = $28.91 a day</p>
+<p><a href="/blog/work-out-your-daily-budget.html">How to work out your daily budget</a> goes through this step in detail, including yearly bills and saving first.</p>
+
+<h2>Step 4: Build and use the buffer</h2>
+<p>Every payment goes into the buffer when it arrives. Once a month, on the same day, move the pay figure out of it into your everyday money. In the example, if the next twelve months look like these six, about $30,400 comes in and $26,400 goes out as pay, so the buffer grows slowly and is there for months like April.</p>
+<p>How big a buffer you want is up to you. Two or three months of your pay figure is enough to ride out a gap like April's without changing anything. While it's smaller than that, keep the pay figure cautious.</p>
+<p>Review the pay figure every few months. If the buffer keeps growing, you can pay yourself more. If it keeps shrinking, lower the pay figure before it runs out, not after.</p>
+
+<h2>Doing it in Daily Allowance</h2>
+<p>Daily Allowance works out your daily figure from recurring entries, so the pay figure is what you give it as income. In Quick Setup, enter your pay figure as your monthly income, or add it later as a recurring monthly income entry. The app spreads it across the days of the month along with your bills, just as it would a salary.</p>
+<p>The buffer can live in the Kitty Bank, the app's savings:</p>
+<ul>
+  <li><strong>When a client pays,</strong> open Kitty Bank and use Add. The money goes into the Kitty Bank and your Daily Balance doesn't change.</li>
+  <li><strong>Each month,</strong> use Spend in the Kitty Bank to take the pay figure out of it, with a label such as "Pay to myself". Spend takes it out of the Kitty Bank without touching your Daily Balance. That's what you want here, because the recurring income is already adding your pay to your Daily Balance day by day.</li>
+</ul>
+<p>Why not log each payment as one-off income instead? You can, but a one-off entry lands in your Daily Balance in full on the day you log it, so a big invoice makes your balance jump and the next quiet month starts from wherever it's fallen to. The Daily Allowance figure is also worked out from recurring entries only, so with no recurring income it shows your bills and nothing else.</p>
+<p>The rest works as it does for anyone. Unspent money carries into tomorrow, and if you go over, <a href="/blog/what-to-do-when-you-overspend.html">here's what to do on a day you overspend</a>. If the buffer is healthy and you'd rather put more aside, <a href="/blog/save-for-a-goal.html">saving for a goal</a> covers how to use the Kitty Bank for that too.</p>
+<p>None of this is financial or tax advice. It's a way of smoothing out lumpy income so the day-to-day stays calm.</p>
+""",
+},
+{
+"slug": "save-for-a-goal",
+"date": "2026-11-06",
+"title": "How to save for a goal a little each day",
+"description": "Turn a savings goal into a monthly and a daily amount, choose how to set the money aside, and track it in Daily Allowance's Kitty Bank.",
+"body": """
+<p class="lede">A goal like a holiday, a new bike or a deposit feels far away as a single number. Broken down into a monthly and then a daily amount, it becomes something you can fit into an ordinary week.</p>
+
+<h2>Step 1: Put a price and a date on it</h2>
+<p>"Save for a holiday" is hard to act on. "$1,200 by the end of June" isn't. Find out roughly what the thing costs and pick the month you want it by. If you're not sure of the price, round up; ending with spare money is a better problem than coming up short.</p>
+
+<h2>Step 2: Divide it down</h2>
+<p>Say it's $1,200 and you have eight months:</p>
+<div class="table-scroll">
+<table class="ledger">
+  <caption>$1,200 in eight months</caption>
+  <tbody>
+    <tr><th scope="row">Per month</th><td>$1,200 ÷ 8 = $150.00</td></tr>
+    <tr><th scope="row">Per day</th><td>$150 ÷ 30.4375 = $4.93</td></tr>
+    <tr><th scope="row">Per week</th><td>$4.93 × 7 = about $34.50</td></tr>
+  </tbody>
+</table>
+</div>
+<p>The 30.4375 is the average length of a month (365.25 days ÷ 12), the same figure used in <a href="/blog/work-out-your-daily-budget.html">How to work out your daily budget</a>.</p>
+<p>Now compare it with your daily allowance. If you have $40 a day to spend, setting aside $4.93 of it leaves about $35.07. That's the real question to ask yourself: could you live on $35 a day for eight months? If yes, the plan works. If not, move the date back or lower the target. Both are better than a plan you abandon in March.</p>
+
+<h2>Step 3: Choose how the money gets set aside</h2>
+<h3>Off the top, every month</h3>
+<p>Treat the saving as a bill. It comes off before your allowance is worked out, so you never see it as spending money. This is the most reliable way, because nothing depends on how the month goes.</p>
+<h3>Sweep up what's left</h3>
+<p>Spend from your normal allowance and, at the end of each week or month, move whatever you didn't spend into savings. This feels good in careful weeks, but it saves nothing in the weeks that go over, so it's better as an extra on top of a fixed amount than as the whole plan.</p>
+<h3>Both</h3>
+<p>A fixed amount off the top keeps the goal on track, and sweeping up the leftovers gets you there sooner. The sweep is the more satisfying part, but the fixed amount is the part you can count on.</p>
+
+<h2>Step 4: Keep the goal money separate</h2>
+<p>Money set aside for a goal is easy to borrow from "just this once". Keeping it somewhere you don't spend from, a separate savings account or at least a separate figure you track, makes borrowing a deliberate choice. If you do borrow, write down how much, and pay it back the same way you'd <a href="/blog/what-to-do-when-you-overspend.html">make up an overspend</a>: a little each day.</p>
+
+<h2>When things change</h2>
+<p>Plans drift. The price goes up, a car repair eats a month's saving, or you get there early. A few rules of thumb:</p>
+<ul>
+  <li><strong>If you fall behind,</strong> work out the new monthly amount from what's left and the months remaining, rather than trying to catch up in one go. $600 left with four months to go is $150 a month, the same as before; $750 left with three months to go is $250, and that's the moment to decide whether to move the date instead.</li>
+  <li><strong>If you get ahead,</strong> keep the fixed amount going anyway. Finishing early is a nice surprise; stopping early tends to mean starting again later.</li>
+  <li><strong>When you reach the goal,</strong> spend it on the thing. That's what it was for.</li>
+</ul>
+
+<h2>Doing it in Daily Allowance</h2>
+<p>The Kitty Bank is the app's savings, kept apart from your Daily Balance. It has four actions, on the + button on the Kitty Bank screen:</p>
+<ul>
+  <li><strong>Save</strong> moves an amount from your Daily Balance into the Kitty Bank.</li>
+  <li><strong>Add</strong> puts money into the Kitty Bank without touching your Daily Balance, for money that never went through your daily budget, such as a gift or a bonus.</li>
+  <li><strong>Withdraw</strong> moves money from the Kitty Bank back to your Daily Balance.</li>
+  <li><strong>Spend</strong> records a purchase paid from your savings, without moving it back to your Daily Balance first.</li>
+</ul>
+<p>For the off-the-top method, add your monthly saving as a recurring expense, like a bill, so your Daily Allowance already leaves it out. Then, once a month, use Add in the Kitty Bank to record the same amount there. For the sweep, use Transfer to Kitty Bank on the home screen. It appears when your Daily Balance is above zero and moves the whole balance into savings in one go.</p>
+<p>To track progress, set a Savings Goal in Settings. It's entered as a percentage of your annual allowance, meaning your Daily Allowance multiplied by 365. With a $40 allowance, that's $14,600 a year, so a $1,200 goal is about 8.2%:</p>
+<p class="sum">$1,200 ÷ ($40 × 365) × 100 = 8.2%</p>
+<p>Once it's set, the Kitty Bank screen shows a progress bar with your balance against the goal amount, and the kibble picture on that screen changes in seven stages as you get closer. The Kitty Bank list shows this month's entries by default, and See all Entries shows your whole savings history.</p>
+<p>If the goal is a big purchase you'd rather pay off after buying, Premium's Spread over months turns it into monthly amounts instead. <a href="/blog/what-to-do-when-you-overspend.html">What to do on a day you overspend</a> covers when that makes sense.</p>
+""",
+},
+{
+"slug": "share-a-budget",
+"date": "2026-11-06",
+"title": "How to share a budget with a partner or family",
+"description": "What to agree before you share a budget, how a shared daily allowance works day to day, and how to set up sharing in Daily Allowance for up to five people.",
+"body": """
+<p class="lede">Sharing a budget works best when everyone agrees on a few things before the first entry goes in: what money is shared, who logs what, and what happens when someone goes over.</p>
+
+<h2>Decide what's shared</h2>
+<p>There's no single right way for a household to split money, but there are two common shapes:</p>
+<ul>
+  <li><strong>Everything together.</strong> All income goes into one pot and all spending comes out of it. It's simple, and it suits couples who already think of their money as joint.</li>
+  <li><strong>A shared pot plus personal money.</strong> Each person puts an agreed amount into a household budget for rent, bills and groceries, and keeps the rest. This suits people who want joint costs covered without explaining every coffee.</li>
+</ul>
+<p>The second shape is easier to start with, because it only asks you to agree on the household costs. You can always widen it later.</p>
+<p>Write down the answer, even if it's two lines: "Groceries, eating out together and the kids' things come from the shared budget. Personal spending doesn't." Then, when you're not sure which pot something belongs in, you have something to check instead of a disagreement.</p>
+
+<h2>Agree on the daily number</h2>
+<p>A shared budget gives you one shared daily allowance. Work it out together, from the income that goes into the shared pot and the bills that come out of it; <a href="/blog/work-out-your-daily-budget.html">How to work out your daily budget</a> has the arithmetic. Then talk about whether it's realistic for the whole household. A number one person thinks is generous and the other thinks is tight will cause friction every day.</p>
+
+<h2>Agree on logging</h2>
+<p>A shared balance is only as good as the entries in it. Two habits make the biggest difference:</p>
+<ul>
+  <li><strong>Log your own purchases, as they happen.</strong> If one person logs everything from receipts at the end of the week, the shared number is wrong for six days out of seven.</li>
+  <li><strong>Use the same categories for the same things.</strong> If one of you files the weekly shop under Groceries and the other under Food, the category breakdown stops meaning much.</li>
+</ul>
+
+<h2>Agree on bills one person pays</h2>
+<p>In many households one person's card or account pays the rent or the electricity, even when the cost is shared. That's fine, as long as the shared budget records it. Add shared bills to the shared budget as recurring entries once, whoever actually pays them, so the daily number already accounts for them. Then the person paying isn't quietly subsidizing everyone else's daily spending, and nobody has to remember who covered what at the end of the month.</p>
+<p>The same goes for income. If each person puts a fixed amount into the shared pot every month, record each contribution as recurring income in the shared budget, and leave the rest of each person's pay out of it.</p>
+
+<h2>Agree on bad days</h2>
+<p>With one shared balance, one person's expensive day lowers everyone's tomorrow. That's the point of sharing, but it helps to decide in advance how you'll handle it. One simple approach: whoever went over says so, and the household makes it up over the next week by spending a little less, the way <a href="/blog/what-to-do-when-you-overspend.html">What to do on a day you overspend</a> describes. Nobody has to explain a $6 lunch, and nobody is surprised by a $200 one.</p>
+
+<h2>Check in once a month</h2>
+<p>Ten minutes at the end of the month is enough: how did the balance end, were there days that went over and why, and does the daily number still fit? This is also when to adjust the plan, rather than in the middle of a tense week.</p>
+
+<h2>Doing it in Daily Allowance</h2>
+<p>Budget sharing is a Premium feature for the budget's owner. Everyone else joins for free: while they're in the shared budget, they get the owner's Premium features too.</p>
+<ul>
+  <li><strong>Invite by email.</strong> In Settings &gt; Budget &amp; Sharing, choose Invite via Email and enter the address they use to sign in to Daily Allowance. The app opens an email to them with the invitation. Once they open the app, they switch to your budget from the same Settings screen.</li>
+  <li><strong>Or by QR code.</strong> Show your Share Budget QR. They scan it from Join Shared Budget on their phone, or type in the Budget ID, and you approve the request from your pending requests.</li>
+  <li><strong>Up to five people.</strong> You can share a budget with up to five people besides yourself.</li>
+</ul>
+<p>Everyone in the budget sees and edits the same entries, the same Daily Balance and the same Kitty Bank, each on their own phone. Anyone who joins keeps their own personal budget too, and Switch Budget moves between the two, so personal spending can stay personal.</p>
+<p>As the owner, you can see who has access and remove someone; anyone you remove goes back to their own personal budget. Someone who wants to leave can do it themselves with Leave This Budget.</p>
+<p>If you save as a household, the shared Kitty Bank works for that too. <a href="/blog/save-for-a-goal.html">How to save for a goal a little each day</a> explains how to set it up.</p>
 """,
 },
 ]
