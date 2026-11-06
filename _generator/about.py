@@ -40,6 +40,8 @@ PAGES = {
         "crumb": "About",
         "skip": "Skip to content",
         "photo_alt": "Joseph Suzuki-Parker at sunset, in a cap and dark jacket.",
+        "beach_alt": "Morning waves breaking on a sandy beach in Chiba under a bright sun and scattered clouds.",
+        "beach_caption": "Home sweet home: Chiba, Japan",
         "foot": "&copy; 2026 SP Digital Labs, the name under which Joseph Suzuki-Parker publishes apps. Japan.",
         "foot_links": [("/", "Apps"), ("/blog/", "Blog"), ("https://tevo.jp/", "Tevo")],
         "body": f'''
@@ -74,6 +76,8 @@ PAGES = {
         "crumb": "紹介",
         "skip": "本文へ移動",
         "photo_alt": "夕日の中に立つ Joseph Suzuki-Parker。",
+        "beach_alt": "晴れた朝、千葉の砂浜に波が打ち寄せる様子。",
+        "beach_caption": "ホーム・スイート・ホーム：千葉",
         "foot": "&copy; 2026 SP Digital Labs（Joseph Suzuki-Parker がアプリを公開する際の屋号）。日本。",
         "foot_links": [("/ja/", "アプリ"), ("/blog/", "ブログ"), ("https://tevo.jp/", "Tevo")],
         "body": f'''
@@ -138,7 +142,13 @@ def document(lang, p):
 
 <main id="main" class="wrap">
 <article class="post about">
+<div class="about-side">
 <img class="about-photo" src="/assets/joe.jpg" alt="{p["photo_alt"]}" width="540" height="720">
+<figure class="about-home">
+<img src="/assets/chiba-beach.jpg" alt="{p["beach_alt"]}" width="800" height="600" loading="lazy">
+<figcaption>{p["beach_caption"]}</figcaption>
+</figure>
+</div>
 <div class="post-body">
 {p["body"].strip()}
 </div>
