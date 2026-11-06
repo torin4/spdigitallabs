@@ -95,6 +95,8 @@ def page(slug, current, title, description, body, lang="en", main_class="wrap pa
 <meta property="og:image:alt" content="SP Digital Labs: Everyday tools, done right.">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://spdigitallabs.app{current}">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/favicon-192.png" type="image/png" sizes="192x192">
 <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/fonts/mplus-rounded-1c-800-latin.woff2" as="font" type="font/woff2" crossorigin>
