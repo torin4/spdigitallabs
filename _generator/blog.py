@@ -78,6 +78,7 @@ def document(title, description, path, body, og_type="website", extra=""):
 
 {FOOTER}
 <script src="/email.js"></script>
+<script src="/motion.js"></script>
 </body>
 </html>
 '''

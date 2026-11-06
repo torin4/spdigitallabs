@@ -166,6 +166,7 @@ def document(lang, p):
   </div>
 </footer>
 <script src="/email.js"></script>
+<script src="/motion.js"></script>
 </body>
 </html>
 '''

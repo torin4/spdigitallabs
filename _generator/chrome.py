@@ -1,6 +1,6 @@
 """Shared page chrome for spdigitallabs.app app pages."""
 
-CSS_VERSION = "20261106h"
+CSS_VERSION = "20261106i"
 
 APPS = {
     "understory": {
@@ -73,6 +73,7 @@ def app_footer(name, foot):
 def head_tags(title, description, path, og_type="website", extra=""):
     """The shared <head> contents, from charset to stylesheet. extra goes before the stylesheet."""
     return f'''<meta charset="utf-8">
+<script>(function(d){{if(window.matchMedia&&matchMedia("(prefers-reduced-motion: no-preference)").matches&&"IntersectionObserver"in window){{d.classList.add("motion");setTimeout(function(){{if(!window.__spMotion)d.classList.remove("motion")}},2500)}}}})(document.documentElement)</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{title}</title>
 <meta name="description" content="{description}">
@@ -118,6 +119,7 @@ def page(slug, current, title, description, body, lang="en", main_class="wrap pa
 
 {app_footer(name, app["foot"])}
 <script src="/email.js"></script>
+<script src="/motion.js"></script>
 </body>
 </html>
 '''

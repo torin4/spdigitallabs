@@ -802,3 +802,17 @@ a { transition: color 150ms var(--ease-out), text-decoration-color 150ms var(--e
   .post.about .about-side { position: sticky; top: var(--space-5); grid-template-columns: 1fr; gap: var(--space-4); margin: var(--space-5) 0 0; }
   .about-home img { aspect-ratio: 4 / 3; }
 }
+
+/* Reveal on scroll (motion.js). Only when the head added .motion, which it skips for reduced motion. */
+@media (prefers-reduced-motion: no-preference) {
+  .motion:not(.motion-ready) main { opacity: 0; }
+  .motion .rv { opacity: 0; transform: translateY(18px); }
+  .motion .rv.rv-in {
+    opacity: 1;
+    transform: none;
+    transition: opacity 650ms var(--ease-out), transform 650ms var(--ease-out);
+    transition-delay: var(--rv-delay, 0ms);
+  }
+  .motion .site-header, .motion .app-bar { animation: rv-fade 500ms var(--ease-out) both; }
+  @keyframes rv-fade { from { opacity: 0; } to { opacity: 1; } }
+}
