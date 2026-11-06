@@ -7,6 +7,7 @@ Writes into the site folder (the parent of _generator/). Generated:
   strata/index.html
   understory/{index,privacy,terms,legal-notice}.html
   surfwindow/{index,privacy,terms,privacy-ja,terms-ja}.html
+  blog/index.html and blog/<slug>.html (posts are in blog_posts.py)
 The Daily Allowance policy pages (privacy, terms, support, delete-account)
 and the homepage are written by hand. When style.css changes, bump
 CSS_VERSION in chrome.py and the ?v= on the hand-written pages to match.
@@ -19,8 +20,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
 
-import dailyallowance, strata, surfwindow, understory  # noqa: E402
+import blog, dailyallowance, strata, surfwindow, understory  # noqa: E402
 
-for module in (dailyallowance, strata, surfwindow, understory):
+for module in (dailyallowance, strata, surfwindow, understory, blog):
     module.build(ROOT)
 print("Rebuilt app pages in", ROOT)

@@ -1,6 +1,6 @@
 """Shared page chrome for spdigitallabs.app app pages."""
 
-CSS_VERSION = "20261106a"
+CSS_VERSION = "20261106b"
 
 APPS = {
     "understory": {
@@ -70,6 +70,33 @@ def app_footer(name, foot):
         '</footer>' % (name, links))
 
 
+def head_tags(title, description, path, og_type="website", extra=""):
+    """The shared <head> contents, from charset to stylesheet. extra goes before the stylesheet."""
+    return f'''<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{title}</title>
+<meta name="description" content="{description}">
+<meta name="theme-color" content="#f7f8fa" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1117" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="{og_type}">
+<meta property="og:site_name" content="SP Digital Labs">
+<meta property="og:title" content="{title}">
+<meta property="og:description" content="{description}">
+<meta property="og:url" content="https://spdigitallabs.app{path}">
+<meta property="og:image" content="https://spdigitallabs.app/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SP Digital Labs: Everyday tools, done right.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://spdigitallabs.app{path}">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/mplus-rounded-1c-800-latin.woff2" as="font" type="font/woff2" crossorigin>
+{extra}<link rel="stylesheet" href="/style.css?v={CSS_VERSION}">'''
+
+
 def page(slug, current, title, description, body, lang="en", main_class="wrap page"):
     """current is this page's path, e.g. "/understory/privacy.html"."""
     app = APPS[slug]
@@ -78,29 +105,7 @@ def page(slug, current, title, description, body, lang="en", main_class="wrap pa
     return f'''<!doctype html>
 <html lang="{lang}">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>{full_title}</title>
-<meta name="description" content="{description}">
-<meta name="theme-color" content="#f7f8fa" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0e1117" media="(prefers-color-scheme: dark)">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="SP Digital Labs">
-<meta property="og:title" content="{full_title}">
-<meta property="og:description" content="{description}">
-<meta property="og:url" content="https://spdigitallabs.app{current}">
-<meta property="og:image" content="https://spdigitallabs.app/assets/og.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="SP Digital Labs: Everyday tools, done right.">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="canonical" href="https://spdigitallabs.app{current}">
-<link rel="icon" href="/favicon.ico" sizes="48x48">
-<link rel="icon" href="/assets/favicon-192.png" type="image/png" sizes="192x192">
-<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="preload" href="/fonts/mplus-rounded-1c-800-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/style.css?v={CSS_VERSION}">
+{head_tags(full_title, description, current)}
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
