@@ -571,8 +571,18 @@ a { transition: color 150ms var(--ease-out), text-decoration-color 150ms var(--e
    app's page (pattern used by small app studios such as Sindre Sorhus,
    Panic and the Iconfactory). */
 .home-intro { padding-block: var(--space-7) var(--space-6); }
-.home-intro > * { max-width: var(--text); }
-.home-intro h1 { font-size: clamp(2.25rem, 1.5rem + 3.2vw, 3.5rem); line-height: 1.05; letter-spacing: -0.02em; }
+.home-intro { display: flex; flex-direction: column; gap: var(--space-5); }
+.home-intro-text { max-width: var(--text); }
+.home-intro h1 { font-size: clamp(2rem, 1.4rem + 2.4vw, 2.875rem); line-height: 1.08; letter-spacing: -0.02em; }
+.home-art { display: block; width: 168px; height: auto; flex: none; }
+.home-art .t-indigo { fill: var(--indigo); }
+.home-art .t-ink { fill: var(--ink); }
+.home-art .t-tint { fill: var(--indigo-tint); }
+.home-art .t-moss { fill: var(--moss); }
+@media (min-width: 760px) {
+  .home-intro { flex-direction: row; align-items: center; gap: var(--space-6); }
+  .home-art { width: 300px; }
+}
 .home-intro .lede { margin-top: var(--space-3); }
 
 .home-apps { padding-bottom: var(--space-7); }

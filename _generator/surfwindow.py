@@ -165,9 +165,9 @@ OVERVIEW = hero("surfwindow", "Web app · Free",
 
 <section aria-label="Main features">
 """ + feature_rows([
-    ("/assets/screens/surfwindow-home.jpg", "Surf Window home screen listing saved breaks with scores.", "A score for every break", "Surf Window scores live swell, wind and tide against each beach's own profile, so every hour gets a number out of 100 and a plain sentence saying what's helping and what's holding it back."),
-    ("/assets/screens/surfwindow-break.jpg", "A break page with a wind and swell map, the swell window and a tide curve.", "See the swell window", "A live wind and swell map shows which directions each break can actually receive, so you can see why one beach works and the next one doesn't."),
-    ("/assets/screens/surfwindow-forecast.jpg", "Forecast tab with daily wave heights and a seven-day chart.", "Seven days, hour by hour", "Swell at the beach, period, wind, tide and wave power on one timeline, with the best windows of the week picked out for you."),
+    ("/assets/screens/surfwindow-home.jpg", "Surf Window home screen listing saved breaks with scores.", "A score for every break", "Surf Window covers 25 surf spots in Shonan and Chiba. For each one, it checks the latest forecast for waves, wind and tide, and compares it with what that particular beach needs to be good. Every hour gets a score out of 100 and a short, plain sentence saying what's helping and what's holding the waves back."),
+    ("/assets/screens/surfwindow-break.jpg", "A break page with a wind and swell map, the swell window and a tide curve.", "See the swell window", "Every beach faces its own direction. Waves from some directions reach it, while headlands and bays block the rest. Surf Window draws this swell window on a live map of wind and waves, so you can see why one beach is working today while the one next to it is flat."),
+    ("/assets/screens/surfwindow-forecast.jpg", "Forecast tab with daily wave heights and a seven-day chart.", "Seven days, hour by hour", "The forecast tab lays out the next seven days hour by hour: wave size at the beach, the time between waves (the period), wind, tide and wave power, all on one timeline. Surf Window also picks out the best times of the week for you, so you don't have to work them out yourself."),
 ]) + """
 </section>
 
