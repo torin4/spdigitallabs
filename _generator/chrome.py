@@ -1,6 +1,6 @@
 """Shared page chrome for spdigitallabs.app app pages."""
 
-CSS_VERSION = "20261105f"
+CSS_VERSION = "20261106a"
 
 APPS = {
     "understory": {
@@ -84,6 +84,16 @@ def page(slug, current, title, description, body, lang="en", main_class="wrap pa
 <meta name="description" content="{description}">
 <meta name="theme-color" content="#f7f8fa" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0e1117" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SP Digital Labs">
+<meta property="og:title" content="{full_title}">
+<meta property="og:description" content="{description}">
+<meta property="og:url" content="https://spdigitallabs.app{current}">
+<meta property="og:image" content="https://spdigitallabs.app/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SP Digital Labs: Everyday tools, done right.">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://spdigitallabs.app{current}">
 <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://spdigitallabs.app/sitemap.xml
