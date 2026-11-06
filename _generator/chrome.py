@@ -116,7 +116,7 @@ def page(slug, current, title, description, body, lang="en", main_class="wrap pa
 '''
 
 
-EMAIL = '<a class="email" href="/#contact">torin2582 [at] gmail [dot] com</a>'
+EMAIL = '<a class="email" href="/#contact">support [at] spdigitallabs [dot] app</a>'
 
 
 def shots(items):

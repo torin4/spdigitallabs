@@ -236,7 +236,7 @@ LEGAL_ROWS = [
     ("運営責任者", "Person responsible", "Joseph Suzuki Parker", "Joseph Suzuki Parker"),
     ("所在地", "Address", "請求があった場合には、遅滞なく開示いたします。", "Provided without delay on request."),
     ("電話番号", "Phone", "請求があった場合には、遅滞なく開示いたします。お問い合わせはメールでお願いいたします。", "Provided without delay on request. Please contact us by email."),
-    ("メールアドレス", "Email", '<a class="email" href="/#contact">torin2582 [at] gmail [dot] com</a>', '<a class="email" href="/#contact">torin2582 [at] gmail [dot] com</a>'),
+    ("メールアドレス", "Email", '<a class="email" href="/#contact">support [at] spdigitallabs [dot] app</a>', '<a class="email" href="/#contact">support [at] spdigitallabs [dot] app</a>'),
     ("サービス名", "Service", "Understory Premium（ウェブアプリ「Understory」の有料サブスクリプション）", "Understory Premium, a subscription for the Understory web app"),
     ("販売価格", "Price", "月額プラン：US$9.99／月<br>年額プラン：US$89／年<br>お申し込み前に購入画面に表示されます。", "Monthly: US$9.99 a month<br>Yearly: US$89 a year<br>Shown on the checkout screen before you buy."),
     ("商品代金以外の必要料金", "Other charges", "インターネット接続にかかる通信料金はお客様のご負担となります。日本円以外の通貨でお支払いの場合、カード会社所定の為替レート・手数料が適用されることがあります。", "Internet connection charges are yours. If your card is in another currency, your card issuer's exchange rate and fees may apply."),
