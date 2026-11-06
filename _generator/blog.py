@@ -10,7 +10,7 @@ from icons import ARROW_RIGHT
 from blog_posts import POSTS
 
 SITE = "https://spdigitallabs.app"
-AUTHOR = {"@type": "Person", "name": "Joseph Suzuki Parker", "url": SITE + "/"}
+AUTHOR = {"@type": "Person", "name": "Joseph Suzuki-Parker", "url": SITE + "/"}
 BLOG_TITLE = "Blog"
 BLOG_DESCRIPTION = "Practical notes on everyday money and the apps from SP Digital Labs."
 
@@ -49,7 +49,7 @@ def header():
 
 FOOTER = '''<footer class="site-footer">
   <div class="wrap foot-simple">
-    <p>&copy; 2026 SP Digital Labs, the name under which Joseph Suzuki Parker publishes apps. Japan.</p>
+    <p>&copy; 2026 SP Digital Labs, the name under which Joseph Suzuki-Parker publishes apps. Japan.</p>
     <nav aria-label="Apps">
       <a href="/dailyallowance/">Daily Allowance</a>
       <a href="/strata/">Strata</a>
@@ -154,7 +154,7 @@ def index_page(posts):
     extra = ld(blog_ld) + ld(crumbs_ld([("Home", "/"), ("Blog", path)]))
     body = f'''<section class="blog-intro" aria-labelledby="blog-title">
   <h1 id="blog-title">Blog</h1>
-  <p class="lede">Practical notes on everyday money, starting with how to spend by the day. By Joseph Suzuki Parker, who makes the apps at SP Digital Labs.</p>
+  <p class="lede">Practical notes on everyday money, starting with how to spend by the day. By Joseph Suzuki-Parker, who makes the apps at SP Digital Labs.</p>
 </section>
 
 <section class="blog-list" aria-label="Posts">

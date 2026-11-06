@@ -16,8 +16,8 @@ LINKEDIN = "https://www.linkedin.com/in/joseph-suzuki-parker-01a66a23/"
 PERSON = {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Joseph Suzuki Parker",
-    "alternateName": ["Joseph Suzuki-Parker", "Joe Suzuki-Parker"],
+    "name": "Joseph Suzuki-Parker",
+    "alternateName": ["Joe Suzuki-Parker", "Joseph Torin Suzuki-Parker"],
     "url": SITE + "/about/",
     "image": SITE + "/assets/joe.jpg",
     "jobTitle": "English instructor and app developer",
@@ -34,17 +34,17 @@ PAGES = {
     "en": {
         "path": "/about/",
         "alt_path": "/ja/about/",
-        "title": "About Joseph Suzuki Parker - SP Digital Labs",
-        "description": "Joseph Suzuki Parker is an English teacher and applied linguist in Japan who builds apps as SP Digital Labs. MA Applied Linguistics, University of Birmingham.",
+        "title": "About Joseph Suzuki-Parker - SP Digital Labs",
+        "description": "Joseph Suzuki-Parker is an English teacher and applied linguist in Japan who builds apps as SP Digital Labs. MA Applied Linguistics, University of Birmingham.",
         "home": "/",
         "crumb": "About",
         "skip": "Skip to content",
-        "photo_alt": "Joseph Suzuki Parker at sunset, in a cap and dark jacket.",
-        "foot": "&copy; 2026 SP Digital Labs, the name under which Joseph Suzuki Parker publishes apps. Japan.",
+        "photo_alt": "Joseph Suzuki-Parker at sunset, in a cap and dark jacket.",
+        "foot": "&copy; 2026 SP Digital Labs, the name under which Joseph Suzuki-Parker publishes apps. Japan.",
         "foot_links": [("/", "Apps"), ("/blog/", "Blog"), ("https://tevo.jp/", "Tevo")],
         "body": f'''
 <h1>About</h1>
-<p class="lede">SP Digital Labs is the name under which Joseph Suzuki Parker publishes apps. Joe is an English teacher and applied linguist who builds software, based in Chiba, Japan.</p>
+<p class="lede">SP Digital Labs is the name under which Joseph Suzuki-Parker publishes apps. Joe is an English teacher and applied linguist who builds software, based in Chiba, Japan.</p>
 
 <h2>From music to languages</h2>
 <p>Joe started out as a musician. He trained at the Military School of Music and served as a percussionist with the 3rd Infantry Division Band of the U.S. Army, including a deployment to Iraq. After the Army he studied Japanese at the University of Colorado Boulder, graduating with distinction in 2010, and soon after moved to Japan.</p>
@@ -68,17 +68,17 @@ PAGES = {
     "ja": {
         "path": "/ja/about/",
         "alt_path": "/about/",
-        "title": "Joseph Suzuki Parker について - SP Digital Labs",
-        "description": "Joseph Suzuki Parker（ジョセフ・スズキ・パーカー）は、日本で英語を教える応用言語学の教員で、SP Digital Labs の名前でアプリを作っています。バーミンガム大学 応用言語学修士。",
+        "title": "Joseph Suzuki-Parker について - SP Digital Labs",
+        "description": "Joseph Suzuki-Parker（ジョセフ・スズキ・パーカー）は、日本で英語を教える応用言語学の教員で、SP Digital Labs の名前でアプリを作っています。バーミンガム大学 応用言語学修士。",
         "home": "/ja/",
         "crumb": "紹介",
         "skip": "本文へ移動",
-        "photo_alt": "夕日の中に立つ Joseph Suzuki Parker。",
-        "foot": "&copy; 2026 SP Digital Labs（Joseph Suzuki Parker がアプリを公開する際の屋号）。日本。",
+        "photo_alt": "夕日の中に立つ Joseph Suzuki-Parker。",
+        "foot": "&copy; 2026 SP Digital Labs（Joseph Suzuki-Parker がアプリを公開する際の屋号）。日本。",
         "foot_links": [("/ja/", "アプリ"), ("/blog/", "ブログ"), ("https://tevo.jp/", "Tevo")],
         "body": f'''
 <h1>紹介</h1>
-<p class="lede">SP Digital Labs は、Joseph Suzuki Parker がアプリを公開する際の屋号です。ジョーは千葉県在住の英語教員・応用言語学者で、ソフトウェアも作っています。</p>
+<p class="lede">SP Digital Labs は、Joseph Suzuki-Parker がアプリを公開する際の屋号です。ジョーは千葉県在住の英語教員・応用言語学者で、ソフトウェアも作っています。</p>
 
 <h2>音楽から言葉へ</h2>
 <p>ジョーの出発点は音楽でした。米陸軍の軍楽学校で学び、第3歩兵師団軍楽隊の打楽器奏者としてイラクへの派遣も経験しました。除隊後はコロラド大学ボルダー校で日本語を専攻し、2010年に優秀な成績で卒業。その後まもなく日本に移りました。</p>

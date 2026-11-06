@@ -6,7 +6,7 @@ PRIVACY_JA = f'''
 <h1>プライバシーポリシー</h1>
 <p class="updated">最終更新日：2026年11月5日 · <a href="/surfwindow/privacy.html" lang="en" hreflang="en">English</a></p>
 
-<p>Surf Window（surfwindow.jp）は、湘南・千葉のサーフポイントの波予報ウェブアプリです。日本の個人開発者 Joseph Suzuki Parker が屋号「SP Digital Labs」で提供しています（以下「当方」）。本ポリシーでは、Surf Window が取得する情報、その利用目的、提供先、およびお客様が選べることを説明します。</p>
+<p>Surf Window（surfwindow.jp）は、湘南・千葉のサーフポイントの波予報ウェブアプリです。日本の個人開発者 Joseph Suzuki-Parker が屋号「SP Digital Labs」で提供しています（以下「当方」）。本ポリシーでは、Surf Window が取得する情報、その利用目的、提供先、およびお客様が選べることを説明します。</p>
 
 <div class="card">
   <p><strong>要点：</strong>Surf Window はアカウントなしで使えます。Googleでログインすると、お気に入りのポイントと、お客様が決めたハンドル（表示名）を保存します。投稿した波情報はハンドルとともに公開されます。現在地は端末内でのみ使い、距離の表示と、報告の前に浜にいることの確認だけに利用します。アプリの使われ方の把握と不具合の修正のため、PostHog による分析（セッション録画を含む）を利用しています。広告は表示せず、データを販売することもありません。</p>
@@ -97,7 +97,7 @@ PRIVACY_JA = f'''
 
 <h2>事業者情報</h2>
 <ul>
-  <li>事業者：Joseph Suzuki Parker（屋号：SP Digital Labs）</li>
+  <li>事業者：Joseph Suzuki-Parker（屋号：SP Digital Labs）</li>
   <li>住所：ご請求があった場合、遅滞なく開示します。</li>
 </ul>
 
@@ -113,7 +113,7 @@ TERMS_JA = f'''
 <h1>利用規約</h1>
 <p class="updated">最終更新日：2026年11月5日 · <a href="/surfwindow/terms.html" lang="en" hreflang="en">English</a></p>
 
-<p>本規約は、日本の個人開発者 Joseph Suzuki Parker が屋号「SP Digital Labs」で提供する波予報ウェブアプリ Surf Window（以下「本アプリ」）の利用条件を定めるものです（提供者を以下「当方」）。本アプリを利用することで、本規約に同意したものとみなします。同意いただけない場合は、本アプリを利用しないでください。</p>
+<p>本規約は、日本の個人開発者 Joseph Suzuki-Parker が屋号「SP Digital Labs」で提供する波予報ウェブアプリ Surf Window（以下「本アプリ」）の利用条件を定めるものです（提供者を以下「当方」）。本アプリを利用することで、本規約に同意したものとみなします。同意いただけない場合は、本アプリを利用しないでください。</p>
 
 <div class="card">
   <p><strong>要点：</strong>Surf Window のスコアは予報データにもとづく目安であり、安全を保証するものではありません。入水前に必ずご自身でコンディションを確認し、自分の力量の範囲で、監視員や地域のルールに従ってください。投稿した報告はハンドルとともに公開されるので、正直で思いやりのある内容でお願いします。Surf Window は無料です。</p>

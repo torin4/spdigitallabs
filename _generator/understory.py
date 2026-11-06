@@ -5,7 +5,7 @@ PRIVACY = f'''
 <h1>Privacy Policy</h1>
 <p class="updated">Last updated: November 5, 2026</p>
 
-<p>Understory is a private journaling web app at understoryjournal.app, made by SP Digital Labs, the name under which Joseph Suzuki Parker, an independent developer based in Japan, publishes apps ("we", "us"). This policy explains what information Understory collects, why, who it is shared with, and the choices you have.</p>
+<p>Understory is a private journaling web app at understoryjournal.app, made by SP Digital Labs, the name under which Joseph Suzuki-Parker, an independent developer based in Japan, publishes apps ("we", "us"). This policy explains what information Understory collects, why, who it is shared with, and the choices you have.</p>
 
 <div class="card">
   <p><strong>The short version:</strong> your journal entries are encrypted in your browser with a key only you hold, so we can't read them. If you use Premium and keep the companion on, the text of an entry is sent, unencrypted and only for that moment, to Google's Gemini AI service to write the companion's replies; our server doesn't keep a copy, and Google doesn't use it to train its models. A few results, such as an entry's mood and themes, are stored without that encryption so your growth rings can be drawn. We don't show ads, don't use analytics, and don't sell your data. Payments go through Stripe, and we never see your card.</p>
@@ -118,7 +118,7 @@ TERMS = f'''
 <h1>Terms of Service</h1>
 <p class="updated">Last updated: November 5, 2026</p>
 
-<p>These terms apply to your use of Understory, a journaling web app made by SP Digital Labs, the name under which Joseph Suzuki Parker, an independent developer based in Japan, publishes apps ("we", "us"). By creating an account or using Understory, you agree to these terms. If you don't agree, please don't use it.</p>
+<p>These terms apply to your use of Understory, a journaling web app made by SP Digital Labs, the name under which Joseph Suzuki-Parker, an independent developer based in Japan, publishes apps ("we", "us"). By creating an account or using Understory, you agree to these terms. If you don't agree, please don't use it.</p>
 
 <div class="card">
   <p><strong>The short version:</strong> Understory is a journal, not therapy or medical care. Your entries are encrypted with a key only you hold, so keep your passphrase and recovery code safe; we can't recover them. Journaling is free. Premium is a subscription billed by Stripe that renews until you cancel, and you can ask us for a refund. Its AI replies can be wrong. Your writing belongs to you, and you can delete your account at any time.</p>
@@ -232,8 +232,8 @@ OVERVIEW = hero("understory", "Web app",
 """
 
 LEGAL_ROWS = [
-    ("販売業者", "Seller", "Joseph Suzuki Parker（屋号：SP Digital Labs）", "Joseph Suzuki Parker, trading as SP Digital Labs"),
-    ("運営責任者", "Person responsible", "Joseph Suzuki Parker", "Joseph Suzuki Parker"),
+    ("販売業者", "Seller", "Joseph Suzuki-Parker（屋号：SP Digital Labs）", "Joseph Suzuki-Parker, trading as SP Digital Labs"),
+    ("運営責任者", "Person responsible", "Joseph Suzuki-Parker", "Joseph Suzuki-Parker"),
     ("所在地", "Address", "請求があった場合には、遅滞なく開示いたします。", "Provided without delay on request."),
     ("電話番号", "Phone", "請求があった場合には、遅滞なく開示いたします。お問い合わせはメールでお願いいたします。", "Provided without delay on request. Please contact us by email."),
     ("メールアドレス", "Email", '<a class="email" href="/#contact">support [at] spdigitallabs [dot] app</a>', '<a class="email" href="/#contact">support [at] spdigitallabs [dot] app</a>'),

@@ -62,7 +62,7 @@ def app_footer(name, foot):
     return (
         '<footer class="site-footer">\n'
         '  <div class="wrap foot-simple">\n'
-        '    <p>&copy; 2026 SP Digital Labs, the name under which Joseph Suzuki Parker publishes apps. Japan.</p>\n'
+        '    <p>&copy; 2026 SP Digital Labs, the name under which Joseph Suzuki-Parker publishes apps. Japan.</p>\n'
         '    <nav aria-label="%s links">\n%s\n'
         '      <a href="/#contact">Contact</a>\n'
         '    </nav>\n'

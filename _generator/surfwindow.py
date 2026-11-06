@@ -6,7 +6,7 @@ PRIVACY = f'''
 <h1>Privacy Policy</h1>
 <p class="updated">Last updated: November 5, 2026 · <a href="/surfwindow/privacy-ja.html" lang="ja" hreflang="ja">日本語</a></p>
 
-<p>Surf Window is a surf forecast web app for breaks in Shonan and Chiba, at surfwindow.jp, made by SP Digital Labs, the name under which Joseph Suzuki Parker, an independent developer based in Japan, publishes apps ("we", "us"). This policy explains what information Surf Window collects, why, who it is shared with, and the choices you have.</p>
+<p>Surf Window is a surf forecast web app for breaks in Shonan and Chiba, at surfwindow.jp, made by SP Digital Labs, the name under which Joseph Suzuki-Parker, an independent developer based in Japan, publishes apps ("we", "us"). This policy explains what information Surf Window collects, why, who it is shared with, and the choices you have.</p>
 
 <div class="card">
   <p><strong>The short version:</strong> you can use Surf Window without an account. If you sign in with Google, we keep your saved breaks and the handle you choose. Surf reports you post are public under your handle. Your location stays on your device and is only used to show distances and to check you're at the beach before you report. We use PostHog analytics, including session recordings, to see how the app is used and fix problems. We don't show ads or sell your data.</p>
@@ -105,7 +105,7 @@ TERMS = f'''
 <h1>Terms of Service</h1>
 <p class="updated">Last updated: November 5, 2026 · <a href="/surfwindow/terms-ja.html" lang="ja" hreflang="ja">日本語</a></p>
 
-<p>These terms apply to your use of Surf Window, a surf forecast web app made by SP Digital Labs, the name under which Joseph Suzuki Parker, an independent developer based in Japan, publishes apps ("we", "us"). By using Surf Window, you agree to these terms. If you don't agree, please don't use it.</p>
+<p>These terms apply to your use of Surf Window, a surf forecast web app made by SP Digital Labs, the name under which Joseph Suzuki-Parker, an independent developer based in Japan, publishes apps ("we", "us"). By using Surf Window, you agree to these terms. If you don't agree, please don't use it.</p>
 
 <div class="card">
   <p><strong>The short version:</strong> Surf Window's scores are estimates from forecast data, not a promise that it's safe to surf. Check the conditions yourself, know your limits, and follow local rules and lifeguards. Reports you post are public under your handle, so keep them honest and kind. Surf Window is free.</p>

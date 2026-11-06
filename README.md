@@ -1,6 +1,6 @@
 # SP Digital Labs
 
-Website for SP Digital Labs, the name under which Joseph Suzuki Parker publishes apps. Live at https://spdigitallabs.app (GitHub Pages, custom domain set in `CNAME`).
+Website for SP Digital Labs, the name under which Joseph Suzuki-Parker publishes apps. Live at https://spdigitallabs.app (GitHub Pages, custom domain set in `CNAME`).
 
 Plain static HTML, no build step. Preview locally with `python3 -m http.server` and open http://localhost:8000.
 
