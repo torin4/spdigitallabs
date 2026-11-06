@@ -573,7 +573,8 @@ a { transition: color 150ms var(--ease-out), text-decoration-color 150ms var(--e
 .home-intro { padding-block: var(--space-7) var(--space-6); }
 .home-intro { display: flex; flex-direction: column; gap: var(--space-5); }
 .home-intro-text { max-width: var(--text); }
-.home-intro h1 { font-size: clamp(2rem, 1.4rem + 2.4vw, 2.875rem); line-height: 1.08; letter-spacing: -0.02em; }
+.home-intro { --h1: clamp(2rem, 1.4rem + 2.4vw, 2.875rem); }
+.home-intro h1 { font-size: var(--h1); line-height: 1.08; letter-spacing: -0.02em; }
 .home-art { display: block; width: 168px; height: auto; flex: none; }
 .home-art .t-indigo { fill: var(--indigo); }
 .home-art .t-ink { fill: var(--ink); }
@@ -581,7 +582,8 @@ a { transition: color 150ms var(--ease-out), text-decoration-color 150ms var(--e
 .home-art .t-moss { fill: var(--moss); }
 @media (min-width: 760px) {
   .home-intro { flex-direction: row; align-items: center; gap: var(--space-6); }
-  .home-art { width: 300px; }
+  /* as tall as the two-line headline plus the line under it */
+  .home-art { width: auto; height: calc(var(--h1) * 2.16 + var(--space-3) + 1.1875rem * 1.55); }
 }
 .home-intro .lede { margin-top: var(--space-3); }
 
