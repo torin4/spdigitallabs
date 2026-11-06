@@ -1,6 +1,6 @@
 """Shared page chrome for spdigitallabs.app app pages."""
 
-CSS_VERSION = "20261106b"
+CSS_VERSION = "20261106c"
 
 APPS = {
     "understory": {

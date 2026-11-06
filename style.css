@@ -774,3 +774,13 @@ a { transition: color 150ms var(--ease-out), text-decoration-color 150ms var(--e
 .post-more { margin-top: var(--space-6); }
 .post-more ul { list-style: none; padding: 0; margin-top: var(--space-3); display: grid; gap: var(--space-2); }
 .post-more a { font-weight: 600; }
+
+/* About page */
+.about-photo { display: block; width: min(100%, 320px); height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: var(--radius-md); margin-bottom: var(--space-5); }
+.about-links { display: flex; flex-wrap: wrap; gap: var(--space-3) var(--space-5); padding-top: var(--space-3); }
+.about-links a { display: inline-flex; align-items: center; gap: 0.35em; }
+.about-links .icon { width: 1em; height: 1em; }
+@media (min-width: 900px) {
+  .post.about { max-width: calc(var(--text) + 300px); display: grid; grid-template-columns: 260px 1fr; gap: var(--space-6); align-items: start; }
+  .post.about .about-photo { position: sticky; top: var(--space-5); width: 100%; margin: var(--space-5) 0 0; }
+}
