@@ -1,6 +1,6 @@
 """Shared page chrome for spdigitallabs.app app pages."""
 
-CSS_VERSION = "20261106c"
+CSS_VERSION = "20261106d"
 
 APPS = {
     "understory": {
@@ -46,7 +46,7 @@ def app_header(slug, name, icon, tabs, current):
         '    <nav class="crumbs" aria-label="Breadcrumb">\n'
         '      <a class="brand" href="/"><img src="/assets/logo.svg" alt="" width="32" height="32">'
         '<span class="brand-text">SP Digital Labs</span></a>\n'
-        '      <span class="crumb-sep" aria-hidden="true">/</span>\n'
+        '      <span class="crumb-sep" aria-hidden="true"><svg class="icon" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span>\n'
         '      <a class="crumb-app" href="/%s/"%s><img src="%s" alt="" width="28" height="28">%s</a>\n'
         '    </nav>\n'
         '    <nav class="nav" aria-label="%s">\n'

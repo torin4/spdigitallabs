@@ -40,7 +40,7 @@ def header():
   <div class="wrap bar">
     <nav class="crumbs" aria-label="Breadcrumb">
       <a class="brand" href="/"><img src="/assets/logo.svg" alt="" width="32" height="32"><span class="brand-text">SP Digital Labs</span></a>
-      <span class="crumb-sep" aria-hidden="true">/</span>
+      <span class="crumb-sep" aria-hidden="true"><svg class="icon" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span>
       <a class="crumb-app" href="/blog/">Blog</a>
     </nav>
   </div>
