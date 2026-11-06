@@ -121,10 +121,10 @@ def post_page(post, others):
     <h1>{post["title"]}</h1>
     {meta_line(post)}
   </header>
+  {CTA}
   <div class="post-body">
 {post["body"].strip()}
   </div>
-  {CTA}
   <nav class="post-more" aria-labelledby="more-title">
     <h2 id="more-title" class="label">More from the blog</h2>
     <ul>
