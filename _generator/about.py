@@ -61,10 +61,10 @@ PAGES = {
 </ul>
 
 <h2>Building tools</h2>
-<p>That classroom work led to <a href="https://tevo.jp/">Tevo</a>, an AI speaking-practice platform that turns English textbooks into conversations students can practise out loud. Joe co-founded it in 2023 with his brother Micah Parker and fellow teacher Hiro Iwama.</p>
+<p>That classroom work led to <a href="https://tevo.jp/" target="_blank" rel="noopener">Tevo</a>, an AI speaking-practice platform that turns English textbooks into conversations students can practise out loud. Joe co-founded it in 2023 with his brother Micah Parker and fellow teacher Hiro Iwama.</p>
 <p>The apps here come from the same habit of building the tool he wishes already existed: <a href="/dailyallowance/">Daily Allowance</a> for knowing what you can spend today, <a href="/strata/">Strata</a> for reading the Bible with its history, <a href="/understory/">Understory</a> for private journaling, and <a href="/surfwindow/">Surf Window</a> for deciding when it's worth going surfing.</p>
 
-<p class="about-links"><a href="{SCHOLAR}">Google Scholar{EXTERNAL}</a><a href="{LINKEDIN}">LinkedIn{EXTERNAL}</a><a href="/#contact">Get in touch</a></p>
+<p class="about-links"><a href="{SCHOLAR}" target="_blank" rel="noopener">Google Scholar{EXTERNAL}</a><a href="{LINKEDIN}" target="_blank" rel="noopener">LinkedIn{EXTERNAL}</a><a href="/#contact">Get in touch</a></p>
 ''',
     },
     "ja": {
@@ -97,10 +97,10 @@ PAGES = {
 </ul>
 
 <h2>道具を作る</h2>
-<p>教室での経験から生まれたのが <a href="https://tevo.jp/">Tevo</a> です。英語の教科書を、声に出して練習できる AI との会話に変えるスピーキング練習のプラットフォームで、2023年に兄弟の Micah Parker、同じく英語教員の Hiro Iwama と共同で立ち上げました。</p>
+<p>教室での経験から生まれたのが <a href="https://tevo.jp/" target="_blank" rel="noopener">Tevo</a> です。英語の教科書を、声に出して練習できる AI との会話に変えるスピーキング練習のプラットフォームで、2023年に兄弟の Micah Parker、同じく英語教員の Hiro Iwama と共同で立ち上げました。</p>
 <p>ここにあるアプリも同じ発想から生まれています。あったらいいのに、と思った道具を自分で作る。今日使えるお金がわかる <a href="/dailyallowance/">Daily Allowance</a>、歴史を背景に聖書を読む <a href="/strata/">Strata</a>、プライベートな日記の <a href="/understory/">Understory</a>、そして海に行くべきかを判断する <a href="/surfwindow/">Surf Window</a> です。</p>
 
-<p class="about-links"><a href="{SCHOLAR}">Google Scholar{EXTERNAL}</a><a href="{LINKEDIN}">LinkedIn{EXTERNAL}</a><a href="/ja/#contact">お問い合わせ</a></p>
+<p class="about-links"><a href="{SCHOLAR}" target="_blank" rel="noopener">Google Scholar{EXTERNAL}</a><a href="{LINKEDIN}" target="_blank" rel="noopener">LinkedIn{EXTERNAL}</a><a href="/ja/#contact">お問い合わせ</a></p>
 ''',
     },
 }
@@ -118,7 +118,9 @@ def document(lang, p):
                  for d in (person, crumbs))
     other = "English" if lang == "ja" else "日本語"
     other_lang = "en" if lang == "ja" else "ja"
-    foot_links = "\n      ".join(f'<a href="{href}">{label}</a>' for href, label in p["foot_links"])
+    foot_links = "\n      ".join(
+        f'<a href="{href}"{' target="_blank" rel="noopener"' if href.startswith("http") else ""}>{label}</a>'
+        for href, label in p["foot_links"])
     return f'''<!doctype html>
 <html lang="{lang}">
 <head>
