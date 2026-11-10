@@ -1,6 +1,6 @@
 """Shared page chrome for spdigitallabs.app app pages."""
 
-CSS_VERSION = "20261106j"
+CSS_VERSION = "20261110a"
 
 APPS = {
     "understory": {
@@ -178,3 +178,13 @@ def feature_rows(items):
     <div class="feature-copy"><h2>{h}</h2><p>{p}</p></div>
   </li>''' for src, alt, h, p in items)
     return f'<ul class="feature-rows">\n{rows}\n</ul>'
+
+
+def feature_rows_wide(items):
+    """items: (img src, alt, heading, text). Like feature_rows, for landscape desktop screenshots."""
+    rows = "\n".join(
+        f'''  <li class="feature-row">
+    <div class="feature-shot"><img src="{src}" alt="{alt}" width="1440" height="900" loading="lazy"></div>
+    <div class="feature-copy"><h2>{h}</h2><p>{p}</p></div>
+  </li>''' for src, alt, h, p in items)
+    return f'<ul class="feature-rows wide">\n{rows}\n</ul>'

@@ -1,4 +1,4 @@
-from chrome import EMAIL, hero, features, build_pages
+from chrome import EMAIL, hero, features, feature_rows_wide, build_pages
 
 SUPPORT_EMAIL = EMAIL.replace('class="email"', 'class="email" data-subject="Tuck support"')
 
@@ -132,15 +132,20 @@ OVERVIEW = hero("tuck", "Mac app",
     "Tuck is a clipboard manager for Mac that stays out of sight. It remembers the text, files, images and screenshots you copy, and shows them only when you press the shortcut. Type a few letters, press Return, and it's pasted.",
     '<span class="label">Coming soon to the Mac App Store</span>') + """
 
+<section aria-label="Main features">
+""" + feature_rows_wide([
+    ("/assets/screens/tuck-history.jpg", "The Tuck panel listing recent clips: text, code, a file and an image, with the selected clip shown in full below.", "Your history, one shortcut away", "Press Cmd+Shift+V and everything you copied is there: text, code, files and images, newest first. The pane under the list shows the selected clip in full. Press Return and it's pasted into the app you were in, then Tuck gets out of the way."),
+    ("/assets/screens/tuck-search.jpg", "Searching for the word git finds a git command and an image whose text contains the word.", "Find it by typing, even inside a screenshot", "Type a few letters and the list narrows as you go. Tuck reads the text in images on your Mac, so a screenshot turns up when you type a word that appears in it. Narrow further by the app a clip came from, or by kind: text, file, image or pinned."),
+    ("/assets/screens/tuck-settings.jpg", "Tuck settings for the panel: floating or docked layout, keep open, the strip, and paste cleaning.", "Set it up your way", "Keep Tuck as a floating panel that appears where you left it, or dock it to the edge of the screen as a sidebar. Add a small strip that shows the newest clip, choose your own shortcut, and decide how pasted text is cleaned up."),
+]) + """
+</section>
+
 <section aria-labelledby="more-title">
-  <h2 id="more-title" class="section-title">What it does</h2>
+  <h2 id="more-title" class="section-title">More</h2>
 """ + features([
-    ('Find it by typing', 'Search your history as you type. Narrow by the app a clip came from, or by text, file, image or pinned.'),
-    ('Search inside screenshots', 'Tuck reads the text in images on your Mac, so you can find a screenshot by the words in it.'),
     ('Paste it clean', 'Strip terminal color codes, trailing spaces and extra indentation, wrap code in a fence, or paste exactly as copied.'),
     ('Pins and templates', 'Pin what you reuse. A pinned clip can have a blank that Tuck fills with whatever is on the clipboard.'),
-    ('Careful with secrets', 'Password managers are skipped, and text that looks like a password or key is never written to disk.'),
-    ('Nothing leaves your Mac', 'No account, no sync, no analytics. Tuck never connects to the internet.'),
+    ('Private by design', 'Password managers are skipped and secrets are never written to disk. No account, no sync, and nothing leaves your Mac.'),
 ]) + f"""
 </section>
 

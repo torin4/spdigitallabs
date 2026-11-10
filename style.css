@@ -684,6 +684,13 @@ a { transition: color 150ms var(--ease-out), text-decoration-color 150ms var(--e
 @media (max-width: 47.99rem) {
   .feature-shot img { max-width: 15rem; margin-inline: auto; }
 }
+/* Wide feature rows: landscape desktop screenshots, given the larger column. */
+.feature-rows.wide { max-width: none; }
+.feature-rows.wide .feature-shot img { max-width: none; aspect-ratio: 16 / 10; border-radius: 0.75rem; }
+@media (min-width: 48rem) {
+  .feature-rows.wide .feature-row { grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); }
+  .feature-rows.wide .feature-row:nth-child(even) { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); }
+}
 .section-title-lg { font-size: clamp(1.375rem, 1.1rem + 1vw, 1.75rem); margin-bottom: var(--space-5); }
 
 /* Japanese: break lines between phrases (文節), not in the middle of one. */
