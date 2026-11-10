@@ -25,6 +25,12 @@ APPS = {
         "foot": [("/dailyallowance/support.html", "Support"), ("/dailyallowance/privacy.html", "Privacy Policy"),
                  ("/dailyallowance/terms.html", "Terms of Service"), ("/dailyallowance/delete-account.html", "Delete your account")],
     },
+    "tuck": {
+        "name": "Tuck",
+        "icon": "/assets/apps/tuck.png",
+        "tabs": [("/tuck/support.html", "Support"), ("/tuck/privacy.html", "Privacy")],
+        "foot": [("/tuck/support.html", "Support"), ("/tuck/privacy.html", "Privacy Policy")],
+    },
     "strata": {
         "name": "Strata",
         "icon": "/assets/apps/strata.png",

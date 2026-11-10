@@ -22,4 +22,4 @@ The app pages and their policies are built from `_generator/` (Python 3, no depe
 
     python3 _generator/build.py
 
-Edit the text in `_generator/<app>.py`, then rebuild. That regenerates `dailyallowance/index.html`, `strata/index.html`, the Understory and Surf Window pages, and the blog. Blog posts are HTML strings in `_generator/blog_posts.py`; add a post there, rebuild, and add its URL to `sitemap.xml`. The homepage and the Daily Allowance policy pages are written by hand. Jekyll skips folders starting with `_`, so `_generator/` is never published.
+Edit the text in `_generator/<app>.py`, then rebuild. That regenerates `dailyallowance/index.html`, `strata/index.html`, the Understory, Surf Window and Tuck pages, and the blog. Blog posts are HTML strings in `_generator/blog_posts.py`; add a post there, rebuild, and add its URL to `sitemap.xml`. The homepage and the Daily Allowance policy pages are written by hand. Jekyll skips folders starting with `_`, so `_generator/` is never published.
