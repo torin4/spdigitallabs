@@ -6,6 +6,7 @@ Writes into the site folder (the parent of _generator/). Generated:
   dailyallowance/index.html
   strata/index.html
   understory/{index,privacy,terms,legal-notice}.html
+  hanjo/{index,privacy,terms,legal-notice}.html
   surfwindow/{index,privacy,terms,privacy-ja,terms-ja}.html
   tuck/{index,support,privacy}.html
   blog/index.html and blog/<slug>.html (posts are in blog_posts.py)
@@ -22,8 +23,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
 
-import about, blog, dailyallowance, strata, surfwindow, tuck, understory  # noqa: E402
+import about, blog, dailyallowance, hanjo, strata, surfwindow, tuck, understory  # noqa: E402
 
-for module in (dailyallowance, strata, surfwindow, tuck, understory, blog, about):
+for module in (dailyallowance, hanjo, strata, surfwindow, tuck, understory, blog, about):
     module.build(ROOT)
 print("Rebuilt app pages in", ROOT)

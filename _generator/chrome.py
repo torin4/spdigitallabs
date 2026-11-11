@@ -3,6 +3,13 @@
 CSS_VERSION = "20261110a"
 
 APPS = {
+    "hanjo": {
+        "name": "Hanjo",
+        "icon": "/assets/apps/hanjo.png",
+        "tabs": [("/hanjo/privacy.html", "Privacy"), ("/hanjo/terms.html", "Terms")],
+        "foot": [("/hanjo/privacy.html", "Privacy Policy"), ("/hanjo/terms.html", "Terms of Service"),
+                 ("/hanjo/legal-notice.html", "特定商取引法に基づく表記")],
+    },
     "understory": {
         "name": "Understory",
         "icon": "/assets/apps/understory.png",
