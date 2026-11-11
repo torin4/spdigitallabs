@@ -1,10 +1,10 @@
 from icons import EXTERNAL
-from chrome import EMAIL, hero, features, shots, feature_rows, build_pages
-from surfwindow_ja import PRIVACY_JA, TERMS_JA
+from chrome import EMAIL, hero, features, shots, feature_rows, build_pages, redirect_stub
+from surfwindow_ja import PAGES_JA
 
 PRIVACY = f'''
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: November 5, 2026 · <a href="/surfwindow/privacy-ja.html" lang="ja" hreflang="ja">日本語</a></p>
+<p class="updated">Last updated: November 11, 2026</p>
 
 <p>Surf Window is a surf forecast web app for breaks in Shonan and Chiba, at surfwindow.jp, made by SP Digital Labs, the name under which Joseph Suzuki-Parker, an independent developer based in Japan, publishes apps ("we", "us"). This policy explains what information Surf Window collects, why, who it is shared with, and the choices you have.</p>
 
@@ -99,11 +99,12 @@ PRIVACY = f'''
 
 <h2>Contact</h2>
 <p>Questions or requests about your privacy: {EMAIL}</p>
+<p>This policy is also available in <a href="/ja/surfwindow/privacy.html" lang="ja" hreflang="ja">Japanese</a>. If the two versions differ, the English version applies.</p>
 '''
 
 TERMS = f'''
 <h1>Terms of Service</h1>
-<p class="updated">Last updated: November 5, 2026 · <a href="/surfwindow/terms-ja.html" lang="ja" hreflang="ja">日本語</a></p>
+<p class="updated">Last updated: November 11, 2026</p>
 
 <p>These terms apply to your use of Surf Window, a surf forecast web app made by SP Digital Labs, the name under which Joseph Suzuki-Parker, an independent developer based in Japan, publishes apps ("we", "us"). By using Surf Window, you agree to these terms. If you don't agree, please don't use it.</p>
 
@@ -156,6 +157,7 @@ TERMS = f'''
 
 <h2>Contact</h2>
 <p>Questions about these terms: {EMAIL}</p>
+<p>These terms are also available in <a href="/ja/surfwindow/terms.html" lang="ja" hreflang="ja">Japanese</a>. If the two versions differ, the English version applies.</p>
 '''
 
 OVERVIEW = hero("surfwindow", "Web app · Free",
@@ -181,8 +183,8 @@ OVERVIEW = hero("surfwindow", "Web app · Free",
 <section aria-labelledby="help-title">
   <h2 id="help-title" class="section-title">Help and policies</h2>
   <ul class="help-list">
-    <li><a href="/surfwindow/privacy.html">Privacy Policy</a> · <a href="/surfwindow/privacy-ja.html" lang="ja">プライバシーポリシー</a></li>
-    <li><a href="/surfwindow/terms.html">Terms of Service</a> · <a href="/surfwindow/terms-ja.html" lang="ja">利用規約</a>. Scores are estimates, not safety advice.</li>
+    <li><a href="/surfwindow/privacy.html">Privacy Policy</a></li>
+    <li><a href="/surfwindow/terms.html">Terms of Service</a>. Scores are estimates, not safety advice.</li>
     <li>Delete your account with アカウント削除 (Delete account) at the bottom of the app.</li>
     <li>Questions: {EMAIL}</li>
   </ul>
@@ -193,9 +195,13 @@ PAGES = {
     "index.html": ("Surf Window", "Go or no-go surf scores for 25 breaks in Shonan and Chiba. Free, in Japanese and English.", OVERVIEW, "en", "wrap app-page"),
     "privacy.html": ("Privacy Policy", "How Surf Window collects, uses and protects your information.", PRIVACY, "en", "wrap page"),
     "terms.html": ("Terms of Service", "The terms for using Surf Window.", TERMS, "en", "wrap page"),
-    "privacy-ja.html": ("プライバシーポリシー", "Surf Window が取得する情報、その利用目的と提供先、お客様が選べること。", PRIVACY_JA, "ja", "wrap page"),
-    "terms-ja.html": ("利用規約", "Surf Window の利用規約。予報は目安であり、安全の保証ではありません。", TERMS_JA, "ja", "wrap page"),
 }
 
+# The Japanese policies used to live at these URLs, and the Surf Window app still links them.
+MOVED = {"privacy-ja.html": "/ja/surfwindow/privacy.html", "terms-ja.html": "/ja/surfwindow/terms.html"}
+
+
 def build(root):
-    build_pages(root, "surfwindow", PAGES)
+    build_pages(root, "surfwindow", PAGES, PAGES_JA)
+    for fn, target in MOVED.items():
+        open(f"{root}/surfwindow/{fn}", "w").write(redirect_stub(target))

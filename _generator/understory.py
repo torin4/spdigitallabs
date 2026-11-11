@@ -1,9 +1,10 @@
 from icons import EXTERNAL
 from chrome import EMAIL, hero, features, shots, feature_rows, build_pages
+from understory_ja import PAGES_JA
 
 PRIVACY = f'''
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: November 5, 2026</p>
+<p class="updated">Last updated: November 11, 2026</p>
 
 <p>Understory is a private journaling web app at understoryjournal.app, made by SP Digital Labs, the name under which Joseph Suzuki-Parker, an independent developer based in Japan, publishes apps ("we", "us"). This policy explains what information Understory collects, why, who it is shared with, and the choices you have.</p>
 
@@ -112,11 +113,12 @@ PRIVACY = f'''
 
 <h2>Contact</h2>
 <p>Questions or requests about your privacy: {EMAIL}</p>
+<p>This policy is also available in <a href="/ja/understory/privacy.html" lang="ja" hreflang="ja">Japanese</a>. If the two versions differ, the English version applies.</p>
 '''
 
 TERMS = f'''
 <h1>Terms of Service</h1>
-<p class="updated">Last updated: November 5, 2026</p>
+<p class="updated">Last updated: November 11, 2026</p>
 
 <p>These terms apply to your use of Understory, a journaling web app made by SP Digital Labs, the name under which Joseph Suzuki-Parker, an independent developer based in Japan, publishes apps ("we", "us"). By creating an account or using Understory, you agree to these terms. If you don't agree, please don't use it.</p>
 
@@ -185,6 +187,7 @@ TERMS = f'''
 
 <h2>Contact</h2>
 <p>Questions about these terms: {EMAIL}</p>
+<p>These terms are also available in <a href="/ja/understory/terms.html" lang="ja" hreflang="ja">Japanese</a>. If the two versions differ, the English version applies.</p>
 '''
 
 
@@ -283,4 +286,4 @@ PAGES = {
 }
 
 def build(root):
-    build_pages(root, "understory", PAGES)
+    build_pages(root, "understory", PAGES, PAGES_JA)

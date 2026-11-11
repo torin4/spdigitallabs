@@ -219,6 +219,10 @@ p, ul, ol { margin: 0; }
 }
 .nav a:hover { color: var(--ink); background: var(--surface); }
 .nav a[aria-current="page"] { color: var(--ink); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px; }
+@media (max-width: 400px) {
+  .nav ul { margin-inline: calc(var(--space-2) * -1); gap: 0; }
+  .nav a { padding-inline: var(--space-2); }
+}
 
 /* App bar (app pages) */
 

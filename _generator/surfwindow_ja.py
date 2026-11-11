@@ -1,10 +1,10 @@
-from chrome import EMAIL
+from icons import EXTERNAL
+from chrome import EMAIL_JA as EMAIL, hero, features, feature_rows
 
-LANG_EN = '<p class="updated"><a href="/surfwindow/privacy.html" lang="en">English</a></p>'
 
 PRIVACY_JA = f'''
 <h1>プライバシーポリシー</h1>
-<p class="updated">最終更新日：2026年11月5日 · <a href="/surfwindow/privacy.html" lang="en" hreflang="en">English</a></p>
+<p class="updated">最終更新日：2026年11月11日</p>
 
 <p>Surf Window（surfwindow.jp）は、湘南・千葉のサーフポイントの波予報ウェブアプリです。日本の個人開発者 Joseph Suzuki-Parker が屋号「SP Digital Labs」で提供しています（以下「当方」）。本ポリシーでは、Surf Window が取得する情報、その利用目的、提供先、およびお客様が選べることを説明します。</p>
 
@@ -106,12 +106,12 @@ PRIVACY_JA = f'''
 
 <h2>お問い合わせ</h2>
 <p>個人情報に関するご質問・ご請求：{EMAIL}</p>
-<p>日本語版と英語版の内容に相違がある場合は、日本語版が優先します。</p>
+<p>本ページは英語版を翻訳したものです。日本語版と英語版の内容に相違がある場合は、英語版が優先します。</p>
 '''
 
 TERMS_JA = f'''
 <h1>利用規約</h1>
-<p class="updated">最終更新日：2026年11月5日 · <a href="/surfwindow/terms.html" lang="en" hreflang="en">English</a></p>
+<p class="updated">最終更新日：2026年11月11日</p>
 
 <p>本規約は、日本の個人開発者 Joseph Suzuki-Parker が屋号「SP Digital Labs」で提供する波予報ウェブアプリ Surf Window（以下「本アプリ」）の利用条件を定めるものです（提供者を以下「当方」）。本アプリを利用することで、本規約に同意したものとみなします。同意いただけない場合は、本アプリを利用しないでください。</p>
 
@@ -163,5 +163,42 @@ TERMS_JA = f'''
 
 <h2>お問い合わせ</h2>
 <p>本規約に関するご質問：{EMAIL}</p>
-<p>日本語版と英語版の内容に相違がある場合は、日本語版が優先します。</p>
+<p>本ページは英語版を翻訳したものです。日本語版と英語版の内容に相違がある場合は、英語版が優先します。</p>
 '''
+
+OVERVIEW_JA = hero("surfwindow", "ウェブアプリ · 無料",
+    "行く価値はある？行くならいつ？",
+    "Surf Window は、湘南と千葉の25のサーフポイントについて、最新のうねり・風・潮を各ポイントの特性と照らし合わせて採点します。1時間ごとのスコアと、その理由がわかります。日本語と英語に対応しています。",
+    '<a class="button" href="https://surfwindow.jp/">Surf Window を開く' + EXTERNAL + '</a><span class="label">アカウント不要</span>') + """
+
+<section aria-label="主な機能">
+""" + feature_rows([
+    ("/assets/screens/surfwindow-home.jpg", "保存したポイントとスコアが並ぶ Surf Window のホーム画面。", "ポイントごとのスコア", "Surf Window は湘南と千葉の25のサーフスポットに対応しています。ポイントごとに、波・風・潮の最新の予報を確かめ、その浜が良くなるために必要な条件と比べます。1時間ごとに100点満点のスコアを付け、何が波を良くしていて、何が妨げているのかを短くわかりやすい一文で伝えます。"),
+    ("/assets/screens/surfwindow-break.jpg", "風とうねりの地図、うねりの入る範囲、潮の曲線が表示されたポイントのページ。", "うねりの入る範囲が見える", "浜はそれぞれ違う方角を向いています。ある方角からの波は届き、それ以外は岬や湾にさえぎられます。Surf Window はこの「うねりの入る範囲」を風と波のライブ地図の上に描くので、今日ある浜に波があり、隣の浜はフラットなのはなぜかがひと目でわかります。"),
+    ("/assets/screens/surfwindow-forecast.jpg", "日ごとの波の高さと7日間のグラフが表示された予報タブ。", "7日間を1時間ごとに", "予報タブでは、この先7日間を1時間ごとに並べます。浜での波のサイズ、波と波の間隔（周期）、風、潮、波のパワーをひとつのタイムラインで確認できます。その週でいちばん良い時間帯も Surf Window が選び出すので、自分で計算する必要はありません。"),
+]) + """
+</section>
+
+<section aria-labelledby="more-title">
+  <h2 id="more-title" class="section-title">その他の機能</h2>
+""" + features([('浜からの報告', '浜にいるサーファーが、実際の様子を3回のタップで報告します。予報の横に表示されます。'),
+    ('危険も正直に', '上級者向けの時間帯には印が付き、どのポイントにも危険についての注意書きがあります。'),
+    ('日本語と英語', 'すべての画面が両方の言語に対応しています。アカウントは不要で、現在地はお使いのスマートフォンの中にとどまります。')]) + f"""
+</section>
+
+<section aria-labelledby="help-title">
+  <h2 id="help-title" class="section-title">ヘルプとポリシー</h2>
+  <ul class="help-list">
+    <li><a href="/ja/surfwindow/privacy.html">プライバシーポリシー</a></li>
+    <li><a href="/ja/surfwindow/terms.html">利用規約</a>。スコアは目安であり、安全を保証するものではありません。</li>
+    <li>アカウントは、アプリの下部にある「アカウント削除」から削除できます。</li>
+    <li>お問い合わせ：{EMAIL}</li>
+  </ul>
+</section>
+"""
+
+PAGES_JA = {
+    "index.html": ("Surf Window", "湘南と千葉の25のサーフポイントを、行くか行かないかで判断できるスコアで。無料、日本語と英語に対応。", OVERVIEW_JA, "ja", "wrap app-page"),
+    "privacy.html": ("プライバシーポリシー", "Surf Window が取得する情報、その利用目的と提供先、お客様が選べること。", PRIVACY_JA, "ja", "wrap page"),
+    "terms.html": ("利用規約", "Surf Window の利用規約。予報は目安であり、安全の保証ではありません。", TERMS_JA, "ja", "wrap page"),
+}

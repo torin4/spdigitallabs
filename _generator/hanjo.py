@@ -1,5 +1,6 @@
 from icons import EXTERNAL
 from chrome import EMAIL, hero, features, feature_rows_wide, build_pages
+from hanjo_ja import PAGES_JA
 
 UPDATED = "November 11, 2026"
 UPDATED_JA = "2026年11月11日"
@@ -107,6 +108,7 @@ PRIVACY = f'''
 
 <h2>Contact</h2>
 <p>Questions or requests about your privacy: {EMAIL}</p>
+<p>This policy is also available in <a href="/ja/hanjo/privacy.html" lang="ja" hreflang="ja">Japanese</a>. If the two versions differ, the English version applies.</p>
 '''
 
 TERMS = f'''
@@ -179,6 +181,7 @@ TERMS = f'''
 
 <h2>Contact</h2>
 <p>Questions about these terms: {EMAIL}</p>
+<p>These terms are also available in <a href="/ja/hanjo/terms.html" lang="ja" hreflang="ja">Japanese</a>. If the two versions differ, the English version applies.</p>
 '''
 
 
@@ -278,4 +281,4 @@ PAGES = {
 }
 
 def build(root):
-    build_pages(root, "hanjo", PAGES)
+    build_pages(root, "hanjo", PAGES, PAGES_JA)

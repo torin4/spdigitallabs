@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<script>(function(d){if(window.matchMedia&&matchMedia("(prefers-reduced-motion: no-preference)").matches&&"IntersectionObserver"in window){d.classList.add("motion");setTimeout(function(){if(!window.__spMotion)d.classList.remove("motion")},2500)}})(document.documentElement)</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>プライバシーポリシー - Understory</title>
+<meta name="description" content="Understory が取得する情報、その利用目的と提供先、お客様が選べること。">
+<meta name="theme-color" content="#f7f8fa" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1117" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SP Digital Labs">
+<meta property="og:title" content="プライバシーポリシー - Understory">
+<meta property="og:description" content="Understory が取得する情報、その利用目的と提供先、お客様が選べること。">
+<meta property="og:url" content="https://spdigitallabs.app/ja/understory/privacy.html">
+<meta property="og:image" content="https://spdigitallabs.app/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SP Digital Labs: Everyday tools, done right.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://spdigitallabs.app/ja/understory/privacy.html">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/mplus-rounded-1c-800-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="alternate" hreflang="en" href="https://spdigitallabs.app/understory/privacy.html">
+<link rel="alternate" hreflang="ja" href="https://spdigitallabs.app/ja/understory/privacy.html">
+<link rel="alternate" hreflang="x-default" href="https://spdigitallabs.app/understory/privacy.html">
+<link rel="stylesheet" href="/style.css?v=20261111a">
+</head>
+<body>
+<a class="skip" href="#main">本文へスキップ</a>
+
+<header class="site-header">
+  <div class="wrap bar">
+    <nav class="crumbs" aria-label="パンくずリスト">
+      <a class="brand" href="/ja/"><img src="/assets/logo.svg" alt="" width="32" height="32"><span class="brand-text">SP Digital Labs</span></a>
+      <span class="crumb-sep" aria-hidden="true"><svg class="icon" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span>
+      <a class="crumb-app" href="/ja/understory/"><img src="/assets/apps/understory.png" alt="" width="28" height="28">Understory</a>
+    </nav>
+    <nav class="nav" aria-label="Understory">
+      <ul>
+        <li><a href="/ja/understory/privacy.html" aria-current="page">プライバシー</a></li>
+        <li><a href="/ja/understory/terms.html">利用規約</a></li>
+        <li><a href="/understory/privacy.html" lang="en" hreflang="en">English</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap page">
+<h1>プライバシーポリシー</h1>
+<p class="updated">最終更新日：2026年11月11日</p>
+
+<p>Understory（understoryjournal.app）は、プライベートな日記のウェブアプリです。日本の個人開発者 Joseph Suzuki-Parker が屋号「SP Digital Labs」で提供しています（以下「当方」）。本ポリシーでは、Understory が取得する情報、その利用目的、提供先、およびお客様が選べることを説明します。</p>
+
+<div class="card">
+  <p><strong>要点：</strong>日記の内容は、お客様だけが持つ鍵でブラウザ内で暗号化されるため、当方は読むことができません。Premium を利用し、コンパニオンをオンにしている場合は、コンパニオンの返答を作成するため、エントリーの本文がその時に限り暗号化されない状態で Google の AI サービス Gemini に送信されます。当方のサーバーはその写しを保存せず、Google がそれをモデルの学習に使うこともありません。エントリーの気分やテーマなど一部の結果は、成長の輪を描くため、この暗号化をせずに保存します。広告は表示せず、分析ツールも使わず、データを販売することもありません。お支払いは Stripe を通じて行われ、当方がカード情報を見ることはありません。</p>
+</div>
+
+<h2>取得する情報</h2>
+
+<h3>アカウント</h3>
+<ul>
+  <li>メールアドレスとパスワード、または Google のどちらで登録した場合も、Firebase Authentication から<strong>メールアドレス</strong>と<strong>ユーザーID</strong>を受け取ります。</li>
+  <li>コンパニオンの話し方や、言葉をどこから引くかなどの<strong>設定</strong>、および初期設定を終えた日時。</li>
+  <li>ログインのパスワードを当方が見ることはなく、Google Firebase が取り扱います。メールアドレスとパスワードで登録した場合、同じパスワードで端末上の日記のロックも解除します（下記参照）。</li>
+</ul>
+
+<h3>日記</h3>
+<ul>
+  <li><strong>エントリー、メモ（spores、胞子）、コンパニオンの記憶（heartwood、心材）</strong>は、保存前に、お客様のパスフレーズから作った鍵でブラウザ内で暗号化されます。この鍵は、一度だけ表示されるリカバリーコードでも保護されます。当方が保存するのは暗号化された文章と保護された鍵だけなので、当方はお客様の文章を読むことができず、パスフレーズとリカバリーコードの両方を失った場合は復元することもできません。</li>
+  <li>アプリが動作するよう、各エントリーについての一部の情報は、この暗号化を<strong>せずに</strong>保存します。書いた日時と変更した日時、文字数（語数）、入力が文字か音声か、その季節（season）、書き終えたかアーカイブしたかです。</li>
+  <li>Premium では、書き終えた各エントリーの<strong>気分の読み取り</strong>も、この暗号化をせずに保存します。主な気分とそのスコア、最大5つのテーマ、お客様に表示する振り返り（引用と短いメモ）です。これらは成長の輪と統計の表示に使います。</li>
+</ul>
+
+<h3>コンパニオンとその他のAI機能（Premium）</h3>
+<p>Premium のAI機能には Google の Gemini モデルを使います。<strong>お客様が同意するまで、何も送信しません。</strong>Premium のAI機能が初めて動作する前に、アプリが何をどこへ送るかを説明し、同意を求めます。同意した日時は記録します。AI機能が動作するときは、必要な文章をブラウザ内で復号し、当方のサーバーを経由して、暗号化された通信で Google に送信します。</p>
+<ul>
+  <li><strong>エントリーを書き終えたとき</strong>：気分を読み取るため、また「companion remembers」（コンパニオンの記憶）がオンの場合はコンパニオンの記憶を更新するため、本文全体を送信します。コンパニオンがオンの間は自動で行われます。</li>
+  <li><strong>コンパニオンに頼んだとき</strong>：reflect（振り返る）、tend（手入れする）、glean（拾い集める）、seek（尋ねる）、chat（話す）を頼むと、作業中の文章を、それまでの会話、コンパニオンの記憶、および端末が関連すると判断した過去のエントリーからの短い抜粋（最大3つ）とともに送信します。</li>
+  <li><strong>スペルチェック</strong>：チェックする文章を送信します。</li>
+  <li><strong>音声入力</strong>：ブラウザ内で音声を録音し、文字に起こすために送信します。音声は保存しません。</li>
+</ul>
+<p>Gemini は Google Cloud の Vertex AI を通じて利用しています。Google Cloud の規約に基づき、Google は当方が送信した内容をモデルの学習に使いません。規約に定めるとおり、不正利用の検知のため短期間処理することがあります。当方のサーバーはこれらのリクエストを中継して回答をお客様に返すだけで、文章や音声を保存しません。windthrow（風倒木）として印を付けたエントリーが、コンパニオンの記憶に加えられることはありません。Preferences（設定）でコンパニオンをオフにすると、エントリーに関する情報はAIサービスに一切送信されなくなり、同意も撤回されます。再びオンにすると、改めて同意を求めます。</p>
+<p>月ごとの上限を適用するため、お客様の毎月のAIリクエスト数も記録します。</p>
+
+<h3>共有リンク</h3>
+<p>エントリーを共有するリンク（たとえばセラピストに見せるためのもの）を作ると、選んだエントリーは、リンク自体に含まれる新しい鍵で暗号化されます。当方が保存するのは、暗号化された写しと有効期限だけです。リンクを持っている人は誰でも共有された内容を読めるため、信頼できる相手にだけ共有してください。リンクには有効期限を設定でき、いつでも無効にできます。無効にすると、当方の写しは削除されます。</p>
+
+<h3>お支払い</h3>
+<ul>
+  <li>Premium のお支払いは <strong>Stripe</strong> を通じて行われます。サブスクリプションをお客様のアカウントに結び付けるため、メールアドレスとユーザーIDを Stripe に送信します。</li>
+  <li>サブスクリプションの状態、プラン、更新日と無料体験の日付、Stripe の顧客IDとサブスクリプションIDを保存します。</li>
+  <li>カード情報やお支払いの詳細を当方が受け取ることはなく、Stripe が取り扱います。</li>
+</ul>
+
+<h3>安全のための確認</h3>
+<p>コンパニオンを使うと、当方のサーバーが、お客様が危機的な状況にあることをうかがわせる言葉が文章に含まれていないかを確認し、見つかった場合はアプリに相談窓口へのリンクを表示します。この確認の結果は保存せず、誰にも報告しません。</p>
+
+<h3>端末とブラウザ</h3>
+<ul>
+  <li><strong>マイク</strong>：音声入力を選んだときだけ使います。カメラや現在地は使いません。</li>
+  <li><strong>ブラウザに保存するもの</strong>：オフラインでも使えるようにするための日記データの写し、まだ保存していない暗号化された下書き、および端末のPINを設定した場合はそのPINで保護した日記の鍵。</li>
+  <li>Understory には、分析、広告、トラッキングのツールはありません。</li>
+  <li>アプリはフォントを Google Fonts から読み込むため、ページを開いたときに Google はお客様のIPアドレスを受け取ります。</li>
+</ul>
+
+<h2>利用目的</h2>
+<ul>
+  <li>Understory の提供（日記の同期、成長の輪と統計の表示、アカウントの安全の確保）</li>
+  <li>Premium の機能が動作するときの、コンパニオンの返答、気分の読み取り、文字起こし、スペルの提案の作成</li>
+  <li>サブスクリプションの処理と、その上限の適用</li>
+  <li>お問い合わせやご依頼への対応</li>
+</ul>
+<p>お客様の情報を広告に使うことはなく、販売することもありません。</p>
+
+<h2>要配慮個人情報と外国にある第三者への提供</h2>
+<p>お客様が書く内容には、健康状態や信仰など、要配慮個人情報が含まれることがあります。また、コンパニオンが言葉を引く伝統として選んだ設定から、それがわかることもあります。日本の個人情報保護法に基づき、当方がこれらをAIサービスに送信すること、および気分の読み取りを保存することは、お客様の明示的な同意がある場合に限ります。同意はアプリ内で行い、いつでも撤回できます。</p>
+<p>お客様のデータは、アメリカ合衆国の事業者（Google、Vercel、Stripe）によって処理されます。アメリカ合衆国には、日本の個人情報保護法に相当する包括的な連邦の個人情報保護法はありません。これらの事業者は、下記にリンクしたそれぞれのポリシーと契約に基づき、データを保護することを約束しています。アプリ内で同意することにより、お客様はこの外国への提供に同意したことになります。</p>
+
+<h2>保存場所</h2>
+<p>お客様のデータは Google Firebase（Authentication と Cloud Firestore）に保存されます。アプリとそのサーバーは Vercel 上で動作します。これらのサービスは、アメリカ合衆国その他の国でデータを保存・処理することがあります。データは通信時と保存時に暗号化され、日記の文章は上記のとおり、お客様自身の鍵でも暗号化されます。</p>
+
+<h2>提供先</h2>
+<p>当方が情報を提供するのは、Understory の運営に必要な次のサービスに限られます。</p>
+<ul>
+  <li><strong>Google</strong>：Firebase がアカウントとデータを保存し、Google Cloud の Vertex AI が Premium のAI機能を支える Gemini モデルを動かします。<a href="https://firebase.google.com/support/privacy">Firebase のプライバシー</a> · <a href="https://cloud.google.com/terms/data-processing-addendum">Google Cloud のデータ処理規約</a></li>
+  <li><strong>Vercel</strong>：アプリの配信とサーバーの運用。<a href="https://vercel.com/legal/privacy-policy">Vercel のプライバシー</a></li>
+  <li><strong>Stripe</strong>：Premium のお支払いの処理。<a href="https://stripe.com/privacy">Stripe のプライバシー</a></li>
+  <li>共有リンクを渡した相手は、そのリンクに含まれるエントリーを読むことができます。</li>
+</ul>
+<p>このほか、法令に基づく場合は、情報を開示することがあります。</p>
+
+<h2>保存期間</h2>
+<ul>
+  <li>アカウント、日記、気分の読み取り：お客様がそれらまたはアカウントを削除するまで</li>
+  <li>共有リンク：有効期限が切れるか、お客様が無効にするまで</li>
+  <li>毎月のAI利用回数：アカウントを削除するまで</li>
+  <li>お支払いの記録：法令の定めに従い Stripe が保存します</li>
+</ul>
+
+<h2>お客様が選べること・お客様の権利</h2>
+<ul>
+  <li>コンパニオン、その記憶、音声入力は、Preferences（設定）でオン・オフを切り替えられます。コンパニオンをオフにすると、AIサービスへの送信についての同意は撤回されます。</li>
+  <li>日記からエントリーを削除できます。その気分の読み取りも削除されます。</li>
+  <li>Preferences（設定）で、コンパニオンの記憶を読む、編集する、消去することができます。</li>
+  <li>アプリからエントリーをPDFとして保存できます。</li>
+  <li>共有リンクはいつでも無効にできます。</li>
+  <li>アカウントは「Preferences &gt; Account &gt; Delete account」（設定 &gt; アカウント &gt; アカウントの削除）から削除できます。アカウント、日記、メモ、気分の読み取り、コンパニオンの記憶、共有リンク、AI利用回数が完全に削除され、Premium のサブスクリプションも解約され、そのブラウザから Understory のデータが消去されます。ログインできない場合は、アカウントのメールアドレスからご連絡いただければ、30日以内に削除します。</li>
+  <li>お住まいの地域によっては、情報の開示、訂正、利用への異議、データ保護機関への申し立てなど、さらに権利が認められる場合があります。ご連絡いただければ対応します。</li>
+</ul>
+
+<h2>お子様について</h2>
+<p>Understory は13歳未満のお子様を対象としておらず、お子様の情報を意図的に取得することはありません。お子様が情報を提供したと思われる場合はご連絡ください。削除します。</p>
+
+<h2>本ポリシーの変更</h2>
+<p>本ポリシーを変更する場合は、冒頭の日付を更新します。重要な変更の場合は、アプリ内でもお知らせします。</p>
+
+<h2>お問い合わせ</h2>
+<p>プライバシーに関するご質問・ご依頼：<a class="email" href="/ja/#contact">support [at] spdigitallabs [dot] app</a></p>
+<p>本ページは英語版を翻訳したものです。日本語版と英語版の内容に相違がある場合は、英語版が優先します。</p>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap foot-simple">
+    <p>&copy; 2026 SP Digital Labs（Joseph Suzuki-Parker がアプリを公開する際の屋号）。日本。</p>
+    <nav aria-label="Understoryのリンク">
+      <a href="/ja/understory/privacy.html">プライバシーポリシー</a>
+      <a href="/ja/understory/terms.html">利用規約</a>
+      <a href="/understory/legal-notice.html">特定商取引法に基づく表記</a>
+      <a href="/ja/#contact">お問い合わせ</a>
+    </nav>
+  </div>
+</footer>
+<script src="/email.js"></script>
+<script src="/motion.js"></script>
+</body>
+</html>

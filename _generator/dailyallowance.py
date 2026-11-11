@@ -1,5 +1,7 @@
 from icons import EXTERNAL
 from chrome import EMAIL, hero, features, feature_rows, build_pages
+from dailyallowance_policies import PRIVACY, TERMS, SUPPORT, DELETE_ACCOUNT, META
+from dailyallowance_ja import PAGES_JA
 
 V = "?v=2"
 OVERVIEW = hero("dailyallowance", "Available on iPhone",
@@ -42,8 +44,12 @@ OVERVIEW = hero("dailyallowance", "Available on iPhone",
 
 PAGES = {
     "index.html": ("Daily Allowance", "Know exactly how much you can spend today, after your bills are covered.", OVERVIEW, "en", "wrap app-page"),
+    "support.html": (*META["support"], SUPPORT, "en", "wrap page"),
+    "privacy.html": (*META["privacy"], PRIVACY, "en", "wrap page"),
+    "terms.html": (*META["terms"], TERMS, "en", "wrap page"),
+    "delete-account.html": (*META["delete-account"], DELETE_ACCOUNT, "en", "wrap page"),
 }
 
 
 def build(root):
-    build_pages(root, "dailyallowance", PAGES)
+    build_pages(root, "dailyallowance", PAGES, PAGES_JA)

@@ -1,10 +1,11 @@
 from chrome import EMAIL, hero, features, feature_rows_wide, build_pages
+from tuck_ja import PAGES_JA
 
 SUPPORT_EMAIL = EMAIL.replace('class="email"', 'class="email" data-subject="Tuck support"')
 
 PRIVACY = f'''
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: November 10, 2026</p>
+<p class="updated">Last updated: November 11, 2026</p>
 
 <p>Tuck is a clipboard manager for Mac made by SP Digital Labs, the name under which Joseph Suzuki-Parker, an independent developer based in Japan, publishes apps ("we", "us"). This policy explains what Tuck keeps, where it keeps it, and the choices you have.</p>
 
@@ -61,6 +62,7 @@ PRIVACY = f'''
 
 <h2>Contact</h2>
 <p>Questions about your privacy: {EMAIL}</p>
+<p>This policy is also available in <a href="/ja/tuck/privacy.html" lang="ja" hreflang="ja">Japanese</a>. If the two versions differ, the English version applies.</p>
 '''
 
 SUPPORT = f'''
@@ -168,4 +170,4 @@ PAGES = {
 
 
 def build(root):
-    build_pages(root, "tuck", PAGES)
+    build_pages(root, "tuck", PAGES, PAGES_JA)

@@ -1,5 +1,6 @@
 from icons import EXTERNAL
 from chrome import EMAIL, hero, features, shots, feature_rows, build_pages
+from strata_ja import PAGES_JA
 
 OVERVIEW = hero("strata", "Web app",
     "Read Scripture grounded in the history it grew out of.",
@@ -47,4 +48,4 @@ PAGES = {
 
 
 def build(root):
-    build_pages(root, "strata", PAGES)
+    build_pages(root, "strata", PAGES, PAGES_JA)
