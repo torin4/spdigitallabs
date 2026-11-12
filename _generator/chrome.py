@@ -59,6 +59,16 @@ APPS = {
         "tabs_ja": [("https://stratabible.app/privacy", "プライバシー"), ("https://stratabible.app/terms", "利用規約")],
         "foot_ja": [("https://stratabible.app/privacy", "プライバシーポリシー（英語）"), ("https://stratabible.app/terms", "利用規約（英語）")],
     },
+    "perapera": {
+        "name": "PeraPera",
+        "icon": "/assets/apps/perapera.png",
+        "tabs": [("https://japanese-app-kappa.vercel.app/privacy.html", "Privacy"), ("https://japanese-app-kappa.vercel.app/terms.html", "Terms")],
+        "foot": [("https://japanese-app-kappa.vercel.app/privacy.html", "Privacy Policy"), ("https://japanese-app-kappa.vercel.app/terms.html", "Terms of Use"),
+                 ("https://japanese-app-kappa.vercel.app/tokushoho.html", "特定商取引法に基づく表記")],
+        "tabs_ja": [("https://japanese-app-kappa.vercel.app/privacy.html", "プライバシー"), ("https://japanese-app-kappa.vercel.app/terms.html", "利用規約")],
+        "foot_ja": [("https://japanese-app-kappa.vercel.app/privacy.html", "プライバシーポリシー（英語）"), ("https://japanese-app-kappa.vercel.app/terms.html", "利用規約（英語）"),
+                 ("https://japanese-app-kappa.vercel.app/tokushoho.html", "特定商取引法に基づく表記")],
+    },
 }
 
 

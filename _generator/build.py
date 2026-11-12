@@ -7,6 +7,7 @@ Writes into the site folder (the parent of _generator/). Generated:
   strata/index.html
   understory/{index,privacy,terms,legal-notice}.html
   hanjo/{index,privacy,terms,legal-notice}.html
+  perapera/index.html (its policies are on the app's own site)
   surfwindow/{index,privacy,terms}.html, plus redirects at privacy-ja.html
     and terms-ja.html (the Surf Window app links them)
   tuck/{index,support,privacy}.html
@@ -27,8 +28,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
 
-import about, blog, dailyallowance, hanjo, strata, surfwindow, tuck, understory  # noqa: E402
+import about, blog, dailyallowance, hanjo, perapera, strata, surfwindow, tuck, understory  # noqa: E402
 
-for module in (dailyallowance, hanjo, strata, surfwindow, tuck, understory, blog, about):
+for module in (dailyallowance, hanjo, perapera, strata, surfwindow, tuck, understory, blog, about):
     module.build(ROOT)
 print("Rebuilt app pages in", ROOT)
