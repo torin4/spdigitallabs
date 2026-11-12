@@ -6,12 +6,13 @@ APP = "https://japanese-app-kappa.vercel.app"
 
 OVERVIEW = hero("perapera", "Web app",
     "Japanese practice for learners who are already good.",
-    "PeraPera is for adult learners from upper-intermediate to near-native (B1 to C2). You type the reading of every word before anything is shown, read passages written at your level, and practise real conversation with feedback on what you said.",
+    "PeraPera is for adult learners from upper-intermediate to near-native (CEFR B1 to C2). You type the reading of every word before anything is shown, read passages written at your level, and practise real conversation with feedback on what you said.",
     f'<a class="button" href="{APP}/">Open PeraPera' + EXTERNAL + '</a><span class="label">Vocabulary review is free · No account needed</span>') + """
 
 <section aria-label="Main features">
 """ + feature_rows([
     ("/assets/screens/perapera-review.jpg", "A review card showing the word 田舎 in a sentence, with a box to type its reading.", "Type the reading first", "Most vocabulary apps let you pick an answer from a list. PeraPera makes you produce it: you see the word in a sentence and type its reading in hiragana before the meaning appears. Words come back as cloze sentences and listening questions too, so you know each one in more than one way."),
+    ("/assets/screens/perapera-placement.jpg", "The placement test showing a difficult kanji word, with a box to type its reading and a Skip button.", "Find your level in two minutes", "A short placement test shows you one word at a time and asks for its reading. Get it right and the next word is harder; miss it and the next is easier. It settles on the level where words start to get hard for you, shown as a CEFR level from B1 to C2, and review concentrates there. Retake it whenever you like."),
     ("/assets/screens/perapera-reader.jpg", "The graded reader setup screen, asking for a topic, a level and a length.", "Reading at your level", "Say what you'd like to read, such as a news article, a folktale or a business email, and pick a level and a length. PeraPera writes a passage for you. Tap any word to see its reading and meaning, then answer a couple of comprehension questions."),
     ("/assets/screens/perapera-home.jpg", "The PeraPera home screen, with the session button, progress numbers and the vocabulary and speaking sections.", "Conversation, with feedback", "Hold a spoken conversation in Japanese, work through guided practice, or take a speaking test. Afterwards you get a review of the session: what you did well, the gaps, the grammar to go back over and the words worth learning. You can also record a real conversation and have it reviewed."),
 ]) + """
@@ -19,9 +20,9 @@ OVERVIEW = hero("perapera", "Web app",
 
 <section aria-labelledby="more-title">
   <h2 id="more-title" class="section-title">More</h2>
-""" + features([('Find your level', 'A two-minute placement test finds the point where words start getting hard for you, and review concentrates there.'),
-    ('Your own words', 'Add words you meet, or look one up and save it, and they join your review.'),
-    ('An honest number', 'PeraPera shows your reading accuracy over time. There are no streaks to protect.')]) + f"""
+""" + features([('Your own words', 'Add words you meet, or look one up and save it, and they join your review.'),
+    ('An honest number', 'PeraPera shows your reading accuracy over time. There are no streaks to protect.'),
+    ('On all your devices', 'Sign in to keep your words and progress in sync across your phone and computer.')]) + f"""
 </section>
 
 <section aria-labelledby="plans-title">
