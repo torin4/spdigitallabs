@@ -59,6 +59,14 @@ APPS = {
         "tabs_ja": [("https://stratabible.app/privacy", "プライバシー"), ("https://stratabible.app/terms", "利用規約")],
         "foot_ja": [("https://stratabible.app/privacy", "プライバシーポリシー（英語）"), ("https://stratabible.app/terms", "利用規約（英語）")],
     },
+    "lift": {
+        "name": "Lift",
+        "icon": "/assets/apps/lift.png",
+        "tabs": [("/lift/support.html", "Support"), ("/lift/privacy.html", "Privacy"), ("/lift/terms.html", "Terms")],
+        "foot": [("/lift/support.html", "Support"), ("/lift/privacy.html", "Privacy Policy"), ("/lift/terms.html", "Terms of Service")],
+        "tabs_ja": [("/ja/lift/support.html", "サポート"), ("/ja/lift/privacy.html", "プライバシー"), ("/ja/lift/terms.html", "利用規約")],
+        "foot_ja": [("/ja/lift/support.html", "サポート"), ("/ja/lift/privacy.html", "プライバシーポリシー"), ("/ja/lift/terms.html", "利用規約")],
+    },
     "perapera": {
         "name": "PeraPera",
         "icon": "/assets/apps/perapera.png",
