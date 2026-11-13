@@ -23,7 +23,7 @@ PRIVACY = f'''
 <ul>
   <li><strong>Your routines:</strong> the exercises you add, with their sets, target reps, rest times and weight steps.</li>
   <li><strong>Your sessions:</strong> the date and length of each workout, the weight and reps of each set, sets you skipped, machine setup notes and any other notes you write.</li>
-  <li><strong>Your body measurements:</strong> bodyweight, and any other values you enter from an InBody result sheet, such as body fat and muscle mass.</li>
+  <li><strong>Your body measurements:</strong> bodyweight, and any other values you enter from an InBody result sheet, such as body fat and muscle mass. If you choose to enter them, also your height and sex, which are used only to show the normal ranges for those values.</li>
   <li><strong>Your settings:</strong> language, rest time and your weekly set targets.</li>
 </ul>
 <p>Like any website, the service that hosts Lift (Google Firebase Hosting) receives your IP address and basic details of the request when the app loads, and keeps them in logs for a limited time for security and reliability.</p>
@@ -158,7 +158,7 @@ SUPPORT = f'''
 <h2>Getting started</h2>
 
 <h3>How do I start?</h3>
-<p>Open Lift and tap New routine, then add your machines in the order you use them. Or tap "Start from a sample machine circuit" for a ten-station routine you can edit. Then tap Start workout.</p>
+<p>Open Lift. Sign in with Google, or tap "Continue without an account"; you can sign in later from Settings. Then tap New routine and add your machines in the order you use them. Or tap "Start from a sample machine circuit" for a ten-station routine you can edit. Then tap Start workout.</p>
 
 <h3>How do I put Lift on my home screen?</h3>
 <p>On iPhone, open Lift in Safari, tap the Share button, then Add to Home Screen. On Android, open it in Chrome, tap the menu, then Add to Home screen or Install app. Lift then opens full screen like any other app.</p>
