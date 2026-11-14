@@ -2,8 +2,8 @@ from icons import EXTERNAL
 from chrome import EMAIL, hero, features, feature_rows_wide, build_pages
 from hanjo_ja import PAGES_JA
 
-UPDATED = "November 11, 2026"
-UPDATED_JA = "2026年11月11日"
+UPDATED = "November 15, 2026"
+UPDATED_JA = "2026年11月15日"
 
 PRIVACY = f'''
 <h1>Privacy Policy</h1>
@@ -96,7 +96,7 @@ PRIVACY = f'''
 <ul>
   <li>Stop sharing a design at any time; this deletes the shared copy, its comments and its links.</li>
   <li>Use Hanjo without the AI designer; nothing is sent to Anthropic unless you send a request.</li>
-  <li>To delete your account and everything stored with it, email us from the address on your account and we will delete it within 30 days. Any AI plan is cancelled at the same time.</li>
+  <li>To delete your account and everything stored with it, open the account menu in the app and choose Delete account. It is deleted at once, and any AI plan is cancelled at the same time. If you can't sign in, email us from the address on your account and we will delete it within 30 days.</li>
   <li>Depending on where you live, you may have further rights, such as to see, correct or object to how we use your information, or to complain to a data protection authority. Contact us and we will help.</li>
 </ul>
 
@@ -128,7 +128,7 @@ TERMS = f'''
 <ul>
   <li>You sign in with Google, or with an email address and password. Keep your sign-in details secure; you are responsible for activity on your account.</li>
   <li>Tell us right away if you think someone else has used your account.</li>
-  <li>To delete your account, email us from the address on your account.</li>
+  <li>To delete your account, choose Delete account in the account menu. This can't be undone. If you can't sign in, email us from the address on your account.</li>
 </ul>
 
 <h2>Not professional advice</h2>
@@ -188,7 +188,7 @@ TERMS = f'''
 OVERVIEW = hero("hanjo", "Web app",
     "Design your house in Japan, room by room, then walk through it.",
     "Hanjo (半畳, half a tatami mat) is a house planner for people building in Japan. Draw on the 910 mm module and see jo and tsubo as you go, check the plan against your plot's limits, then look around it in 3D, in real sunlight, and share it with your builder for comments. An AI designer can lay out a first plan or rework one corner.",
-    '<a class="button" href="https://hanjo.app/">Open Hanjo' + EXTERNAL + '</a><span class="label">Free to design · Works in your browser</span>') + f"""
+    '<a class="button" href="https://hanjo.app/">Open Hanjo' + EXTERNAL + '</a><span class="label">Free to design · Free account · Works in your browser</span>') + f"""
 
 <section aria-label="Main features">
 """ + feature_rows_wide([

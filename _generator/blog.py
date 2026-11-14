@@ -1,4 +1,9 @@
-"""The blog: /blog/ and /blog/<slug>.html. Posts live in blog_posts.py."""
+"""The blog: /blog/ and /blog/<slug>.html.
+
+Posts hosted here live in blog_posts.py (Daily Allowance) and
+blog_posts_<app>.py (one file per app). Each post's "app" key picks its group
+on the hub, the app card above the article and the "more" list under it.
+"""
 import html
 import json
 import os
@@ -7,22 +12,62 @@ from datetime import date
 
 from chrome import head_tags
 from icons import ARROW_RIGHT, EXTERNAL
-from blog_posts import POSTS
+from blog_posts import POSTS as DAILYALLOWANCE_POSTS
+from blog_posts_hanjo import POSTS as HANJO_POSTS
+from blog_posts_lift import POSTS as LIFT_POSTS
+from blog_posts_perapera import POSTS as PERAPERA_POSTS
+from blog_posts_tuck import POSTS as TUCK_POSTS
+
+POSTS = [{"app": "dailyallowance", **p} for p in DAILYALLOWANCE_POSTS] + HANJO_POSTS + TUCK_POSTS + PERAPERA_POSTS + LIFT_POSTS
 
 SITE = "https://spdigitallabs.app"
 AUTHOR = {"@type": "Person", "name": "Joseph Suzuki-Parker", "url": SITE + "/"}
 BLOG_TITLE = "Blog"
-BLOG_DESCRIPTION = "Guides from every SP Digital Labs app: everyday money, reading Genesis in its history, journaling, and surf in Shonan and Chiba."
+BLOG_DESCRIPTION = "Guides from every SP Digital Labs app: everyday money, reading Genesis in its history, journaling, surf in Shonan and Chiba, planning a house in Japan, the Mac clipboard, advanced Japanese, and logging your training."
 
-# The hub lists every app's posts. Daily Allowance posts live here; the others
-# live on their app's own site and are listed from external_posts.json
-# (refresh it with fetch_blog_posts.py).
+# The hub lists every app's posts, in the homepage's order. Posts for the apps
+# in APPS live here; the others live on their app's own site and are listed
+# from external_posts.json (refresh it with fetch_blog_posts.py).
 APP_GROUPS = [
     ("dailyallowance", "Daily Allowance", "/dailyallowance/", "Budgeting by the day", None),
     ("strata", "Strata", "/strata/", "Reading Genesis with its history", "stratabible.app"),
     ("understory", "Understory", "/understory/", "Journaling, privately", "understoryjournal.app"),
     ("surfwindow", "Surf Window", "/surfwindow/", "Surf guides for Shonan and Chiba, in Japanese", "surfwindow.jp"),
+    ("hanjo", "Hanjo", "/hanjo/", "Planning a house in Japan", None),
+    ("tuck", "Tuck", "/tuck/", "The clipboard on a Mac", None),
+    ("perapera", "PeraPera", "/perapera/", "Japanese for learners who are already good", None),
+    ("lift", "Lift", "/lift/", "Logging your training", None),
 ]
+
+# The app card above each article, and the app named in its structured data.
+# shot is (src, alt, width, height); a landscape shot gets the wide layout.
+APPS = {
+    "dailyallowance": {
+        "name": "Daily Allowance", "label": "iPhone app", "os": "iOS", "category": "FinanceApplication",
+        "blurb": "Add your income and bills once. Daily Allowance turns them into one number for today and carries whatever you don't spend into tomorrow.",
+        "shot": ("/assets/screens/dailyallowance-home.jpg?v=2", "The Daily Allowance home screen with a Daily Balance of $96.33.", 390, 844),
+    },
+    "hanjo": {
+        "name": "Hanjo", "label": "Web app", "os": "Web", "category": "DesignApplication",
+        "blurb": "A house planner for people building in Japan. Draw on the 910 mm module, see each room in jo and tsubo, then look around the house in 3D.",
+        "shot": ("/assets/screens/hanjo-plan.jpg", "A single-storey 3LDK plan in Hanjo with an LDK, washitsu, bedroom, bath and genkan.", 1440, 900),
+    },
+    "tuck": {
+        "name": "Tuck", "label": "Mac app · Coming soon", "os": "macOS", "category": "UtilitiesApplication",
+        "blurb": "A clipboard manager for Mac that stays out of sight. It remembers the text, files, images and screenshots you copy, and nothing leaves your Mac.",
+        "shot": ("/assets/screens/tuck-history.jpg", "The Tuck panel listing recent clips: text, code, a file and an image.", 1440, 900),
+    },
+    "perapera": {
+        "name": "PeraPera", "label": "Web app", "os": "Web", "category": "EducationalApplication",
+        "blurb": "Japanese practice for upper-intermediate to near-native learners. Type the reading of every word, read passages at your level, and practise conversation with feedback.",
+        "shot": ("/assets/screens/perapera-review.jpg", "A PeraPera review card showing a word in a sentence, with a box to type its reading.", 390, 844),
+    },
+    "lift": {
+        "name": "Lift", "label": "Web app", "os": "Web", "category": "HealthApplication",
+        "blurb": "A workout log that takes one tap per set. Before every exercise it suggests a weight from your own history and shows you why.",
+        "shot": ("/assets/screens/lift-log.jpg", "A Lift workout on the chest press: two of three sets are ticked and a rest timer is counting down.", 780, 1688),
+    },
+}
 with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "external_posts.json")) as _f:
     EXTERNAL_POSTS = json.load(_f)
 
@@ -101,20 +146,25 @@ def meta_line(post):
             f'<span aria-hidden="true"> · </span>{minutes(post["body"])} min read</p>')
 
 
-CTA = f'''<aside class="post-cta" aria-labelledby="cta-title">
+def cta(slug):
+    app = APPS[slug]
+    src, alt, width, height = app["shot"]
+    wide = " post-cta-wide" if width > height else ""
+    return f'''<aside class="post-cta{wide}" aria-labelledby="cta-title">
   <div class="post-cta-text">
-    <div class="post-cta-id"><img src="/assets/apps/dailyallowance.png" alt="" width="56" height="56"><span class="label">iPhone app</span></div>
-    <h2 id="cta-title">Daily Allowance</h2>
-    <p>Add your income and bills once. Daily Allowance turns them into one number for today and carries whatever you don't spend into tomorrow.</p>
-    <a class="button" href="/dailyallowance/">See Daily Allowance{ARROW_RIGHT}</a>
+    <div class="post-cta-id"><img src="/assets/apps/{slug}.png" alt="" width="56" height="56"><span class="label">{app["label"]}</span></div>
+    <h2 id="cta-title">{app["name"]}</h2>
+    <p>{app["blurb"]}</p>
+    <a class="button" href="/{slug}/">See {app["name"]}{ARROW_RIGHT}</a>
   </div>
-  <img class="post-cta-shot" src="/assets/screens/dailyallowance-home.jpg?v=2" alt="The Daily Allowance home screen with a Daily Balance of $96.33." width="390" height="844" loading="lazy">
+  <img class="post-cta-shot" src="{src}" alt="{alt}" width="{width}" height="{height}" loading="lazy">
 </aside>'''
 
 
 def post_page(post, others):
     path = f"/blog/{post['slug']}.html"
     title = f"{post['title']} - SP Digital Labs"
+    app = APPS[post["app"]]
     article_ld = {
         "@context": "https://schema.org", "@type": "BlogPosting",
         "headline": post["title"], "description": post["description"],
@@ -122,8 +172,8 @@ def post_page(post, others):
         "inLanguage": "en", "author": AUTHOR, "publisher": AUTHOR,
         "image": SITE + "/assets/og.png",
         "mainEntityOfPage": {"@type": "WebPage", "@id": SITE + path},
-        "about": {"@type": "SoftwareApplication", "name": "Daily Allowance", "operatingSystem": "iOS",
-                  "applicationCategory": "FinanceApplication", "url": SITE + "/dailyallowance/"},
+        "about": {"@type": "SoftwareApplication", "name": app["name"], "operatingSystem": app["os"],
+                  "applicationCategory": app["category"], "url": f"{SITE}/{post['app']}/"},
     }
     extra = (f'<meta property="article:published_time" content="{post["date"]}">\n'
              + ld(article_ld) + ld(crumbs_ld([("Home", "/"), ("Blog", "/blog/"), (post["title"], path)])))
@@ -134,12 +184,12 @@ def post_page(post, others):
     <h1>{post["title"]}</h1>
     {meta_line(post)}
   </header>
-  {CTA}
+  {cta(post["app"])}
   <div class="post-body">
 {post["body"].strip()}
   </div>
   <nav class="post-more" aria-labelledby="more-title">
-    <h2 id="more-title" class="label">More from the blog</h2>
+    <h2 id="more-title" class="label">More on {app["name"]}</h2>
     <ul>
 {more}
     </ul>
@@ -177,7 +227,7 @@ def index_page(posts):
     jump = []
     groups = []
     for slug, name, page, line, site in APP_GROUPS:
-        cards = ([local_card(p) for p in posts] if site is None else
+        cards = ([local_card(p) for p in posts if p["app"] == slug] if site is None else
                  [external_card(p, site) for p in EXTERNAL_POSTS if p["app"] == slug])
         if not cards:
             continue
@@ -205,7 +255,7 @@ def index_page(posts):
     extra = ld(blog_ld) + ld(crumbs_ld([("Home", "/"), ("Blog", path)]))
     body = f'''<section class="blog-intro" aria-labelledby="blog-title">
   <h1 id="blog-title">Blog</h1>
-  <p class="lede">Guides and notes from every app: everyday money, reading Genesis with its history, journaling, and surfing in Shonan and Chiba. Written by Joseph Suzuki&#8209;Parker.</p>
+  <p class="lede">Guides and notes from every app: everyday money, reading Genesis with its history, journaling, surfing in Shonan and Chiba, planning a house in Japan, the Mac clipboard, advanced Japanese, and logging your training. Written by Joseph Suzuki&#8209;Parker.</p>
   <nav class="blog-jump" aria-label="Jump to an app">{"".join(jump)}</nav>
 </section>
 
@@ -221,6 +271,6 @@ def build(root):
     _, page = index_page(posts)
     open(f"{root}/blog/index.html", "w").write(page)
     for post in posts:
-        others = [p for p in posts if p is not post]
+        others = [p for p in posts if p is not post and p["app"] == post["app"]]
         _, page = post_page(post, others)
         open(f"{root}/blog/{post['slug']}.html", "w").write(page)

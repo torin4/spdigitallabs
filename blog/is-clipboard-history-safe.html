@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script>(function(d){if(window.matchMedia&&matchMedia("(prefers-reduced-motion: no-preference)").matches&&"IntersectionObserver"in window){d.classList.add("motion");setTimeout(function(){if(!window.__spMotion)d.classList.remove("motion")},2500)}})(document.documentElement)</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Is clipboard history safe? Passwords, API keys and what to check first - SP Digital Labs</title>
+<meta name="description" content="A clipboard history records what you copy, passwords included unless it&#x27;s built not to. What to check in any clipboard manager, and what Tuck does.">
+<meta name="theme-color" content="#f7f8fa" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1117" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="SP Digital Labs">
+<meta property="og:title" content="Is clipboard history safe? Passwords, API keys and what to check first - SP Digital Labs">
+<meta property="og:description" content="A clipboard history records what you copy, passwords included unless it&#x27;s built not to. What to check in any clipboard manager, and what Tuck does.">
+<meta property="og:url" content="https://spdigitallabs.app/blog/is-clipboard-history-safe.html">
+<meta property="og:image" content="https://spdigitallabs.app/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SP Digital Labs: Everyday tools, done right.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://spdigitallabs.app/blog/is-clipboard-history-safe.html">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/mplus-rounded-1c-800-latin.woff2" as="font" type="font/woff2" crossorigin>
+<meta property="article:published_time" content="2026-11-14">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BlogPosting",
+ "headline": "Is clipboard history safe? Passwords, API keys and what to check first",
+ "description": "A clipboard history records what you copy, passwords included unless it's built not to. What to check in any clipboard manager, and what Tuck does.",
+ "datePublished": "2026-11-14",
+ "dateModified": "2026-11-14",
+ "inLanguage": "en",
+ "author": {
+  "@type": "Person",
+  "name": "Joseph Suzuki-Parker",
+  "url": "https://spdigitallabs.app/"
+ },
+ "publisher": {
+  "@type": "Person",
+  "name": "Joseph Suzuki-Parker",
+  "url": "https://spdigitallabs.app/"
+ },
+ "image": "https://spdigitallabs.app/assets/og.png",
+ "mainEntityOfPage": {
+  "@type": "WebPage",
+  "@id": "https://spdigitallabs.app/blog/is-clipboard-history-safe.html"
+ },
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Tuck",
+  "operatingSystem": "macOS",
+  "applicationCategory": "UtilitiesApplication",
+  "url": "https://spdigitallabs.app/tuck/"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://spdigitallabs.app/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Blog",
+   "item": "https://spdigitallabs.app/blog/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Is clipboard history safe? Passwords, API keys and what to check first",
+   "item": "https://spdigitallabs.app/blog/is-clipboard-history-safe.html"
+  }
+ ]
+}
+</script>
+<link rel="stylesheet" href="/style.css?v=20261114a">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap bar">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a class="brand" href="/"><img src="/assets/logo.svg" alt="" width="32" height="32"><span class="brand-text">SP Digital Labs</span></a>
+      <span class="crumb-sep" aria-hidden="true"><svg class="icon" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span>
+      <a class="crumb-app" href="/blog/">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+<article class="post">
+  <header class="post-head">
+    <p class="label"><a href="/blog/">Blog</a></p>
+    <h1>Is clipboard history safe? Passwords, API keys and what to check first</h1>
+    <p class="post-meta"><time datetime="2026-11-14">14 November 2026</time><span aria-hidden="true"> · </span>5 min read</p>
+  </header>
+  <aside class="post-cta post-cta-wide" aria-labelledby="cta-title">
+  <div class="post-cta-text">
+    <div class="post-cta-id"><img src="/assets/apps/tuck.png" alt="" width="56" height="56"><span class="label">Mac app · Coming soon</span></div>
+    <h2 id="cta-title">Tuck</h2>
+    <p>A clipboard manager for Mac that stays out of sight. It remembers the text, files, images and screenshots you copy, and nothing leaves your Mac.</p>
+    <a class="button" href="/tuck/">See Tuck<svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+  </div>
+  <img class="post-cta-shot" src="/assets/screens/tuck-history.jpg" alt="The Tuck panel listing recent clips: text, code, a file and an image." width="1440" height="900" loading="lazy">
+</aside>
+  <div class="post-body">
+<p class="lede">A clipboard history is a record of what you copied, and some of what you copy is secret. Whether that's safe depends on what the clipboard manager records, where it keeps it, and what you do with the rest.</p>
+
+<h2>What changes when you keep a history</h2>
+<p>The clipboard is shared on purpose. It exists so that one app can read what another put there. Without a history, a password you copy sits on the clipboard until your next copy and is then gone.</p>
+<p>A history changes how long things last. The same password is now in a list, and usually in a file, for as long as the history keeps it. That could be weeks. The ways it can then reach someone else are ordinary ones:</p>
+<ul>
+  <li><strong>Someone uses your Mac</strong> while you're logged in and opens the history.</li>
+  <li><strong>You open the history while sharing your screen</strong> or with someone looking over your shoulder.</li>
+  <li><strong>The history leaves your Mac,</strong> through a sync feature or in a backup.</li>
+  <li><strong>Other software running under your account reads the file</strong> the history is stored in.</li>
+</ul>
+
+<h2>What you copy that shouldn't be kept</h2>
+<ul>
+  <li>Passwords, when you copy them instead of using autofill.</li>
+  <li>One-time login codes from a text message or an authenticator app.</li>
+  <li>API keys, access tokens and private keys, if you write software.</li>
+  <li>Card numbers and bank details.</li>
+  <li>Other people's personal information, such as a customer's address copied from one system into another.</li>
+</ul>
+
+<h2>What to check before trusting a clipboard manager</h2>
+<h3>Does it connect to the internet?</h3>
+<p>Sync between devices is convenient, and it means your clipboard is stored on someone's server. An app with no sync and no account has nowhere to send your history. Read the privacy policy for what is collected, and check whether the app works with no network connection.</p>
+<h3>Where is the history stored?</h3>
+<p>Find out which folder it's in, whether other user accounts on the Mac can read it, and whether it's included in your backups. A history file is protected by the same things as your other files: your login password and, if you've turned it on, FileVault.</p>
+<h3>Does it skip what password managers mark as hidden?</h3>
+<p>Many password managers mark what they copy with a flag that asks clipboard managers not to record it. It's a convention, not something macOS enforces, so it only works if the clipboard manager respects it. Many password managers can also clear the clipboard after a short time. That doesn't remove a copy a history has already made.</p>
+<h3>Can you exclude apps?</h3>
+<p>A list of apps to never record from covers the cases the flag misses: a banking app, a remote desktop window, a database tool.</p>
+<h3>Can you pause it?</h3>
+<p>If you know you're about to handle something sensitive, the simplest protection is to stop recording for a few minutes.</p>
+<h3>How long is it kept, and can you delete it?</h3>
+<p>Look for a limit on the size or age of the history, a way to delete a single item, and a way to clear everything.</p>
+
+<h2>Habits that help with any clipboard manager</h2>
+<ul>
+  <li><strong>Use autofill instead of copying passwords.</strong> A password that never touches the clipboard can't be recorded from it.</li>
+  <li><strong>Delete what slipped through.</strong> If you see a secret in your history, delete that item then, not later.</li>
+  <li><strong>Lock your Mac when you step away,</strong> and turn on FileVault.</li>
+</ul>
+
+<h2>How Tuck handles it</h2>
+<p>Tuck is a clipboard manager for Mac that isn't released yet; it's coming to the Mac App Store. Here is what it does with sensitive copies.</p>
+<ul>
+  <li><strong>Nothing leaves your Mac.</strong> Tuck has no account, no sync and no analytics, and it never connects to the internet. The Mac App Store version runs in Apple's App Sandbox without the permission an app needs to make network connections.</li>
+  <li><strong>Hidden copies are skipped.</strong> Anything a password manager marks as hidden is never recorded.</li>
+  <li><strong>Listed apps are skipped.</strong> Copies made while an app listed under Settings &gt; Privacy is in front are not recorded. 1Password, Bitwarden, Keychain Access and Apple's Passwords app are on the list from the start, and you can add any app.</li>
+  <li><strong>Text that looks like a credential is held in memory only.</strong> It appears in the panel masked and labeled "secret, not saved". It's never written to disk, and it's forgotten after 10 minutes or when Tuck quits. Until then you can still paste it. It can't be pinned.</li>
+  <li><strong>The same check applies to images.</strong> Tuck reads the text in images so you can search for them. If that text looks like a credential, it isn't kept.</li>
+  <li><strong>You can pause.</strong> Pause Capture in the menu bar icon's menu stops recording until you turn it off again.</li>
+  <li><strong>You can delete.</strong> Cmd+Delete removes the selected clip, and Settings &gt; History &gt; Clear History removes everything except pinned clips. Tuck also keeps only the newest 1,000 clips and 200 images unless you change those limits.</li>
+  <li><strong>The history is private to your account.</strong> It's stored in Tuck's own folder on your Mac, and Tuck sets that folder so that only your macOS user account can read it.</li>
+</ul>
+
+<h3>What Tuck recognizes as a credential</h3>
+<p>The check looks for shapes. It recognizes API keys and tokens in the formats used by a number of common services, JSON web tokens, private key blocks, lines such as <code>API_KEY=...</code> or <code>PASSWORD=...</code> from an environment file, web addresses with a password in them, <code>Bearer</code> authorization headers, and a copy that is nothing but a six to eight digit code.</p>
+
+<h3>What it doesn't do</h3>
+<ul>
+  <li><strong>It can't recognize a plain password.</strong> A password on its own has no shape to detect. If you copy one from a note, a web page or an app that doesn't mark it as hidden, Tuck records it like any other text.</li>
+  <li><strong>It doesn't remove an image that shows a secret.</strong> The text isn't kept, so the image can't be found by searching, but the picture stays in your history until you delete it.</li>
+  <li><strong>It doesn't encrypt the history itself.</strong> The file is protected by your macOS account and by FileVault if you use it. If you back up your Mac, the history is in the backup.</li>
+  <li><strong>Clear History keeps pinned clips.</strong> Don't pin anything secret.</li>
+  <li><strong>Pausing needs the menu bar icon.</strong> If you've hidden the icon in Settings &gt; General, show it again to reach Pause Capture.</li>
+</ul>
+<p>As Tuck's <a href="/tuck/privacy.html">privacy policy</a> puts it, the detection is a safeguard, not a guarantee. Add the apps you copy sensitive things from to the list, and pause when you know what's coming.</p>
+<p>For what a history is good for, see <a href="/blog/what-is-a-clipboard-manager-mac.html">What a clipboard manager is, and who needs one on a Mac</a>. For images, see <a href="/blog/mac-screenshots-to-clipboard.html">How to copy Mac screenshots to the clipboard</a>.</p>
+  </div>
+  <nav class="post-more" aria-labelledby="more-title">
+    <h2 id="more-title" class="label">More on Tuck</h2>
+    <ul>
+    <li><a href="/blog/what-is-a-clipboard-manager-mac.html">What a clipboard manager is, and who needs one on a Mac</a></li>
+    <li><a href="/blog/mac-screenshots-to-clipboard.html">How to copy Mac screenshots to the clipboard, and find one later by the text in it</a></li>
+    </ul>
+  </nav>
+</article>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap foot-simple">
+    <p>&copy; 2026 SP Digital Labs, the name under which Joseph Suzuki-Parker publishes apps. Japan.</p>
+    <nav aria-label="Apps">
+      <a href="/dailyallowance/">Daily Allowance</a>
+      <a href="/strata/">Strata</a>
+      <a href="/understory/">Understory</a>
+      <a href="/surfwindow/">Surf Window</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+  </div>
+</footer>
+<script src="/email.js"></script>
+<script src="/motion.js"></script>
+</body>
+</html>

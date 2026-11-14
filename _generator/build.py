@@ -16,7 +16,8 @@ Writes into the site folder (the parent of _generator/). Generated:
     legal notices, which are already in Japanese. Japanese text is in
     <app>_ja.py; keep it saying the same as the English. On privacy
     policies and terms, the English version governs.
-  blog/index.html and blog/<slug>.html (posts are in blog_posts.py; English only)
+  blog/index.html and blog/<slug>.html (posts are in blog_posts.py and
+    blog_posts_<app>.py; English only)
   about/index.html and ja/about/index.html
 The homepages (index.html, ja/index.html) and 404.html are written by hand. When style.css changes, bump
 CSS_VERSION in chrome.py and the ?v= on the hand-written pages to match.

@@ -1,6 +1,6 @@
 """Shared page chrome for spdigitallabs.app app pages."""
 
-CSS_VERSION = "20261111a"
+CSS_VERSION = "20261114a"
 
 APPS = {
     "hanjo": {

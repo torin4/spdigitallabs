@@ -191,10 +191,10 @@ SUPPORT = f'''
 <h2>Logging a workout</h2>
 
 <h3>How do I log a set?</h3>
-<p>The weight and reps from last time are already filled in. Tap the check to log the set and start the rest timer. To change a number, tap it first.</p>
+<p>The suggested weight is already filled in, and the reps box shows your target. Tap the check to log the set at those numbers and start the rest timer. To change a number, tap it first.</p>
 
 <h3>How do I skip a set or a station?</h3>
-<p>Tap the set number to mark that set as skipped, or tap Skip at the top of a station to skip all of it. Skipped sets are recorded as skipped. They are left out of your averages and out of the next suggestion.</p>
+<p>Tap the set number to mark that set as skipped, or tap Skip at the top of a station to skip all of it. Skipped sets are recorded as skipped and left out of your averages. If you skip part of an exercise, the next suggestion keeps the same weight until you finish every set. If you skip all of it, the suggestion works from the last session where you did it.</p>
 
 <h3>I closed the app in the middle of a workout</h3>
 <p>Open it again. Lift returns to the station you were on, with your sets, the clock and the rest timer as you left them.</p>
@@ -313,11 +313,11 @@ OVERVIEW = hero("lift", "Web app",
 
 <section aria-label="Main features">
 """ + feature_rows([
-    ("/assets/screens/lift-log.jpg", "A workout on station 5 of 10, the chest press. Two of three sets are ticked and a rest timer is counting down.", "One tap logs the set", "Last session's weights and reps are filled in before you start. Tap the check and the set is logged and the rest timer starts. Change a number only when it changed. You can skip a set or a whole exercise, and Lift records it as skipped, not as a zero."),
+    ("/assets/screens/lift-log.jpg", "A workout on station 5 of 10, the chest press. Two of three sets are ticked and a rest timer is counting down.", "One tap logs the set", "The suggested weight is filled in before you start, and the reps box shows your target. Tap the check and the set is logged and the rest timer starts. Change a number only when it changed. You can skip a set or a whole exercise, and Lift records it as skipped, not as a zero."),
     ("/assets/screens/lift-why.jpg", "A suggested weight of 47.5 kg for the pec deck, opened to show why: last time the final set dropped to 37.5 kg, so keep the weight and finish the last set.", "A suggestion that shows its reasoning", "Before each exercise Lift suggests a weight from what you actually did. Reach the target on every set and it adds one step. Fall short on the last set and it holds. Stay stuck for several sessions and it eases off. Tap Why to see the sessions and the rule it used. It is only a suggestion: type another number and Lift goes with yours."),
     ("/assets/screens/lift-ai.jpg", "The Generate a workout screen: tiles for goal, focus, time and equipment, with Build muscle, Upper body and 45 minutes selected, and a Generate workout button.", "AI builds the workout", "Tell Lift what you want: a goal, the part of the body, how long you have and the equipment you can use. Add a note in your own words if you like, such as an exercise to avoid. One tap and AI puts together a routine from the exercise library. Part of Lift Pro."),
     ("/assets/screens/lift-ai-draft.jpg", "An AI draft called Upper Body Strength in the routine builder. Each exercise shows a one-line reason, with its sets, reps and rest ready to adjust.", "A draft you can read and change", "The workout arrives as a draft, not a finished plan. Every exercise comes with the reason it was chosen, and you can reorder, swap or remove anything, or change the sets and reps, before you save. After that it is a routine like any other, and Lift suggests your weights from your own log."),
-    ("/assets/screens/lift-history.jpg", "The history of the chest press: working weight rising from 45 kg to 52.5 kg over five weeks, with each session's sets listed below.", "Every exercise, over time", "Pick an exercise and see its working weight session by session, with every set underneath. Stats counts your hard sets for each muscle over the last seven days against a range you set, which says more about a week of training than a total of kilograms does."),
+    ("/assets/screens/lift-history.jpg", "The history of the chest press: working weight rising from 45 kg to 52.5 kg over five weeks, with each session's sets listed below.", "Every exercise, over time", "Pick an exercise and see its working weight session by session, with every set underneath. Stats counts the sets you logged for each muscle over the last seven days against a range you set, which says more about a week of training than a total of kilograms does."),
     ("/assets/screens/lift-ja.jpg", "The same workout screen in Japanese, with the English name of the exercise shown under the Japanese one.", "English and Japanese", "Switch the whole app between English and Japanese, coaching notes included. Lift can also show both at once, with the second language under each exercise name. That helps when your gym labels things in the other one."),
 ]) + """
 </section>
