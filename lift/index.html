@@ -5,13 +5,13 @@
 <script>(function(d){if(window.matchMedia&&matchMedia("(prefers-reduced-motion: no-preference)").matches&&"IntersectionObserver"in window){d.classList.add("motion");setTimeout(function(){if(!window.__spMotion)d.classList.remove("motion")},2500)}})(document.documentElement)</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Lift</title>
-<meta name="description" content="A workout log for machine training: one tap logs the set and starts the rest timer, and it suggests your next weight and shows why. English and Japanese. Free.">
+<meta name="description" content="A workout log: record sets in one tap, build your own routines, track body measurements, and get a suggested next weight that shows its reasoning. Optional AI-built workouts with Lift Pro. English and Japanese.">
 <meta name="theme-color" content="#f7f8fa" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0e1117" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="SP Digital Labs">
 <meta property="og:title" content="Lift">
-<meta property="og:description" content="A workout log for machine training: one tap logs the set and starts the rest timer, and it suggests your next weight and shows why. English and Japanese. Free.">
+<meta property="og:description" content="A workout log: record sets in one tap, build your own routines, track body measurements, and get a suggested next weight that shows its reasoning. Optional AI-built workouts with Lift Pro. English and Japanese.">
 <meta property="og:url" content="https://spdigitallabs.app/lift/">
 <meta property="og:image" content="https://spdigitallabs.app/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -57,7 +57,7 @@
     <div><span class="app-hero-name">Lift</span><span class="label live">Web app</span></div>
   </div>
   <h1 id="app-title">Log the set in one tap. Know the next weight.</h1>
-  <p class="lede">Lift is a workout log for people who train on machines, one station after another. Your numbers from last time are already filled in, so logging a set is a single tap, and that same tap starts the rest timer. Before each station it suggests a weight from your own history and shows you why.</p>
+  <p class="lede">Lift is for people who like to keep track of their training. Log each set in one tap, build your own routines, and follow your body measurements over time. Before every exercise it suggests a weight from your own history and shows you why. With Lift Pro, AI builds new workouts for you from the goal, time and equipment you choose.</p>
   <div class="app-actions"><a class="button" href="https://liftjp.web.app/">Open Lift<svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a><span class="label">Free · No account needed</span></div>
 </section>
 
@@ -65,19 +65,27 @@
 <ul class="feature-rows">
   <li class="feature-row">
     <div class="feature-shot"><img src="/assets/screens/lift-log.jpg" alt="A workout on station 5 of 10, the chest press. Two of three sets are ticked and a rest timer is counting down." width="390" height="844" loading="lazy"></div>
-    <div class="feature-copy"><h2>One tap logs the set</h2><p>Last session's weights and reps are filled in before you sit down. Tap the check and the set is logged and the rest timer starts. Change a number only when it changed. You can skip a set or a whole station, and Lift records it as skipped, not as a zero.</p></div>
+    <div class="feature-copy"><h2>One tap logs the set</h2><p>Last session's weights and reps are filled in before you start. Tap the check and the set is logged and the rest timer starts. Change a number only when it changed. You can skip a set or a whole exercise, and Lift records it as skipped, not as a zero.</p></div>
   </li>
   <li class="feature-row">
     <div class="feature-shot"><img src="/assets/screens/lift-why.jpg" alt="A suggested weight of 47.5 kg for the pec deck, opened to show why: last time the final set dropped to 37.5 kg, so keep the weight and finish the last set." width="390" height="844" loading="lazy"></div>
-    <div class="feature-copy"><h2>A suggestion that shows its reasoning</h2><p>Before each station Lift suggests a weight from what you actually did. Reach the target on every set and it adds one step. Fall short on the last set and it holds. Stay stuck for several sessions and it eases off. Tap Why to see the sessions and the rule it used. It is only a suggestion: type another number and Lift goes with yours.</p></div>
+    <div class="feature-copy"><h2>A suggestion that shows its reasoning</h2><p>Before each exercise Lift suggests a weight from what you actually did. Reach the target on every set and it adds one step. Fall short on the last set and it holds. Stay stuck for several sessions and it eases off. Tap Why to see the sessions and the rule it used. It is only a suggestion: type another number and Lift goes with yours.</p></div>
+  </li>
+  <li class="feature-row">
+    <div class="feature-shot"><img src="/assets/screens/lift-ai.jpg" alt="The Generate a workout screen: tiles for goal, focus, time and equipment, with Build muscle, Upper body and 45 minutes selected, and a Generate workout button." width="390" height="844" loading="lazy"></div>
+    <div class="feature-copy"><h2>AI builds the workout</h2><p>Tell Lift what you want: a goal, the part of the body, how long you have and the equipment you can use. Add a note in your own words if you like, such as an exercise to avoid. One tap and AI puts together a routine from the exercise library. Part of Lift Pro.</p></div>
+  </li>
+  <li class="feature-row">
+    <div class="feature-shot"><img src="/assets/screens/lift-ai-draft.jpg" alt="An AI draft called Upper Body Strength in the routine builder. Each exercise shows a one-line reason, with its sets, reps and rest ready to adjust." width="390" height="844" loading="lazy"></div>
+    <div class="feature-copy"><h2>A draft you can read and change</h2><p>The workout arrives as a draft, not a finished plan. Every exercise comes with the reason it was chosen, and you can reorder, swap or remove anything, or change the sets and reps, before you save. After that it is a routine like any other, and Lift suggests your weights from your own log.</p></div>
   </li>
   <li class="feature-row">
     <div class="feature-shot"><img src="/assets/screens/lift-history.jpg" alt="The history of the chest press: working weight rising from 45 kg to 52.5 kg over five weeks, with each session's sets listed below." width="390" height="844" loading="lazy"></div>
-    <div class="feature-copy"><h2>Every machine, over time</h2><p>Pick a machine and see its working weight session by session, with every set underneath. Stats counts your hard sets for each muscle over the last seven days against a range you set, which says more about a week of training than a total of kilograms does.</p></div>
+    <div class="feature-copy"><h2>Every exercise, over time</h2><p>Pick an exercise and see its working weight session by session, with every set underneath. Stats counts your hard sets for each muscle over the last seven days against a range you set, which says more about a week of training than a total of kilograms does.</p></div>
   </li>
   <li class="feature-row">
     <div class="feature-shot"><img src="/assets/screens/lift-ja.jpg" alt="The same workout screen in Japanese, with the English name of the exercise shown under the Japanese one." width="390" height="844" loading="lazy"></div>
-    <div class="feature-copy"><h2>English and Japanese</h2><p>Switch the whole app between English and Japanese, coaching notes included. Lift can also show both at once, with the second language under each exercise name. That helps when the label on the machine is in the other one.</p></div>
+    <div class="feature-copy"><h2>English and Japanese</h2><p>Switch the whole app between English and Japanese, coaching notes included. Lift can also show both at once, with the second language under each exercise name. That helps when your gym labels things in the other one.</p></div>
   </li>
 </ul>
 </section>
@@ -85,14 +93,23 @@
 <section aria-labelledby="more-title">
   <h2 id="more-title" class="section-title">More</h2>
 <ul class="features">
-  <li><h3>It remembers the seat</h3><p>Note the seat and pad positions once. They are waiting at the same machine next session, like the setup column on a paper record sheet.</p></li>
-  <li><h3>Works with no signal</h3><p>Everything is saved on your phone first, so it works in a basement gym. A workout in progress survives the app being closed.</p></li>
+  <li><h3>Your own routines</h3><p>Build routines from a library of more than 170 exercises: barbell, dumbbell, machine, cable and bodyweight. Add your own exercises, and set the sets, reps, rest and weight step for each.</p></li>
+  <li><h3>It remembers your setup</h3><p>Note a seat height, a pin position or a grip once. It is waiting on the same exercise next session.</p></li>
+  <li><h3>Works with no signal</h3><p>Everything is saved on your phone first, so it works where there is no signal. A workout in progress survives the app being closed.</p></li>
   <li><h3>Opens like an app</h3><p>Add Lift to your home screen from your browser and it opens full screen, with nothing to install from a store.</p></li>
   <li><h3>Sync if you want it</h3><p>Sign in with Google to back up your log and use it on your other devices. Without an account, nothing leaves your phone.</p></li>
   <li><h3>Body measurements</h3><p>Enter the numbers from an InBody result sheet, or just your bodyweight, and follow weight, body fat and muscle over time.</p></li>
   <li><h3>Your data is yours</h3><p>Export everything as a file whenever you like. Delete your account, and everything synced with it, from Settings.</p></li>
-  <li><h3>Lift Pro, if you want it</h3><p>An optional ¥480 a month. Pick a goal, a time and your equipment and get a routine built from the exercise library, with the reason for every exercise.</p></li>
 </ul>
+</section>
+
+<section aria-labelledby="plans-title">
+  <h2 id="plans-title" class="section-title">Plans</h2>
+  <div class="plans">
+    <div class="plan"><h3>Free</h3><span class="price">Free</span><p>Logging, your own routines, suggested weights, history and stats, body measurements, and sync across your devices. No account needed to start.</p></div>
+    <div class="plan"><h3>Lift Pro</h3><span class="price">¥480<small> / month</small></span><p>Everything in Free, plus AI-built workouts: up to 40 a month, each with its reasons and fully editable before you save.</p></div>
+  </div>
+  <p class="plans-note">The price includes tax. Billed in Japanese yen through Stripe. Lift Pro renews monthly until you cancel; cancel any time in Settings and keep it through the period you have paid for.</p>
 </section>
 
 <section aria-labelledby="help-title">
