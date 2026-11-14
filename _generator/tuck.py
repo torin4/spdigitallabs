@@ -5,7 +5,7 @@ SUPPORT_EMAIL = EMAIL.replace('class="email"', 'class="email" data-subject="Tuck
 
 PRIVACY = f'''
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: November 11, 2026</p>
+<p class="updated">Last updated: November 15, 2026</p>
 
 <p>Tuck is a clipboard manager for Mac made by SP Digital Labs, the name under which Joseph Suzuki-Parker, an independent developer based in Japan, publishes apps ("we", "us"). This policy explains what Tuck keeps, where it keeps it, and the choices you have.</p>
 
@@ -29,7 +29,8 @@ PRIVACY = f'''
 <ul>
   <li>Anything a password manager marks as hidden is skipped and never recorded.</li>
   <li>Copies made in the apps listed under Settings &gt; Privacy are not recorded. Common password managers are on that list from the start, and you can add any app.</li>
-  <li>Text that looks like a password, API key or access token is held in memory only. It is shown masked, is never written to disk, and is forgotten after 10 minutes or when Tuck quits.</li>
+  <li>Text in a recognizable secret format, such as an API key, an access token, a private key, a password inside a URL or a settings line, or a one-time code, is held in memory only. It is shown masked, is never written to disk, and is forgotten after 10 minutes or when Tuck quits.</li>
+  <li>An ordinary password has no format Tuck can recognize. Copied from anywhere other than a password manager, it is recorded like any other text.</li>
   <li>Text recognized in an image is not kept if it looks like a secret.</li>
 </ul>
 <p>This detection is a safeguard, not a guarantee. A secret in an unusual form may be recorded like any other text, so add the apps you copy sensitive things from to the list.</p>
@@ -46,7 +47,7 @@ PRIVACY = f'''
 <h2>Deleting your data</h2>
 <ul>
   <li>Delete one clip by selecting it and pressing Cmd+Delete.</li>
-  <li>Delete the history with Settings &gt; History &gt; Clear History. Pinned clips are kept; delete those one by one.</li>
+  <li>Delete the history with Settings &gt; History &gt; Clear History. Pinned clips are kept; delete those one by one. Secrets held in memory are not cleared this way; they are forgotten after 10 minutes or when Tuck quits.</li>
   <li>Deleting Tuck and its data from your Mac removes everything. There is nothing for us to delete, because we never had it.</li>
 </ul>
 
@@ -118,7 +119,7 @@ SUPPORT = f'''
 <h2>Your data</h2>
 
 <h3>Does Tuck record my passwords?</h3>
-<p>Copies from password managers are skipped, and text that looks like a password or key is held in memory only and forgotten after 10 minutes. Add any other app Tuck should never record from under Settings &gt; Privacy.</p>
+<p>Copies from password managers are skipped, and text in a recognizable secret format, such as an API key or access token, is held in memory only and forgotten after 10 minutes. An ordinary password copied from another app looks like any other text and is recorded, so add any app Tuck should never record from under Settings &gt; Privacy.</p>
 
 <h3>How do I delete my history?</h3>
 <p>Press Cmd+Delete to delete the selected clip, or use Settings &gt; History &gt; Clear History to delete everything except pinned clips.</p>
@@ -147,7 +148,7 @@ OVERVIEW = hero("tuck", "Mac app",
 """ + features([
     ('Paste it clean', 'Strip terminal color codes, trailing spaces and extra indentation, wrap code in a fence, or paste exactly as copied.'),
     ('Pins and templates', 'Pin what you reuse. A pinned clip can have a blank that Tuck fills with whatever is on the clipboard.'),
-    ('Private by design', 'Password managers are skipped and secrets are never written to disk. No account, no sync, and nothing leaves your Mac.'),
+    ('Private by design', 'Password managers are skipped, and the keys and tokens Tuck recognizes are never written to disk. No account, no sync, and nothing leaves your Mac.'),
 ]) + f"""
 </section>
 
