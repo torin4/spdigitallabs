@@ -3,7 +3,7 @@ from chrome import EMAIL, hero, features, feature_rows, build_pages
 from lift_ja import PAGES_JA
 
 APP = "https://liftjp.web.app"
-UPDATED = "November 13, 2026"
+UPDATED = "November 14, 2026"
 SUPPORT_EMAIL = EMAIL.replace('class="email"', 'class="email" data-subject="Lift support"')
 
 PRIVACY = f'''
@@ -13,7 +13,7 @@ PRIVACY = f'''
 <p>Lift is a workout log web app at liftjp.web.app, made by SP Digital Labs, the name under which Joseph Suzuki-Parker, an independent developer based in Japan, publishes apps ("we", "us"). This policy explains what information Lift collects, why, who it is shared with, and the choices you have.</p>
 
 <div class="card">
-  <p><strong>The short version:</strong> Lift works without an account, and then nothing you enter leaves your device. If you choose to sign in with Google, your log is also stored in Google Firebase so it can be backed up and kept in step across your devices. Lift has no analytics, advertising or tracking, and we don't sell data. You can export everything, and you can delete your account and everything synced with it from Settings.</p>
+  <p><strong>The short version:</strong> Lift works without an account, and then nothing you enter leaves your device. If you choose to sign in with Google, your log is also stored in Google Firebase so it can be backed up and kept in step across your devices. Lift Pro, an optional paid plan, builds workouts with AI: what you pick is sent to Anthropic to write the routine, and payment is handled by Stripe. Lift has no analytics, advertising or tracking, and we don't sell data. You can export everything, and you can delete your account and everything synced with it from Settings.</p>
 </div>
 
 <h2>Information we collect</h2>
@@ -32,6 +32,8 @@ PRIVACY = f'''
 <ul>
   <li><strong>Your account:</strong> Firebase Authentication receives your email address, name and profile picture from Google and creates a user ID. Lift itself shows only your email address, in Settings. We never see your Google password.</li>
   <li><strong>Your log:</strong> the routines, sessions, body measurements and settings listed above are stored in Cloud Firestore under your user ID. Access rules allow only your own signed-in account to read or change them.</li>
+  <li><strong>If you subscribe to Lift Pro:</strong> whether your subscription is active and a Stripe customer ID are stored with your user ID, along with a count of the workouts you have generated this month. Your card details go straight to Stripe; we never see or store them.</li>
+  <li><strong>If you generate a workout:</strong> the choices you tap (goal, focus, time, equipment, experience), anything you type in the optional note, and the names of the exercises in your library, including ones you added yourself, are sent to Anthropic so its AI model can write the routine. Your sessions, weights, body measurements, name and email address are not sent. We don't keep a copy of what you send or of the routine, other than the routine you choose to save in your log.</li>
 </ul>
 
 <h2>Body measurements</h2>
@@ -47,6 +49,7 @@ PRIVACY = f'''
 <h2>How we use it</h2>
 <ul>
   <li>To run Lift: show your log, suggest weights from it, back it up and keep your devices in step.</li>
+  <li>To provide Lift Pro: build the workouts you ask for, and manage your subscription.</li>
   <li>To keep your account secure.</li>
   <li>To answer your messages and requests.</li>
 </ul>
@@ -54,11 +57,14 @@ PRIVACY = f'''
 
 <h2>Where it is stored, and transfers abroad</h2>
 <p>If you sign in, your data is stored in Google Firebase (Authentication and Cloud Firestore), and the app is served by Firebase Hosting. Google may store and process data in the United States or other countries. The United States has no comprehensive federal privacy law equivalent to Japan's. Google commits to protecting data under its own policies and contracts, linked below. Data is encrypted in transit and at rest. By signing in, you consent to this transfer.</p>
+<p>If you use Lift Pro, Stripe processes your payment and Anthropic processes the request for each workout you generate. Both are based in the United States and may process data there or in other countries, under their own policies linked below. By subscribing and by generating a workout, you consent to these transfers.</p>
 
 <h2>Who we share it with</h2>
-<p>We share information only with the service that runs Lift:</p>
+<p>We share information only with the services that run Lift:</p>
 <ul>
   <li><strong>Google</strong>, which provides Firebase for hosting, sign-in and storage. <a href="https://firebase.google.com/support/privacy">Firebase privacy</a> · <a href="https://cloud.google.com/terms/data-processing-addendum">Google Cloud data processing terms</a></li>
+  <li><strong>Anthropic</strong>, whose AI model writes generated workouts (Lift Pro only). It receives the choices, note and exercise names described above. <a href="https://www.anthropic.com/legal/privacy">Anthropic privacy policy</a></li>
+  <li><strong>Stripe</strong>, which takes payment for Lift Pro. It receives your email address and your card details. <a href="https://stripe.com/privacy">Stripe privacy policy</a></li>
 </ul>
 <p>We may also disclose information if the law requires it.</p>
 
@@ -67,6 +73,7 @@ PRIVACY = f'''
   <li>On your device: until you delete it, clear your browser's data for the site, or remove the app.</li>
   <li>Synced data: until you delete it or your account. When you delete a session or a measurement it is removed from the cloud, and a note that it was deleted is kept for 90 days so that your other devices remove it too.</li>
   <li>Hosting and sign-in logs: kept by Google for a limited time.</li>
+  <li>Subscription status and Stripe customer ID: for as long as you have an account. Stripe keeps payment records for as long as the law requires.</li>
 </ul>
 
 <h2>Your choices and rights</h2>
@@ -98,12 +105,13 @@ TERMS = f'''
 <p>These terms apply to your use of Lift, a workout log web app made by SP Digital Labs, the name under which Joseph Suzuki-Parker, an independent developer based in Japan, publishes apps ("we", "us"). By using Lift, you agree to these terms. If you don't agree, please don't use it.</p>
 
 <div class="card">
-  <p><strong>The short version:</strong> Lift is a training log, not medical advice or coaching. Its suggested weights are worked out from your own log by fixed rules, and you decide what to lift. Your log is yours: you can export it or delete it at any time. Lift is free.</p>
+  <p><strong>The short version:</strong> Lift is a training log, not medical advice or coaching. Its suggested weights are worked out from your own log by fixed rules, and you decide what to lift. Your log is yours: you can export it or delete it at any time. Lift is free. Lift Pro is an optional paid plan that builds workouts for you.</p>
 </div>
 
 <h2>Suggestions are not medical advice or coaching</h2>
 <p>Lift records what you tell it and suggests a next weight from those records. It does not know your health, your injuries, your technique or how a set felt. A suggested weight, a set target or a body measurement range is information, not medical, fitness or nutrition advice.</p>
 <p>Training with weights can cause injury. Talk to a doctor before starting or changing a training programme if you have any health concern. Use equipment the way your gym instructs, stop if something hurts, and lift within your ability. You are responsible for your own training and safety.</p>
+<p>The same applies to workouts generated with Lift Pro. They are written by an AI model from the choices you make and the exercises in the app. The model can be wrong, and it does not know your body. Read a generated routine before you save it, change anything that doesn't suit you, and don't rely on it to work around an injury.</p>
 
 <h2>Who can use Lift</h2>
 <p>You must be at least 13 years old to use Lift. If you are under the age of majority where you live, you need a parent or guardian's permission.</p>
@@ -129,8 +137,19 @@ TERMS = f'''
 </ul>
 <p>We may suspend or close an account that breaks these terms. Where reasonable, we will tell you first and give you a chance to fix the problem.</p>
 
+<h2>Lift Pro</h2>
+<ul>
+  <li><strong>What it is:</strong> an optional subscription that lets you generate workouts from the exercise library, up to 40 a month. Everything else in Lift stays free.</li>
+  <li><strong>Price:</strong> ¥480 a month, including consumption tax. Payment is by card through Stripe.</li>
+  <li><strong>Renewal:</strong> it starts as soon as payment completes and renews every month until you cancel.</li>
+  <li><strong>Cancelling:</strong> cancel at any time in Settings &gt; Manage subscription. You keep Lift Pro until the end of the period you have paid for, and you are not charged again.</li>
+  <li><strong>Refunds:</strong> payments aren't refunded for partly used periods, except where the law requires it or the service was unavailable because of a fault on our side.</li>
+  <li><strong>Seller details:</strong> see the <a href="/lift/tokushoho.html">notice under the Act on Specified Commercial Transactions</a>.</li>
+  <li><strong>Changes:</strong> if the price changes, we will tell you before your next renewal, and you can cancel before it applies.</li>
+</ul>
+
 <h2>Changes and availability</h2>
-<p>Lift is free. We work to keep it running, but we can't promise it will always be available or free of errors, and we may change or stop it. If we stop offering Lift, we will give reasonable notice where we can, so you can export your log.</p>
+<p>Lift is free to use, and Lift Pro is optional. We work to keep it running, but we can't promise it will always be available or free of errors, and we may change or stop it. If we stop offering Lift, we will give reasonable notice where we can, so you can export your log.</p>
 
 <h2>Disclaimer and limit of liability</h2>
 <p>To the extent the law allows, Lift is provided "as is", without any promise that its suggestions are right for you, and we are not liable for any injury, loss or damage that results from how you train, or for a log that is lost. Nothing in these terms limits liability for our intentional misconduct or gross negligence, or any rights you have under consumer protection laws that can't be waived.</p>
@@ -214,6 +233,20 @@ SUPPORT = f'''
 <h3>How do I delete my account?</h3>
 <p>Open Settings and tap Delete account. This deletes everything synced for your account, and the sign-in itself. For your security it only works shortly after signing in, so you may be asked to sign out and sign in again first. The copy on your device is kept; use "Reset all data" to remove that too. If you can't sign in, email us from the address on your account and we will delete it for you.</p>
 
+<h2>Lift Pro</h2>
+
+<h3>What is Lift Pro?</h3>
+<p>An optional subscription, ¥480 a month. It adds "Generate with AI": pick a goal, a time and your equipment, add a note if you like, and Lift builds a routine from the exercise library. Each exercise comes with the reason it was chosen. Nothing is saved until you tap Save, and you can change anything first. Logging, suggested weights and sync stay free.</p>
+
+<h3>How do I subscribe?</h3>
+<p>Sign in, then tap "Generate with AI" on the home screen, or "Get Lift Pro" in Settings. Payment is by card on a page run by Stripe.</p>
+
+<h3>How do I cancel, or change my card?</h3>
+<p>Open Settings and tap "Manage subscription". You keep Lift Pro until the end of the period you have paid for.</p>
+
+<h3>I've used all my workouts for the month</h3>
+<p>Lift Pro includes 40 generated workouts a month. The count starts again on the 1st. Routines you have already saved are yours to keep and use.</p>
+
 <h2>Your data</h2>
 
 <h3>How do I save a copy of my data?</h3>
@@ -223,6 +256,54 @@ SUPPORT = f'''
 <p>Settings &gt; Reset all data deletes every routine, session and measurement on the device, and in your account too if you are signed in.</p>
 
 <p>For the details, read our <a href="/lift/privacy.html">Privacy Policy</a>.</p>
+'''
+
+TOKUSHOHO = f'''
+<h1>Notice under the Act on Specified Commercial Transactions</h1>
+<p class="updated">Last updated: {UPDATED}</p>
+
+<p>This notice covers Lift Pro, the paid subscription in Lift. The Japanese version, <a href="/ja/lift/tokushoho.html" lang="ja" hreflang="ja">特定商取引法に基づく表記</a>, is the legal notice; this page is a translation.</p>
+
+<h2>Seller</h2>
+<p>Joseph Torin Suzuki-Parker (trading as SP Digital Labs)</p>
+
+<h2>Person responsible</h2>
+<p>Joseph Torin Suzuki-Parker</p>
+
+<h2>Address</h2>
+<p>Chiba, Japan. The full address is disclosed without delay on request.</p>
+
+<h2>Phone number</h2>
+<p>Disclosed without delay on request. Please contact us by email.</p>
+
+<h2>Email</h2>
+<p>{SUPPORT_EMAIL}</p>
+
+<h2>Price</h2>
+<p>Lift Pro monthly plan: ¥480 (tax included)</p>
+
+<h2>Other charges</h2>
+<p>You pay your own internet connection costs.</p>
+
+<h2>Payment method</h2>
+<p>Credit or debit card, processed by Stripe.</p>
+
+<h2>When you are charged</h2>
+<p>The first month is charged when you subscribe. After that it renews and is charged automatically every month.</p>
+
+<h2>When the service starts</h2>
+<p>As soon as payment completes.</p>
+
+<h2>Cancelling</h2>
+<p>Cancel at any time in the app under Settings &gt; Manage subscription. You keep Lift Pro until the end of the period you have paid for, and you are not charged from the next renewal date.</p>
+
+<h2>Returns and refunds</h2>
+<p>Because this is a digital service, payments aren't refunded once you have subscribed, except where the law requires it or the service could not be provided because of a fault on our side.</p>
+
+<h2>Supported environment</h2>
+<p>A current version of Chrome, Safari, Edge or Firefox, on iPhone, Android or a computer.</p>
+
+<p>See also the <a href="/lift/terms.html">Terms of Service</a> and <a href="/lift/privacy.html">Privacy Policy</a>.</p>
 '''
 
 OVERVIEW = hero("lift", "Web app",
@@ -248,6 +329,7 @@ OVERVIEW = hero("lift", "Web app",
     ('Sync if you want it', 'Sign in with Google to back up your log and use it on your other devices. Without an account, nothing leaves your phone.'),
     ('Body measurements', 'Enter the numbers from an InBody result sheet, or just your bodyweight, and follow weight, body fat and muscle over time.'),
     ('Your data is yours', 'Export everything as a file whenever you like. Delete your account, and everything synced with it, from Settings.'),
+    ('Lift Pro, if you want it', 'An optional ¥480 a month. Pick a goal, a time and your equipment and get a routine built from the exercise library, with the reason for every exercise.'),
 ]) + f"""
 </section>
 
@@ -257,6 +339,7 @@ OVERVIEW = hero("lift", "Web app",
     <li><a href="/lift/support.html">Support</a></li>
     <li><a href="/lift/privacy.html">Privacy Policy</a></li>
     <li><a href="/lift/terms.html">Terms of Service</a></li>
+    <li><a href="/lift/tokushoho.html">Notice under the Act on Specified Commercial Transactions</a></li>
     <li>Lift is a training log, not medical advice or coaching.</li>
     <li>Questions: {EMAIL}</li>
   </ul>
@@ -267,6 +350,7 @@ PAGES = {
     "index.html": ("Lift", "A workout log for machine training: one tap logs the set and starts the rest timer, and it suggests your next weight and shows why. English and Japanese. Free.", OVERVIEW, "en", "wrap app-page"),
     "support.html": ("Support", "Help with Lift: getting started, logging a workout, suggested weights, sync and your data.", SUPPORT, "en", "wrap page"),
     "privacy.html": ("Privacy Policy", "Lift works without an account and keeps your log on your device. If you sign in, it is synced through Google Firebase. No analytics or ads.", PRIVACY, "en", "wrap page"),
+    "tokushoho.html": ("Specified Commercial Transactions notice", "Seller, price, payment, cancellation and refund details for Lift Pro, as required by Japan's Act on Specified Commercial Transactions.", TOKUSHOHO, "en", "wrap page"),
     "terms.html": ("Terms of Service", "The terms for using Lift, a free workout log. Its suggestions are not medical advice or coaching.", TERMS, "en", "wrap page"),
 }
 
