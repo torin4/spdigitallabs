@@ -52,12 +52,12 @@
 
 <main id="main" class="wrap page">
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: November 13, 2026</p>
+<p class="updated">Last updated: November 14, 2026</p>
 
 <p>Lift is a workout log web app at liftjp.web.app, made by SP Digital Labs, the name under which Joseph Suzuki-Parker, an independent developer based in Japan, publishes apps ("we", "us"). This policy explains what information Lift collects, why, who it is shared with, and the choices you have.</p>
 
 <div class="card">
-  <p><strong>The short version:</strong> Lift works without an account, and then nothing you enter leaves your device. If you choose to sign in with Google, your log is also stored in Google Firebase so it can be backed up and kept in step across your devices. Lift has no analytics, advertising or tracking, and we don't sell data. You can export everything, and you can delete your account and everything synced with it from Settings.</p>
+  <p><strong>The short version:</strong> Lift works without an account, and then nothing you enter leaves your device. If you choose to sign in with Google, your log is also stored in Google Firebase so it can be backed up and kept in step across your devices. Lift Pro, an optional paid plan, builds workouts with AI: what you pick is sent to Anthropic to write the routine, and payment is handled by Stripe. Lift has no analytics, advertising or tracking, and we don't sell data. You can export everything, and you can delete your account and everything synced with it from Settings.</p>
 </div>
 
 <h2>Information we collect</h2>
@@ -76,6 +76,8 @@
 <ul>
   <li><strong>Your account:</strong> Firebase Authentication receives your email address, name and profile picture from Google and creates a user ID. Lift itself shows only your email address, in Settings. We never see your Google password.</li>
   <li><strong>Your log:</strong> the routines, sessions, body measurements and settings listed above are stored in Cloud Firestore under your user ID. Access rules allow only your own signed-in account to read or change them.</li>
+  <li><strong>If you subscribe to Lift Pro:</strong> whether your subscription is active and a Stripe customer ID are stored with your user ID, along with a count of the workouts you have generated this month. Your card details go straight to Stripe; we never see or store them.</li>
+  <li><strong>If you generate a workout:</strong> the choices you tap (goal, focus, time, equipment, experience), anything you type in the optional note, and the names of the exercises in your library, including ones you added yourself, are sent to Anthropic so its AI model can write the routine. Your sessions, weights, body measurements, name and email address are not sent. We don't keep a copy of what you send or of the routine, other than the routine you choose to save in your log.</li>
 </ul>
 
 <h2>Body measurements</h2>
@@ -91,6 +93,7 @@
 <h2>How we use it</h2>
 <ul>
   <li>To run Lift: show your log, suggest weights from it, back it up and keep your devices in step.</li>
+  <li>To provide Lift Pro: build the workouts you ask for, and manage your subscription.</li>
   <li>To keep your account secure.</li>
   <li>To answer your messages and requests.</li>
 </ul>
@@ -98,11 +101,14 @@
 
 <h2>Where it is stored, and transfers abroad</h2>
 <p>If you sign in, your data is stored in Google Firebase (Authentication and Cloud Firestore), and the app is served by Firebase Hosting. Google may store and process data in the United States or other countries. The United States has no comprehensive federal privacy law equivalent to Japan's. Google commits to protecting data under its own policies and contracts, linked below. Data is encrypted in transit and at rest. By signing in, you consent to this transfer.</p>
+<p>If you use Lift Pro, Stripe processes your payment and Anthropic processes the request for each workout you generate. Both are based in the United States and may process data there or in other countries, under their own policies linked below. By subscribing and by generating a workout, you consent to these transfers.</p>
 
 <h2>Who we share it with</h2>
-<p>We share information only with the service that runs Lift:</p>
+<p>We share information only with the services that run Lift:</p>
 <ul>
   <li><strong>Google</strong>, which provides Firebase for hosting, sign-in and storage. <a href="https://firebase.google.com/support/privacy">Firebase privacy</a> · <a href="https://cloud.google.com/terms/data-processing-addendum">Google Cloud data processing terms</a></li>
+  <li><strong>Anthropic</strong>, whose AI model writes generated workouts (Lift Pro only). It receives the choices, note and exercise names described above. <a href="https://www.anthropic.com/legal/privacy">Anthropic privacy policy</a></li>
+  <li><strong>Stripe</strong>, which takes payment for Lift Pro. It receives your email address and your card details. <a href="https://stripe.com/privacy">Stripe privacy policy</a></li>
 </ul>
 <p>We may also disclose information if the law requires it.</p>
 
@@ -111,6 +117,7 @@
   <li>On your device: until you delete it, clear your browser's data for the site, or remove the app.</li>
   <li>Synced data: until you delete it or your account. When you delete a session or a measurement it is removed from the cloud, and a note that it was deleted is kept for 90 days so that your other devices remove it too.</li>
   <li>Hosting and sign-in logs: kept by Google for a limited time.</li>
+  <li>Subscription status and Stripe customer ID: for as long as you have an account. Stripe keeps payment records for as long as the law requires.</li>
 </ul>
 
 <h2>Your choices and rights</h2>
