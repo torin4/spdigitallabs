@@ -3,7 +3,7 @@ from chrome import EMAIL, hero, features, feature_rows, build_pages
 from lift_ja import PAGES_JA
 
 APP = "https://liftjp.web.app"
-UPDATED = "November 14, 2026"
+UPDATED = "November 15, 2026"
 SUPPORT_EMAIL = EMAIL.replace('class="email"', 'class="email" data-subject="Lift support"')
 
 PRIVACY = f'''
@@ -13,7 +13,7 @@ PRIVACY = f'''
 <p>Lift is a workout log web app at liftjp.web.app, made by SP Digital Labs, the name under which Joseph Suzuki-Parker, an independent developer based in Japan, publishes apps ("we", "us"). This policy explains what information Lift collects, why, who it is shared with, and the choices you have.</p>
 
 <div class="card">
-  <p><strong>The short version:</strong> Lift works without an account, and then nothing you enter leaves your device. If you choose to sign in with Google, your log is also stored in Google Firebase so it can be backed up and kept in step across your devices. Lift Pro, an optional paid plan, builds workouts with AI: what you pick is sent to Anthropic to write the routine, and payment is handled by Stripe. Lift has no analytics, advertising or tracking, and we don't sell data. You can export everything, and you can delete your account and everything synced with it from Settings.</p>
+  <p><strong>The short version:</strong> Lift works without an account, and then nothing you enter leaves your device. If you choose to sign in with Google, your log is also stored in Google Firebase so it can be backed up and kept in step across your devices. Lift Pro, an optional paid plan, builds workouts with AI: what you pick, and a summary of your past week of workouts if you ask it to build on them, is sent to Anthropic to write the routine, and payment is handled by Stripe. Lift has no analytics, advertising or tracking, and we don't sell data. You can export everything, and you can delete your account and everything synced with it from Settings.</p>
 </div>
 
 <h2>Information we collect</h2>
@@ -33,7 +33,7 @@ PRIVACY = f'''
   <li><strong>Your account:</strong> Firebase Authentication receives your email address, name and profile picture from Google and creates a user ID. Lift itself shows only your email address, in Settings. We never see your Google password.</li>
   <li><strong>Your log:</strong> the routines, sessions, body measurements and settings listed above are stored in Cloud Firestore under your user ID. Access rules allow only your own signed-in account to read or change them.</li>
   <li><strong>If you subscribe to Lift Pro:</strong> whether your subscription is active and a Stripe customer ID are stored with your user ID, along with a count of the workouts you have generated this month. Your card details go straight to Stripe; we never see or store them.</li>
-  <li><strong>If you generate a workout:</strong> the choices you tap (goal, focus, time, equipment, experience), anything you type in the optional note, and the names of the exercises in your library, including ones you added yourself, are sent to Anthropic so its AI model can write the routine. Your sessions, weights, body measurements, name and email address are not sent. We don't keep a copy of what you send or of the routine, other than the routine you choose to save in your log.</li>
+  <li><strong>If you generate a workout:</strong> the choices you tap (goal, focus, time, equipment, experience), anything you type in the optional note, the names of the exercises in your library, including ones you added yourself, and which of them you have logged most often (up to 12, without counts or weights, so the AI can favour exercises you already do) are sent to Anthropic so its AI model can write the routine. If you choose "My last workout", a summary of the workouts you logged in the past seven days (up to six) is sent too: for each one, how many days ago it was, its name and length, and for each exercise its name, muscle group and equipment, how many sets you did, your typical reps, how many sets fell short of your target, and any note you wrote on that exercise. Your sessions are sent only when you choose "My last workout". Weights, body measurements, your name and email address are never sent. We don't keep a copy of what you send or of the routine, other than the routine you choose to save in your log.</li>
 </ul>
 
 <h2>Body measurements</h2>
@@ -63,7 +63,7 @@ PRIVACY = f'''
 <p>We share information only with the services that run Lift:</p>
 <ul>
   <li><strong>Google</strong>, which provides Firebase for hosting, sign-in and storage. <a href="https://firebase.google.com/support/privacy">Firebase privacy</a> · <a href="https://cloud.google.com/terms/data-processing-addendum">Google Cloud data processing terms</a></li>
-  <li><strong>Anthropic</strong>, whose AI model writes generated workouts (Lift Pro only). It receives the choices, note and exercise names described above. <a href="https://www.anthropic.com/legal/privacy">Anthropic privacy policy</a></li>
+  <li><strong>Anthropic</strong>, whose AI model writes generated workouts (Lift Pro only). It receives the choices, note, exercise names and most-logged exercises described above, and the summary of your recent workouts if you choose "My last workout". <a href="https://www.anthropic.com/legal/privacy">Anthropic privacy policy</a></li>
   <li><strong>Stripe</strong>, which takes payment for Lift Pro. It receives your email address and your card details. <a href="https://stripe.com/privacy">Stripe privacy policy</a></li>
 </ul>
 <p>We may also disclose information if the law requires it.</p>
@@ -111,7 +111,7 @@ TERMS = f'''
 <h2>Suggestions are not medical advice or coaching</h2>
 <p>Lift records what you tell it and suggests a next weight from those records. It does not know your health, your injuries, your technique or how a set felt. A suggested weight, a set target or a body measurement range is information, not medical, fitness or nutrition advice.</p>
 <p>Training with weights can cause injury. Talk to a doctor before starting or changing a training programme if you have any health concern. Use equipment the way your gym instructs, stop if something hurts, and lift within your ability. You are responsible for your own training and safety.</p>
-<p>The same applies to workouts generated with Lift Pro. They are written by an AI model from the choices you make and the exercises in the app. The model can be wrong, and it does not know your body. Read a generated routine before you save it, change anything that doesn't suit you, and don't rely on it to work around an injury.</p>
+<p>The same applies to workouts generated with Lift Pro. They are written by an AI model from the choices you make, the exercises in the app, the exercises you log most often and, if you choose "My last workout", a summary of your recent sessions. The model can be wrong, and it does not know your body. Read a generated routine before you save it, change anything that doesn't suit you, and don't rely on it to work around an injury.</p>
 
 <h2>Who can use Lift</h2>
 <p>You must be at least 13 years old to use Lift. If you are under the age of majority where you live, you need a parent or guardian's permission.</p>
@@ -208,7 +208,7 @@ SUPPORT = f'''
 <h2>Suggested weights</h2>
 
 <h3>Where does the suggested weight come from?</h3>
-<p>From your own log for that machine: what you lifted last time, whether every set reached the target, and whether you have been stuck at the same weight. Tap Why on the suggestion to see the sessions and the rule it used.</p>
+<p>From your own log for that machine: what you lifted last time, whether every set reached the target, and whether you have been stuck at the same weight. Tap Why on the suggestion to see the sessions and the rule it used. Settings &gt; About &gt; Science and sources lists the research behind these rules, and says where a rule is our own judgment call.</p>
 
 <h3>The suggestion isn't right for me today</h3>
 <p>Type the weight you want. A suggestion never locks you in, and next time Lift works from what you actually did.</p>
@@ -236,7 +236,13 @@ SUPPORT = f'''
 <h2>Lift Pro</h2>
 
 <h3>What is Lift Pro?</h3>
-<p>An optional subscription, ¥480 a month. It adds "Generate with AI": pick a goal, a time and your equipment, add a note if you like, and Lift builds a routine from the exercise library. Each exercise comes with the reason it was chosen. Nothing is saved until you tap Save, and you can change anything first. Logging, suggested weights and sync stay free.</p>
+<p>An optional subscription, ¥480 a month. It adds "Generate with AI": pick a goal, a time and your equipment, add a note if you like, and Lift builds a routine from the exercise library. Or have it build on your last workout instead. Each exercise comes with the reason it was chosen. Nothing is saved until you tap Save, and you can change anything first. Logging, suggested weights and sync stay free.</p>
+
+<h3>How does "My last workout" work?</h3>
+<p>In Generate a workout, set "Based on" to "My last workout". Lift looks at the workouts you logged in the past seven days and fills in the other choices: the same kind of workout, judged from your reps; the time and equipment of your last session; and a focus on what the week missed, leaving alone anything you worked hard in the last two days. You can change any choice, or set Focus to "AI picks". The AI is asked to avoid heavy work on muscles that are still recovering and to go lighter where your sets fell short. The workout opens with one line on how it follows from last time.</p>
+
+<h3>It says there isn't enough to build from</h3>
+<p>"My last workout" needs at least one logged workout. If your last one was more than five days ago, Lift says you are most likely recovered and builds a regular workout from your choices instead. Either way you still get a workout.</p>
 
 <h3>How do I subscribe?</h3>
 <p>Sign in, then tap "Generate with AI" on the home screen, or "Get Lift Pro" in Settings. Payment is by card on a page run by Stripe.</p>
@@ -308,15 +314,15 @@ TOKUSHOHO = f'''
 
 OVERVIEW = hero("lift", "Web app",
     "Log the set in one tap. Know the next weight.",
-    "Lift is for people who like to keep track of their training. Log each set in one tap, build your own routines, and follow your body measurements over time. Before every exercise it suggests a weight from your own history and shows you why. With Lift Pro, AI builds new workouts for you from the goal, time and equipment you choose.",
+    "Lift is for people who like to keep track of their training. Log each set in one tap, build your own routines, and follow your body measurements over time. Before every exercise it suggests a weight from your own history and shows you why. With Lift Pro, AI builds new workouts for you from the goal, time and equipment you choose, or to complement what you trained last.",
     f'<a class="button" href="{APP}/">Open Lift' + EXTERNAL + '</a><span class="label">Free · No account needed</span>') + """
 
 <section aria-label="Main features">
 """ + feature_rows([
     ("/assets/screens/lift-log.jpg", "A workout on station 5 of 10, the chest press. Two of three sets are ticked and a rest timer is counting down.", "One tap logs the set", "The suggested weight is filled in before you start, and the reps box shows your target. Tap the check and the set is logged and the rest timer starts. Change a number only when it changed. You can skip a set or a whole exercise, and Lift records it as skipped, not as a zero."),
     ("/assets/screens/lift-why.jpg", "A suggested weight of 47.5 kg for the pec deck, opened to show why: last time the final set dropped to 37.5 kg, so keep the weight and finish the last set.", "A suggestion that shows its reasoning", "Before each exercise Lift suggests a weight from what you actually did. Reach the target on every set and it adds one step. Fall short on the last set and it holds. Stay stuck for several sessions and it eases off. Tap Why to see the sessions and the rule it used. It is only a suggestion: type another number and Lift goes with yours."),
-    ("/assets/screens/lift-ai.jpg", "The Generate a workout screen: tiles for goal, focus, time and equipment, with Build muscle, Upper body and 45 minutes selected, and a Generate workout button.", "AI builds the workout", "Tell Lift what you want: a goal, the part of the body, how long you have and the equipment you can use. Add a note in your own words if you like, such as an exercise to avoid. One tap and AI puts together a routine from the exercise library. Part of Lift Pro."),
-    ("/assets/screens/lift-ai-draft.jpg", "An AI draft called Upper Body Strength in the routine builder. Each exercise shows a one-line reason, with its sets, reps and rest ready to adjust.", "A draft you can read and change", "The workout arrives as a draft, not a finished plan. Every exercise comes with the reason it was chosen, and you can reorder, swap or remove anything, or change the sets and reps, before you save. After that it is a routine like any other, and Lift suggests your weights from your own log."),
+    ("/assets/screens/lift-ai.jpg", "The Generate a workout screen: tiles for goal, focus, time and equipment, with Build muscle, Upper body and 45 minutes selected, and a Generate workout button.", "AI builds the workout", "Tell Lift what you want: a goal, the part of the body, how long you have and the equipment you can use. Add a note in your own words if you like, such as an exercise to avoid. Or pick \"My last workout\" and the choices fill in from your past week, so the new workout complements it. One tap and AI puts together a routine from the exercise library. Part of Lift Pro."),
+    ("/assets/screens/lift-ai-draft.jpg", "An AI draft called Upper Body Strength in the routine builder. Each exercise shows a one-line reason, with its sets, reps and rest ready to adjust.", "A draft you can read and change", "The workout arrives as a draft, not a finished plan. Every exercise comes with the reason it was chosen, and you can reorder, swap or remove anything, or change the sets and reps, before you save. Exercises you have logged before show the weight to start at, from your own log. After that it is a routine like any other."),
     ("/assets/screens/lift-history.jpg", "The history of the chest press: working weight rising from 45 kg to 52.5 kg over five weeks, with each session's sets listed below.", "Every exercise, over time", "Pick an exercise and see its working weight session by session, with every set underneath. Stats counts the sets you logged for each muscle over the last seven days against a range you set, which says more about a week of training than a total of kilograms does."),
     ("/assets/screens/lift-ja.jpg", "The same workout screen in Japanese, with the English name of the exercise shown under the Japanese one.", "English and Japanese", "Switch the whole app between English and Japanese, coaching notes included. Lift can also show both at once, with the second language under each exercise name. That helps when your gym labels things in the other one."),
 ]) + """
@@ -325,6 +331,7 @@ OVERVIEW = hero("lift", "Web app",
 <section aria-labelledby="more-title">
   <h2 id="more-title" class="section-title">More</h2>
 """ + features([
+    ('Builds on your last workout', 'Pick "My last workout" in the AI builder and it reads your past week: the kind of workout you have been doing, your usual time and equipment, and what the week missed. Muscles you worked hard in the last two days are left alone. The draft opens with one line on how it follows from last time. Part of Lift Pro.'),
     ('Your own routines', 'Build routines from a library of more than 170 exercises: barbell, dumbbell, machine, cable and bodyweight. Add your own exercises, and set the sets, reps, rest and weight step for each.'),
     ('It remembers your setup', 'Note a seat height, a pin position or a grip once. It is waiting on the same exercise next session.'),
     ('Works with no signal', 'Everything is saved on your phone first, so it works where there is no signal. A workout in progress survives the app being closed.'),
@@ -332,6 +339,7 @@ OVERVIEW = hero("lift", "Web app",
     ('Sync if you want it', 'Sign in with Google to back up your log and use it on your other devices. Without an account, nothing leaves your phone.'),
     ('Body measurements', 'Enter the numbers from an InBody result sheet, or just your bodyweight, and follow weight, body fat and muscle over time.'),
     ('Your data is yours', 'Export everything as a file whenever you like. Delete your account, and everything synced with it, from Settings.'),
+    ('Science and sources', 'Settings &gt; About lists the research behind how Lift suggests weights and builds workouts, with links to the studies. Where a rule is our own judgment call, it says so.'),
 ]) + f"""
 </section>
 
@@ -339,7 +347,7 @@ OVERVIEW = hero("lift", "Web app",
   <h2 id="plans-title" class="section-title">Plans</h2>
   <div class="plans">
     <div class="plan"><h3>Free</h3><span class="price">Free</span><p>Logging, your own routines, suggested weights, history and stats, body measurements, and sync across your devices. No account needed to start.</p></div>
-    <div class="plan"><h3>Lift Pro</h3><span class="price">¥480<small> / month</small></span><p>Everything in Free, plus AI-built workouts: up to 40 a month, each with its reasons and fully editable before you save.</p></div>
+    <div class="plan"><h3>Lift Pro</h3><span class="price">¥480<small> / month</small></span><p>Everything in Free, plus AI-built workouts, from your own choices or to complement your last workout: up to 40 a month, each with its reasons and fully editable before you save.</p></div>
   </div>
   <p class="plans-note">The price includes tax. Billed in Japanese yen through Stripe. Lift Pro renews monthly until you cancel; cancel any time in Settings and keep it through the period you have paid for.</p>
 </section>
