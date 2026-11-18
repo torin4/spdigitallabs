@@ -7,7 +7,7 @@ V = "?v=2"
 OVERVIEW = hero("dailyallowance", "Available on iPhone",
     "Know exactly how much you can spend today.",
     "Daily Allowance turns your income and bills into one simple daily number, then keeps track of the rest: what you spent, what you saved, and how this month compares.",
-    '<a class="button" href="https://apps.apple.com/app/id6829595254">Get it on the App Store' + EXTERNAL + '</a><span class="label">Free · Premium optional</span>') + """
+    '<a class="button" href="https://apps.apple.com/app/id6829595254?ct=website">Get it on the App Store' + EXTERNAL + '</a><span class="label">Free · Premium optional</span>') + """
 
 <section aria-label="Main features">
 """ + feature_rows([

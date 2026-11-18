@@ -14,7 +14,7 @@ PREVAILS = '<p>本ページは英語版を翻訳したものです。日本語�
 OVERVIEW = hero("dailyallowance", "iPhone 版を配信中",
     "今日いくら使えるかが、ひと目でわかる。",
     "Daily Allowance は、収入と毎月の支払いから、1日に使える金額をひとつの数字で示します。あとは使った金額、貯めた金額、今月と先月の比較まで、まとめて記録します。",
-    '<a class="button" href="https://apps.apple.com/app/id6829595254">App Store で入手' + EXTERNAL + '</a><span class="label">無料 · Premium はオプション</span>') + """
+    '<a class="button" href="https://apps.apple.com/app/id6829595254?ct=website">App Store で入手' + EXTERNAL + '</a><span class="label">無料 · Premium はオプション</span>') + """
 
 <section aria-label="主な機能">
 """ + feature_rows([
