@@ -4,15 +4,16 @@ from hanjo_ja import PAGES_JA
 
 UPDATED = "November 15, 2026"
 UPDATED_JA = "2026年11月15日"
+PRIVACY_UPDATED = "November 18, 2026"
 
 PRIVACY = f'''
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: {UPDATED}</p>
+<p class="updated">Last updated: {PRIVACY_UPDATED}</p>
 
 <p>Hanjo is a house design web app at hanjo.app, made by SP Digital Labs, the name under which Joseph Suzuki-Parker, an independent developer based in Japan, publishes apps ("we", "us"). This policy explains what information Hanjo collects, why, who it is shared with, and the choices you have.</p>
 
 <div class="card">
-  <p><strong>The short version:</strong> your designs are saved in your browser and, when you're signed in, to your account so you can open them on other devices. If you use the AI designer, the design you're working on and what you ask are sent to Anthropic's Claude AI service to produce its changes; Anthropic doesn't use it to train its models. Designs you share can be seen by the people you share them with. We don't show ads, don't use analytics, and don't sell your data. The AI plan is sold through Stripe, and we never see your card.</p>
+  <p><strong>The short version:</strong> your designs are saved in your browser and, when you're signed in, to your account so you can open them on other devices. If you use the AI designer, the design you're working on and what you ask are sent to Anthropic's Claude AI service to produce its changes; Anthropic doesn't use it to train its models. Designs you share can be seen by the people you share them with. We use PostHog analytics to count visits and see where visitors come from, never your designs. We don't show ads or sell your data. The AI plan is sold through Stripe, and we never see your card.</p>
 </div>
 
 <h2>Information we collect</h2>
@@ -53,10 +54,17 @@ PRIVACY = f'''
   <li>We send Stripe your email address and user ID so the subscription is linked to your account, and we store Stripe's customer and subscription IDs, the subscription's status, and its billing period.</li>
 </ul>
 
+<h3>Analytics</h3>
+<ul>
+  <li>We use <strong>PostHog</strong> to count visits and see where visitors come from, so we know which links bring people to Hanjo. It records the pages you open, the address you arrived from, campaign tags in the link (such as <code>utm_source</code>), when you leave, and basic browser, device and approximate location details that PostHog derives from the request.</li>
+  <li>Nothing about your designs is sent, nor clicks or what you type, and there are no session recordings. Share-link codes, invited design IDs and sign-in details are removed from addresses before anything is sent.</li>
+  <li>When you sign in, PostHog links your visits to your user ID, not your name or email. Without signing in, it uses a random identifier stored in your browser.</li>
+</ul>
+
 <h3>Device and browser</h3>
 <ul>
-  <li><strong>Stored in your browser:</strong> your designs and traced drawings, view settings such as the 3D options and the time of day, and your sign-in session.</li>
-  <li>Hanjo has no analytics, advertising or tracking tools, and its fonts are served from hanjo.app itself.</li>
+  <li><strong>Stored in your browser:</strong> your designs and traced drawings, view settings such as the 3D options and the time of day, your sign-in session, and PostHog's random identifier.</li>
+  <li>Hanjo uses no advertising or cross-site tracking tools and sets no cookies for analytics, and its fonts are served from hanjo.app itself.</li>
 </ul>
 
 <h2>How we use it</h2>
@@ -65,12 +73,13 @@ PRIVACY = f'''
   <li>To share designs and comments with the people you choose.</li>
   <li>To produce the AI designer's changes when you ask for them, and to apply your plan's allowance.</li>
   <li>To process your subscription.</li>
+  <li>To understand how many people visit and which links bring them.</li>
   <li>To answer your messages and requests.</li>
 </ul>
 <p>We don't use your information for advertising, and we don't sell it.</p>
 
 <h2>Where it is stored, and transfers abroad</h2>
-<p>Your account, designs, shared copies and comments are stored with Supabase in its Tokyo region. The app and its server run on Vercel, whose servers may be in the United States or other countries. AI requests are processed by Anthropic in the United States. Payments are processed by Stripe, which may process data in the United States and other countries. The United States has no comprehensive federal privacy law equivalent to Japan's; these providers commit to protecting data under their own policies and contracts, linked below. Data is encrypted in transit and at rest.</p>
+<p>Your account, designs, shared copies and comments are stored with Supabase in its Tokyo region. The app and its server run on Vercel, whose servers may be in the United States or other countries. AI requests are processed by Anthropic in the United States. Payments are processed by Stripe, which may process data in the United States and other countries. Analytics are stored by PostHog in the United States. The United States has no comprehensive federal privacy law equivalent to Japan's; these providers commit to protecting data under their own policies and contracts, linked below. Data is encrypted in transit and at rest.</p>
 
 <h2>Who we share it with</h2>
 <p>We share information only with the services that run Hanjo:</p>
@@ -79,6 +88,7 @@ PRIVACY = f'''
   <li><strong>Vercel</strong>, which hosts the app and runs its server. <a href="https://vercel.com/legal/privacy-policy">Vercel privacy</a></li>
   <li><strong>Anthropic</strong>, which runs the Claude models behind the AI designer. <a href="https://www.anthropic.com/legal/privacy">Anthropic privacy</a></li>
   <li><strong>Stripe and Link</strong>, which sell and bill the AI plan. <a href="https://stripe.com/privacy">Stripe privacy</a> · <a href="https://link.com/privacy">Link privacy</a></li>
+  <li><strong>PostHog</strong>, for visit analytics. <a href="https://posthog.com/privacy">PostHog privacy</a></li>
   <li><strong>Google</strong>, if you choose to sign in with it. <a href="https://policies.google.com/privacy">Google privacy</a></li>
   <li>The people you share a design with, or give a view-only link to, can see that design, and members can see each other's comments and email addresses.</li>
 </ul>
@@ -89,6 +99,7 @@ PRIVACY = f'''
   <li>Your account and designs are kept until you delete them or your account.</li>
   <li>Shared copies, comments and invitations are kept until you stop sharing the design; view-only links until they expire or you revoke them.</li>
   <li>AI usage records are kept until you delete your account.</li>
+  <li>Analytics are kept for the period PostHog's plan allows, then deleted.</li>
   <li>Stripe and Link keep payment records as the law requires.</li>
 </ul>
 
