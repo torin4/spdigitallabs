@@ -84,6 +84,9 @@ SITE = "https://spdigitallabs.app"
 CHEVRON = '<svg class="icon" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>'
 
 
+# Cloudflare Web Analytics: cookieless visit counts for the whole site (dashboard: dash.cloudflare.com, Web Analytics).
+CF_BEACON = """<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e94084e3ba8d4116bbd17c9ca87d47b9"}'></script><!-- End Cloudflare Web Analytics -->"""
+
 def ja_path(path):
     """The Japanese twin of an English path: /hanjo/privacy.html -> /ja/hanjo/privacy.html."""
     return "/ja" + path
@@ -213,6 +216,7 @@ def page(slug, current, title, description, body, lang="en", main_class="wrap pa
 {app_footer(name, foot, chrome_lang)}
 <script src="/email.js"></script>
 <script src="/motion.js"></script>
+{CF_BEACON}
 </body>
 </html>
 '''
