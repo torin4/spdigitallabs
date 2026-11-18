@@ -6,7 +6,7 @@ Keep the two languages saying the same things.
 import json
 import os
 
-from chrome import head_tags
+from chrome import head_tags, CF_BEACON
 from icons import EXTERNAL
 
 SITE = "https://spdigitallabs.app"
@@ -167,6 +167,7 @@ def document(lang, p):
 </footer>
 <script src="/email.js"></script>
 <script src="/motion.js"></script>
+{CF_BEACON}
 </body>
 </html>
 '''

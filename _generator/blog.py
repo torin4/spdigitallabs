@@ -10,7 +10,7 @@ import os
 import re
 from datetime import date
 
-from chrome import head_tags
+from chrome import head_tags, CF_BEACON
 from icons import ARROW_RIGHT, EXTERNAL
 from blog_posts import POSTS as DAILYALLOWANCE_POSTS
 from blog_posts_hanjo import POSTS as HANJO_POSTS
@@ -136,6 +136,7 @@ def document(title, description, path, body, og_type="website", extra=""):
 {FOOTER}
 <script src="/email.js"></script>
 <script src="/motion.js"></script>
+{CF_BEACON}
 </body>
 </html>
 '''
