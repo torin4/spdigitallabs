@@ -199,7 +199,7 @@ TERMS = f'''
 OVERVIEW = hero("hanjo", "Web app",
     "Design your house in Japan, room by room, then walk through it.",
     "Hanjo (半畳, half a tatami mat) is a house planner for people building in Japan. Draw on the 910 mm module and see jo and tsubo as you go, check the plan against your plot's limits, then look around it in 3D, in real sunlight, and share it with your builder for comments. An AI designer can lay out a first plan or rework one corner.",
-    '<a class="button" href="https://hanjo.app/">Open Hanjo' + EXTERNAL + '</a><span class="label">Free to design · Free account · Works in your browser</span>') + f"""
+    '<a class="button" href="https://hanjo.app/?utm_source=spdigitallabs&amp;utm_medium=website">Open Hanjo' + EXTERNAL + '</a><span class="label">Free to design · Free account · Works in your browser</span>') + f"""
 
 <section aria-label="Main features">
 """ + feature_rows_wide([

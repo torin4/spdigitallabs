@@ -169,7 +169,7 @@ TERMS_JA = f'''
 OVERVIEW_JA = hero("surfwindow", "ウェブアプリ · 無料",
     "行く価値はある？行くならいつ？",
     "Surf Window は、湘南と千葉の25のサーフポイントについて、最新のうねり・風・潮を各ポイントの特性と照らし合わせて採点します。1時間ごとのスコアと、その理由がわかります。日本語と英語に対応しています。",
-    '<a class="button" href="https://surfwindow.jp/">Surf Window を開く' + EXTERNAL + '</a><span class="label">アカウント不要</span>') + """
+    '<a class="button" href="https://surfwindow.jp/?utm_source=spdigitallabs&amp;utm_medium=website">Surf Window を開く' + EXTERNAL + '</a><span class="label">アカウント不要</span>') + """
 
 <section aria-label="主な機能">
 """ + feature_rows([

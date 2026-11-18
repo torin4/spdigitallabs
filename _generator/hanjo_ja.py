@@ -199,7 +199,7 @@ TERMS = f'''
 OVERVIEW = hero("hanjo", "ウェブアプリ",
     "日本で建てる家を、部屋ごとに設計して、歩いて見る。",
     "Hanjo（半畳）は、日本で家を建てる人のための間取り設計アプリです。910 mmのモジュールで描けば、畳数と坪数がその場でわかります。敷地の制限に照らして間取りを確認し、実際の日差しの中で3Dで見て回り、工務店と共有してコメントをもらえます。AIデザイナーが最初の間取りを描いたり、一角だけを描き直したりもします。",
-    '<a class="button" href="https://hanjo.app/">Hanjo を開く' + EXTERNAL + '</a><span class="label">無料で設計 · 無料アカウント · ブラウザで使えます</span>') + f"""
+    '<a class="button" href="https://hanjo.app/?utm_source=spdigitallabs&amp;utm_medium=website">Hanjo を開く' + EXTERNAL + '</a><span class="label">無料で設計 · 無料アカウント · ブラウザで使えます</span>') + f"""
 
 <section aria-label="主な機能">
 """ + feature_rows_wide([

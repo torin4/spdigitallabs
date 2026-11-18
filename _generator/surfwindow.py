@@ -163,7 +163,7 @@ TERMS = f'''
 OVERVIEW = hero("surfwindow", "Web app · Free",
     "Is it worth going, and when?",
     "Surf Window scores live swell, wind and tide against the profile of each of 25 breaks in Shonan and Chiba. You get a number for every hour, and the reason behind it. In Japanese and English.",
-    '<a class=\"button\" href=\"https://surfwindow.jp/\">Open Surf Window' + EXTERNAL + '</a><span class="label">No account needed</span>') + """
+    '<a class=\"button\" href=\"https://surfwindow.jp/?utm_source=spdigitallabs&amp;utm_medium=website\">Open Surf Window' + EXTERNAL + '</a><span class="label">No account needed</span>') + """
 
 <section aria-label="Main features">
 """ + feature_rows([
