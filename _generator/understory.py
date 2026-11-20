@@ -209,15 +209,15 @@ OVERVIEW = hero("understory", "Web app",
   <h2 id="more-title" class="section-title">More</h2>
 """ + features([('Seasons for hard stretches', "Mark an entry fallow, a nurse log for a loss, or windthrow for venting you don't want to keep."),
     ('Heartwood, its memory', 'The companion can keep one encrypted remembering of your journal. Read it, edit it or clear it.'),
-    ('Share with someone you trust', 'Send chosen entries to a therapist or friend with an encrypted link that can expire.'),
+    ('Share with someone you trust', 'Send chosen entries to a therapist or friend with an encrypted link that can expire. Part of Premium.'),
     ('Speak instead of typing', 'With Premium, dictate an entry and check its spelling without changing your words.')]) + f"""
 </section>
 
 <section aria-labelledby="plans-title">
   <h2 id="plans-title" class="section-title">Plans</h2>
   <div class="plans">
-    <div class="plan"><h3>Journal</h3><span class="price">Free</span><p>Encrypted entries, growth rings, seasons, spores, sharing links and PDF export.</p></div>
-    <div class="plan"><h3>Premium</h3><span class="price">US$9.99<small> / month</small></span><p>Or US$89 a year. Adds the companion and its memory, mood colors, voice-to-text and spelling check. 14 days free, cancel anytime.</p></div>
+    <div class="plan"><h3>Journal</h3><span class="price">Free</span><p>Encrypted entries, growth rings, seasons, spores and PDF export.</p></div>
+    <div class="plan"><h3>Premium</h3><span class="price">US$9.99<small> / month</small></span><p>Or US$89 a year. Adds the companion and its memory, mood colors, voice-to-text, spelling check and encrypted sharing links. 14 days free, cancel anytime.</p></div>
   </div>
   <p class="plans-note">Understory is a journal, not therapy. If you're in crisis, contact local emergency services or a crisis line.</p>
 </section>
