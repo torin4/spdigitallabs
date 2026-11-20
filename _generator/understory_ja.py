@@ -214,15 +214,15 @@ OVERVIEW_JA = hero("understory", "ウェブアプリ",
   <h2 id="more-title" class="section-title">そのほかの機能</h2>
 """ + features([('つらい時期のための季節', "エントリーに fallow（休耕）、喪失のための nurse log（倒木更新）、残したくない吐き出しのための windthrow（風倒木）の印を付けられます。"),
     ('Heartwood（心材）、コンパニオンの記憶', 'コンパニオンは、日記についての暗号化された記憶を一つだけ持てます。読む、編集する、消去することができます。'),
-    ('信頼できる人と共有', '選んだエントリーを、有効期限を設定できる暗号化されたリンクで、セラピストや友人に送れます。'),
+    ('信頼できる人と共有', '選んだエントリーを、有効期限を設定できる暗号化されたリンクで、セラピストや友人に送れます。Premium の機能です。'),
     ('タイプする代わりに話す', 'Premium では、エントリーを音声で入力し、言葉を変えずにスペルをチェックできます。')]) + f"""
 </section>
 
 <section aria-labelledby="plans-title">
   <h2 id="plans-title" class="section-title">プラン</h2>
   <div class="plans">
-    <div class="plan"><h3>Journal</h3><span class="price">無料</span><p>暗号化されたエントリー、年輪、季節、spores（メモ）、共有リンク、PDFでの書き出し。</p></div>
-    <div class="plan"><h3>Premium</h3><span class="price">US$9.99<small> / 月</small></span><p>年額 US$89 も選べます。コンパニオンとその記憶、気分の色、音声入力、スペルチェックが加わります。14日間無料、いつでも解約できます。</p></div>
+    <div class="plan"><h3>Journal</h3><span class="price">無料</span><p>暗号化されたエントリー、年輪、季節、spores（メモ）、PDFでの書き出し。</p></div>
+    <div class="plan"><h3>Premium</h3><span class="price">US$9.99<small> / 月</small></span><p>年額 US$89 も選べます。コンパニオンとその記憶、気分の色、音声入力、スペルチェック、暗号化された共有リンクが加わります。14日間無料、いつでも解約できます。</p></div>
   </div>
   <p class="plans-note">Understory は日記であり、セラピーではありません。危機的な状況にある場合は、お住まいの地域の緊急通報先か相談窓口に連絡してください。</p>
 </section>
