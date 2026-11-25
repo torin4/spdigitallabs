@@ -12,7 +12,7 @@ Writes into the site folder (the parent of _generator/). Generated:
     and terms-ja.html (the Surf Window app links them)
   tuck/{index,support,privacy}.html
   lift/{index,support,privacy,terms}.html
-  caloriecount/index.html (its policies are on the app's own site)
+  caloriecount/{index,support,privacy,terms,delete-account}.html
   ja/<app>/... : the Japanese twin of each of those pages, except the
     legal notices, which are already in Japanese. Japanese text is in
     <app>_ja.py; keep it saying the same as the English. On privacy

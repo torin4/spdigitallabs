@@ -1,7 +1,6 @@
 from chrome import EMAIL, hero, features, build_pages
+from caloriecount_policies import PRIVACY, TERMS, SUPPORT, DELETE_ACCOUNT, META
 from caloriecount_ja import PAGES_JA
-
-SITE = "https://calorie-count-hw.web.app"
 
 OVERVIEW = hero("caloriecount", "Coming soon",
     "Calorie counting in one number.",
@@ -23,8 +22,10 @@ OVERVIEW = hero("caloriecount", "Coming soon",
 <section aria-labelledby="help-title">
   <h2 id="help-title" class="section-title">Help and policies</h2>
   <ul class="help-list">
-    <li><a href="{SITE}/privacy">Privacy Policy</a></li>
-    <li><a href="{SITE}/terms">Terms of Service</a></li>
+    <li><a href="/caloriecount/support.html">Support and questions</a></li>
+    <li><a href="/caloriecount/privacy.html">Privacy Policy</a></li>
+    <li><a href="/caloriecount/terms.html">Terms of Service</a></li>
+    <li><a href="/caloriecount/delete-account.html">Delete your account</a></li>
     <li>The numbers are estimates, not medical advice.</li>
     <li>Questions: {EMAIL}</li>
   </ul>
@@ -33,6 +34,10 @@ OVERVIEW = hero("caloriecount", "Coming soon",
 
 PAGES = {
     "index.html": ("Calorie Count", "Calorie counting in one number: what you ate against what you burn. AI estimates a meal from a photo. Coming soon to iPhone and Android.", OVERVIEW, "en", "wrap app-page"),
+    "support.html": (*META["support"], SUPPORT, "en", "wrap page"),
+    "privacy.html": (*META["privacy"], PRIVACY, "en", "wrap page"),
+    "terms.html": (*META["terms"], TERMS, "en", "wrap page"),
+    "delete-account.html": (*META["delete-account"], DELETE_ACCOUNT, "en", "wrap page"),
 }
 
 
