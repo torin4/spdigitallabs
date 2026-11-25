@@ -77,6 +77,14 @@ APPS = {
         "foot_ja": [("https://japanese-app-kappa.vercel.app/privacy.html", "プライバシーポリシー（英語）"), ("https://japanese-app-kappa.vercel.app/terms.html", "利用規約（英語）"),
                  ("https://japanese-app-kappa.vercel.app/tokushoho.html", "特定商取引法に基づく表記")],
     },
+    "caloriecount": {
+        "name": "Calorie Count",
+        "icon": "/assets/apps/caloriecount.png",
+        "tabs": [("https://calorie-count-hw.web.app/privacy", "Privacy"), ("https://calorie-count-hw.web.app/terms", "Terms")],
+        "foot": [("https://calorie-count-hw.web.app/privacy", "Privacy Policy"), ("https://calorie-count-hw.web.app/terms", "Terms of Service")],
+        "tabs_ja": [("https://calorie-count-hw.web.app/privacy", "プライバシー"), ("https://calorie-count-hw.web.app/terms", "利用規約")],
+        "foot_ja": [("https://calorie-count-hw.web.app/privacy", "プライバシーポリシー（英語）"), ("https://calorie-count-hw.web.app/terms", "利用規約（英語）")],
+    },
 }
 
 
