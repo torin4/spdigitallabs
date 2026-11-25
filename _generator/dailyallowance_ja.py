@@ -11,10 +11,10 @@ V = "?v=2"
 UPDATED_JA = "2026年11月11日"
 PREVAILS = '<p>本ページは英語版を翻訳したものです。日本語版と英語版の内容に相違がある場合は、英語版が優先します。</p>'
 
-OVERVIEW = hero("dailyallowance", "iPhone 版を配信中",
+OVERVIEW = hero("dailyallowance", "iPhone・Android 版を配信中",
     "今日いくら使えるかが、ひと目でわかる。",
     "Daily Allowance は、収入と毎月の支払いから、1日に使える金額をひとつの数字で示します。あとは使った金額、貯めた金額、今月と先月の比較まで、まとめて記録します。",
-    '<a class="button" href="https://apps.apple.com/app/id6829595254?ct=website">App Store で入手' + EXTERNAL + '</a><span class="label">無料 · Premium はオプション</span>') + """
+    '<a class="store-badge" href="https://apps.apple.com/app/id6829595254?ct=website"><img src="/assets/badges/app-store-ja.svg" alt="App Store からダウンロード" width="131" height="48"></a><a class="store-badge" href="https://play.google.com/store/apps/details?id=com.tevo.dailyallowance"><img src="/assets/badges/google-play-ja.png" alt="Google Play で手に入れよう" width="160" height="48"></a><span class="label">無料 · Premium はオプション</span>') + """
 
 <section aria-label="主な機能">
 """ + feature_rows([

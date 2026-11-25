@@ -4,10 +4,10 @@ from dailyallowance_policies import PRIVACY, TERMS, SUPPORT, DELETE_ACCOUNT, MET
 from dailyallowance_ja import PAGES_JA
 
 V = "?v=2"
-OVERVIEW = hero("dailyallowance", "Available on iPhone",
+OVERVIEW = hero("dailyallowance", "Available on iPhone and Android",
     "Know exactly how much you can spend today.",
     "Daily Allowance turns your income and bills into one simple daily number, then keeps track of the rest: what you spent, what you saved, and how this month compares.",
-    '<a class="button" href="https://apps.apple.com/app/id6829595254?ct=website">Get it on the App Store' + EXTERNAL + '</a><span class="label">Free · Premium optional</span>') + """
+    '<a class="store-badge" href="https://apps.apple.com/app/id6829595254?ct=website"><img src="/assets/badges/app-store-en.svg" alt="Download on the App Store" width="144" height="48"></a><a class="store-badge" href="https://play.google.com/store/apps/details?id=com.tevo.dailyallowance"><img src="/assets/badges/google-play-en.png" alt="Get it on Google Play" width="162" height="48"></a><span class="label">Free · Premium optional</span>') + """
 
 <section aria-label="Main features">
 """ + feature_rows([
