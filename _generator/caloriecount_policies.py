@@ -202,11 +202,17 @@ SUPPORT = '''
 <h3>What is the big number?</h3>
 <p>It is how far under or over you are today: the calories you have eaten, against the calories you burn in a day. "Under" means you have eaten less than you burn. Stay under, day after day, and you lose weight.</p>
 
+<h3>What is the sweet spot?</h3>
+<p>It is the range to eat in each day, marked as a band on the main screen and the two-week view. It runs from 25% to 10% under what you burn, and never goes below 1,500 calories a day for men or 1,200 for women. Eating in it loses weight at a pace you can keep up. Eating far below it costs muscle, so the app asks you to eat more. It also tells you if you are losing more than 1% of your weight a week.</p>
+
 <h3>How is what I burn worked out?</h3>
 <p>From what you enter on the Profile screen: your sex, age, height and weight give the calories your body uses at rest, and your steps and workouts are added on top. It is an estimate. After two weeks of logging food and weighing in, the app compares it with what your own numbers show and lets you choose which to use.</p>
 
 <h3>How do I add food?</h3>
-<p>Tap the plus button. Type the calories if you know them, describe what you ate and tap Estimate, or take a photo. Foods you have eaten before appear underneath so you can add them again with one tap. Tap any entry in today's list to change or remove it.</p>
+<p>Tap the plus button. Type the calories if you know them, describe what you ate and tap Estimate, or take a photo. Foods you have eaten before appear underneath so you can add them again with one tap, with the ones you usually eat at that time of day first. Tap any entry in today's list to change or remove it.</p>
+
+<h3>Can I see or add to an earlier day?</h3>
+<p>Yes. On the two-week view, tap a day to see what you ate. You can change or remove entries there, and add food you forgot to log.</p>
 
 <h3>How accurate are the estimates?</h3>
 <p>They are a reasonable guess, not a measurement. A photo can't show what is hidden or how much oil was used. If you know the real number, type it in.</p>
