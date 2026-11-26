@@ -1,20 +1,26 @@
 """Calorie Count pages in Japanese: /ja/caloriecount/. Translated from caloriecount.py and
 caloriecount_policies.py; keep them saying the same. On the privacy policy and terms the English version governs."""
-from chrome import EMAIL_JA, hero, features
+from chrome import EMAIL_JA, hero, features, feature_rows
 
 OVERVIEW_JA = hero("caloriecount", "近日公開",
     "カロリー計算を、ひとつの数字で。",
     "Calorie Count は、食べたカロリーと消費するカロリーを比べて、その差を表示します。食事の写真を撮ると、AIがカロリーを見積もります。表示するのは、その数字だけです。",
     '<span class="label">App Store と Google Play で近日公開</span>') + """
 
+<section aria-label="主な機能">
+""" + feature_rows([
+    ("/assets/screens/caloriecount-today.jpg", "今日の画面。1,045 kcal のマイナスで、摂取 1,165、消費 2,210 と表示されている。画面は英語です。", "画面には数字がひとつ", "メインの画面には、今日どれだけ下回っているか、上回っているかが表示されます。食べたカロリーと消費するカロリーを比べた数字です。毎日下回り続ければ、体重は減ります。"),
+    ("/assets/screens/caloriecount-entries.jpg", "今日食べた4つの記録の一覧。写真、説明、手入力で追加され、合計は 1,165 kcal。画面は英語です。", "写真からAIが見積もる", "食事の写真を撮るか、食べたものを短い言葉で入力すると、AIがカロリーを見積もります。数字を自分で入力することもできます。"),
+    ("/assets/screens/caloriecount-two-weeks.jpg", "2週間の画面。合計 3,790 kcal のマイナスで、日ごとの棒グラフと体重のグラフが並んでいる。画面は英語です。", "2週間をひと目で", "2週間の画面では、日ごとの差の合計を体重と並べて見られます。日をタップすると、その日に食べたものを見られます。"),
+]) + """
+</section>
+
 <section aria-labelledby="what-title">
-  <h2 id="what-title" class="section-title">できること</h2>
+  <h2 id="what-title" class="section-title">そのほか</h2>
 """ + features([
-    ('写真からAIが見積もる', '食事の写真を撮るか、食べたものを短い言葉で入力すると、AIがカロリーを見積もります。数字を自分で入力することもできます。'),
     ('消費カロリーは自動で計算', '最初に一度、自分のことを入力します。体格、歩数、運動から、1日に消費するカロリーを計算します。歩数と体重は、Apple ヘルスケアやヘルスコネクトから取り込めます。'),
     ('自分の体重で確かめる', '食事と体重を2週間記録すると、計算した数字を自分の記録と照らし合わせます。'),
     ('目指す範囲がわかる', '1日に食べる量の適正ゾーンを表示します。体重が減るだけ消費を下回り、筋肉が落ちるほどは下回らない範囲です。体重の減り方が速すぎるときは、お知らせします。'),
-    ('画面には数字がひとつ', 'メインの画面には、今日どれだけ下回っているか、上回っているかが表示されます。2週間の画面では、日ごとの差の合計を体重と並べて見られます。日をタップすると、その日に食べたものを見られます。'),
     ('いつもの食事をワンタップで', '以前記録した食べものが、食事を追加するときに表示されます。その時間帯によく食べるものが先に並びます。'),
     ('記録はスマートフォンの中に', '記録はすべてスマートフォンに保存され、オフラインでも使えます。バックアップしたいときや、別のスマートフォンで使いたいときだけログインします。広告はありません。'),
     ('無料で使える', 'カロリーを自分で入力するのは、いつでも無料で回数の制限もありません。AIの見積もりは1日1回使えます。Premium にすると、1日の回数の制限がなくなります。'),
