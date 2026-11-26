@@ -317,7 +317,7 @@ TOKUSHOHO = f'''
 OVERVIEW = hero("lift", "Web app",
     "Log the set in one tap. Know the next weight.",
     "Lift is for people who like to keep track of their training. Log each set in one tap, build your own routines, and follow your body measurements over time. Before every exercise it suggests a weight from your own history and shows you why. With Lift Pro, AI builds new workouts for you from the goal, time and equipment you choose, or to complement what you trained last.",
-    f'<a class="button" href="{APP}/">Open Lift' + EXTERNAL + '</a><span class="label">Free · No account needed</span>') + """
+    f'<a class="button" href="{APP}/">Open Lift' + EXTERNAL + '</a><span class="label">Free · No account needed · Coming soon to the App Store and Google Play</span>') + """
 
 <section aria-label="Main features">
 """ + feature_rows([
@@ -338,7 +338,7 @@ OVERVIEW = hero("lift", "Web app",
     ('Your own routines', 'Build routines from a library of more than 170 exercises: barbell, dumbbell, machine, cable and bodyweight. Add your own exercises, and set the sets, reps, rest and weight step for each.'),
     ('It remembers your setup', 'Note a seat height, a pin position or a grip once. It is waiting on the same exercise next session.'),
     ('Works with no signal', 'Everything is saved on your phone first, so it works where there is no signal. A workout in progress survives the app being closed.'),
-    ('Opens like an app', 'Add Lift to your home screen from your browser and it opens full screen, with nothing to install from a store.'),
+    ('Opens like an app', 'Add Lift to your home screen from your browser and it opens full screen. Apps for iPhone and Android are coming soon to the App Store and Google Play.'),
     ('Sync if you want it', 'Sign in with Google to back up your log and use it on your other devices. Without an account, nothing leaves your phone.'),
     ('Body measurements', 'Enter the numbers from an InBody result sheet, or just your bodyweight, and follow weight, body fat and muscle over time.'),
     ('Your data is yours', 'Export everything as a file whenever you like. Delete your account, and everything synced with it, from Settings.'),
@@ -369,7 +369,7 @@ OVERVIEW = hero("lift", "Web app",
 """
 
 PAGES = {
-    "index.html": ("Lift", "A workout log: record sets in one tap, build your own routines, track body measurements, and get a suggested next weight that shows its reasoning. Optional AI-built workouts with Lift Pro. English and Japanese.", OVERVIEW, "en", "wrap app-page"),
+    "index.html": ("Lift", "A workout log: record sets in one tap, build your own routines, track body measurements, and get a suggested next weight that shows its reasoning. Optional AI-built workouts with Lift Pro. English and Japanese. Coming soon to iPhone and Android.", OVERVIEW, "en", "wrap app-page"),
     "support.html": ("Support", "Help with Lift: getting started, logging a workout, suggested weights, sync and your data.", SUPPORT, "en", "wrap page"),
     "privacy.html": ("Privacy Policy", "Lift works without an account and keeps your log on your device. If you sign in, it is synced through Google Firebase. No analytics or ads.", PRIVACY, "en", "wrap page"),
     "tokushoho.html": ("Specified Commercial Transactions notice", "Seller, price, payment, cancellation and refund details for Lift Pro, as required by Japan's Act on Specified Commercial Transactions.", TOKUSHOHO, "en", "wrap page"),
