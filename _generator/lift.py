@@ -3,23 +3,23 @@ from chrome import EMAIL, hero, features, feature_rows, build_pages
 from lift_ja import PAGES_JA
 
 APP = "https://liftjp.web.app"
-UPDATED = "November 15, 2026"
+UPDATED = "November 26, 2026"
 SUPPORT_EMAIL = EMAIL.replace('class="email"', 'class="email" data-subject="Lift support"')
 
 PRIVACY = f'''
 <h1>Privacy Policy</h1>
 <p class="updated">Last updated: {UPDATED}</p>
 
-<p>Lift is a workout log web app at liftjp.web.app, made by SP Digital Labs, the name under which Joseph Suzuki-Parker, an independent developer based in Japan, publishes apps ("we", "us"). This policy explains what information Lift collects, why, who it is shared with, and the choices you have.</p>
+<p>Lift is a workout log, available as a web app at liftjp.web.app and as apps for iPhone and Android, made by SP Digital Labs, the name under which Joseph Suzuki-Parker, an independent developer based in Japan, publishes apps ("we", "us"). This policy explains what information Lift collects, why, who it is shared with, and the choices you have.</p>
 
 <div class="card">
-  <p><strong>The short version:</strong> Lift works without an account, and then nothing you enter leaves your device. If you choose to sign in with Google, your log is also stored in Google Firebase so it can be backed up and kept in step across your devices. Lift Pro, an optional paid plan, builds workouts with AI: what you pick, and a summary of your past week of workouts if you ask it to build on them, is sent to Anthropic to write the routine, and payment is handled by Stripe. Lift has no analytics, advertising or tracking, and we don't sell data. You can export everything, and you can delete your account and everything synced with it from Settings.</p>
+  <p><strong>The short version:</strong> Lift works without an account, and then nothing you enter leaves your device. If you choose to sign in with Google (or, in the iPhone app, with Apple), your log is also stored in Google Firebase so it can be backed up and kept in step across your devices. Lift Pro, an optional paid plan, builds workouts with AI: what you pick, and a summary of your past week of workouts if you ask it to build on them, is sent to Anthropic to write the routine, and payment is handled by Stripe. Lift Pro is not sold in the iPhone or Android app. Lift has no analytics, advertising or tracking, and we don't sell data. You can export everything, and you can delete your account and everything synced with it from Settings.</p>
 </div>
 
 <h2>Information we collect</h2>
 
 <h3>If you don't sign in</h3>
-<p>Everything you enter is stored only in your browser, on your device. We can't see it. That covers:</p>
+<p>Everything you enter is stored only on your device: in your browser, or inside the app on your phone. We can't see it. That covers:</p>
 <ul>
   <li><strong>Your routines:</strong> the exercises you add, with their sets, target reps, rest times and weight steps.</li>
   <li><strong>Your sessions:</strong> the date and length of each workout, the weight and reps of each set, sets you skipped, machine setup notes and any other notes you write.</li>
@@ -30,7 +30,7 @@ PRIVACY = f'''
 
 <h3>If you sign in</h3>
 <ul>
-  <li><strong>Your account:</strong> Firebase Authentication receives your email address, name and profile picture from Google and creates a user ID. Lift itself shows only your email address, in Settings. We never see your Google password.</li>
+  <li><strong>Your account:</strong> Firebase Authentication receives your email address, name and profile picture from Google and creates a user ID. If you sign in with Apple in the iPhone app, it receives your name and an email address from Apple instead; if you choose Hide My Email, that is a private relay address that Apple forwards to you. Lift itself shows only your email address, in Settings. We never see your Google or Apple password.</li>
   <li><strong>Your log:</strong> the routines, sessions, body measurements and settings listed above are stored in Cloud Firestore under your user ID. Access rules allow only your own signed-in account to read or change them.</li>
   <li><strong>If you subscribe to Lift Pro:</strong> whether your subscription is active and a Stripe customer ID are stored with your user ID, along with a count of the workouts you have generated this month. Your card details go straight to Stripe; we never see or store them.</li>
   <li><strong>If you generate a workout:</strong> the choices you tap (goal, focus, target muscles, time, equipment, experience), anything you type in the optional note, the names of the exercises in your library, including ones you added yourself, and which of them you have logged most often (up to 12, without counts or weights, so the AI can favour exercises you already do) are sent to Anthropic so its AI model can write the routine. If you choose "My last workout", a summary of the workouts you logged in the past seven days (up to six) is sent too: for each one, how many days ago it was, its name and length, and for each exercise its name, muscle group and equipment, how many sets you did, your typical reps, how many sets fell short of your target, and any note you wrote on that exercise. Your sessions are sent only when you choose "My last workout". Weights, body measurements, your name and email address are never sent. We don't keep a copy of what you send or of the routine, other than the routine you choose to save in your log.</li>
@@ -42,6 +42,7 @@ PRIVACY = f'''
 <h2>Device and browser</h2>
 <ul>
   <li><strong>Stored in your browser:</strong> your log, a copy of the app so it works offline, and, once you sign in, your sign-in and Firebase's own offline copy of your synced data.</li>
+  <li><strong>In the iPhone and Android apps:</strong> when a rest ends, Lift can show a notification, and the phone vibrates. The notification is scheduled on your phone; nothing about it is sent to us. You can turn notifications off in your phone's settings.</li>
   <li>Lift doesn't use your camera, microphone, location or contacts. If you leave "Keep screen awake" on, it asks your browser not to lock the screen during a workout.</li>
   <li>Lift has no analytics, advertising or tracking tools, and it loads no outside fonts or scripts, with one exception: Google's Firebase code for signing in and syncing, which is loaded only once you choose to sign in.</li>
 </ul>
@@ -64,6 +65,7 @@ PRIVACY = f'''
 <ul>
   <li><strong>Google</strong>, which provides Firebase for hosting, sign-in and storage. <a href="https://firebase.google.com/support/privacy">Firebase privacy</a> · <a href="https://cloud.google.com/terms/data-processing-addendum">Google Cloud data processing terms</a></li>
   <li><strong>Anthropic</strong>, whose AI model writes generated workouts (Lift Pro only). It receives the choices, note, exercise names and most-logged exercises described above, and the summary of your recent workouts if you choose "My last workout". <a href="https://www.anthropic.com/legal/privacy">Anthropic privacy policy</a></li>
+  <li><strong>Apple</strong>, if you sign in with Apple in the iPhone app. Apple confirms who you are and gives Firebase your name and email address. <a href="https://www.apple.com/legal/privacy/">Apple privacy policy</a></li>
   <li><strong>Stripe</strong>, which takes payment for Lift Pro. It receives your email address and your card details. <a href="https://stripe.com/privacy">Stripe privacy policy</a></li>
 </ul>
 <p>We may also disclose information if the law requires it.</p>
@@ -83,7 +85,7 @@ PRIVACY = f'''
   <li>Delete a session or a measurement in the app.</li>
   <li>Delete every routine, session and measurement with Settings &gt; Reset all data. If you are signed in, this deletes the synced copy too.</li>
   <li>Sign out in Settings, and choose whether your log stays on that device.</li>
-  <li>Delete your account with Settings &gt; Delete account. This permanently deletes everything synced for your account, and the sign-in itself. If you can't sign in, email us from the address on your account and we will delete it for you.</li>
+  <li>Delete your account with Settings &gt; Delete account. This permanently deletes everything synced for your account, and the sign-in itself. If you signed in with Apple, it also ends Lift's access to your Apple ID. If you can't sign in, email us from the address on your account and we will delete it for you.</li>
   <li>Depending on where you live, you may have further rights, such as to see, correct or object to how we use your information, or to complain to a data protection authority. Contact us and we will help.</li>
 </ul>
 
