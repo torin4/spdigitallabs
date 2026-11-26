@@ -368,7 +368,39 @@ OVERVIEW = hero("lift", "Web app",
 </section>
 """
 
+DELETE_ACCOUNT = f'''
+<h1>Delete your account</h1>
+<p class="updated">Last updated: {UPDATED}</p>
+
+<div class="card">
+  <p>Deleting your Lift account permanently removes the account and everything synced with it from our servers. It can't be undone.</p>
+</div>
+
+<h2>Delete in the app</h2>
+<ol>
+  <li>Open Lift and go to <strong>Settings</strong>.</li>
+  <li>Under Account &amp; sync, tap <strong>Delete account</strong> and confirm.</li>
+  <li>If it asks you to sign in again, sign out, sign back in, and delete within a few minutes. This proves it's you.</li>
+</ol>
+<p>Your account is deleted right away, along with everything listed below. The same steps work in the iPhone app, the Android app and the website.</p>
+
+<h2>Can't open the app?</h2>
+<p>Email <a class="email" data-subject="Delete my Lift account" href="support.html">support [at] spdigitallabs [dot] app</a> from the email address on your account, and say you want your account deleted. If you used Sign in with Apple with a hidden email, tell us roughly when you signed up instead. We will confirm and delete it within 30 days.</p>
+
+<h2>What gets deleted</h2>
+<ul>
+  <li>Your account and sign-in details. If you signed in with Apple, Lift's access to your Apple ID is also ended.</li>
+  <li>Your synced log: routines, workouts, body measurements and settings</li>
+  <li>Your Lift Pro record and your count of generated workouts</li>
+</ul>
+
+<h2>What stays</h2>
+<p>The log on your phone or browser is not removed, so you can keep using Lift without an account. To remove it too, use Settings &gt; Reset all data, or delete the app.</p>
+<p>A Lift Pro subscription is billed by Stripe. Deleting your account does not cancel it by itself: cancel it first under Settings &gt; Manage subscription on the website, or email us.</p>
+'''
+
 PAGES = {
+    "delete-account.html": ("Delete your account", "How to delete your Lift account and the data synced with it.", DELETE_ACCOUNT, "en", "wrap page"),
     "index.html": ("Lift", "A workout log: record sets in one tap, build your own routines, track body measurements, and get a suggested next weight that shows its reasoning. Optional AI-built workouts with Lift Pro. English and Japanese. Coming soon to iPhone and Android.", OVERVIEW, "en", "wrap app-page"),
     "support.html": ("Support", "Help with Lift: getting started, logging a workout, suggested weights, sync and your data.", SUPPORT, "en", "wrap page"),
     "privacy.html": ("Privacy Policy", "Lift works without an account and keeps your log on your device. If you sign in, it is synced through Google Firebase. No analytics or ads.", PRIVACY, "en", "wrap page"),
