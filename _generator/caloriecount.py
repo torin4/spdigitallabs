@@ -3,14 +3,15 @@ from caloriecount_policies import PRIVACY, TERMS, SUPPORT, DELETE_ACCOUNT, META
 from caloriecount_ja import PAGES_JA
 
 OVERVIEW = hero("caloriecount", "Coming soon",
-    "Calorie counting in one number.",
-    "Calorie Count compares what you ate with what you burn and shows you the difference. Take a photo of a meal and AI estimates its calories. That number is all it shows.",
+    "Weight loss is simple. So is this app.",
+    "People make losing weight complicated. You lose weight when you eat less than you burn. Calorie Count shows you that as one number, and AI estimates your meals from a photo.",
     '<span class="label">Coming soon to the App Store and Google Play</span>') + """
 
 <section aria-label="Main features">
 """ + feature_rows([
-    ("/assets/screens/caloriecount-today.jpg", "Today screen showing 1,045 kcal under, with 1,165 in and 2,210 out.", "One number on the screen", "The main screen shows how far under or over you are today. It compares what you ate with what you burn. Stay under, day after day, and you lose weight."),
-    ("/assets/screens/caloriecount-entries.jpg", "Today's list of four foods, added by photo, by description and by typing, with 1,165 kcal in total.", "AI estimates from a photo", "Take a photo of your meal, or describe it in a few words, and AI estimates the calories. You can also type the number yourself."),
+    ("/assets/screens/caloriecount-less-in.jpg", "Opening screen that says: put in less than you put out.", "Eat less than you burn", "That is all weight loss is. There are no points to count, no meal plans to follow and no macros to track."),
+    ("/assets/screens/caloriecount-today.jpg", "Today screen showing 1,045 kcal under, with 1,165 in and 2,210 out.", "One number on the screen", "The main screen shows how far under or over you are today. Stay under, day after day, and you lose weight."),
+    ("/assets/screens/caloriecount-entries.jpg", "Today's list of four foods, added by photo, by description and by typing, with 1,165 kcal in total.", "AI does the counting", "Take a photo of your meal, or describe it in a few words, and AI estimates the calories. You can also type the number yourself."),
     ("/assets/screens/caloriecount-two-weeks.jpg", "Two-week view showing 3,790 kcal under in total, a bar for each day and a weight chart underneath.", "Two weeks at a glance", "A two-week view adds up the days and shows them beside your weight. Tap a day to see what you ate."),
 ]) + """
 </section>
@@ -41,7 +42,7 @@ OVERVIEW = hero("caloriecount", "Coming soon",
 """
 
 PAGES = {
-    "index.html": ("Calorie Count", "Calorie counting in one number: what you ate against what you burn. AI estimates a meal from a photo. Coming soon to iPhone and Android.", OVERVIEW, "en", "wrap app-page"),
+    "index.html": ("Calorie Count", "Weight loss is simple: eat less than you burn. Calorie Count shows that as one number, and AI estimates your meals from a photo. Coming soon to iPhone and Android.", OVERVIEW, "en", "wrap app-page"),
     "support.html": (*META["support"], SUPPORT, "en", "wrap page"),
     "privacy.html": (*META["privacy"], PRIVACY, "en", "wrap page"),
     "terms.html": (*META["terms"], TERMS, "en", "wrap page"),

@@ -3,14 +3,15 @@ caloriecount_policies.py; keep them saying the same. On the privacy policy and t
 from chrome import EMAIL_JA, hero, features, feature_rows
 
 OVERVIEW_JA = hero("caloriecount", "近日公開",
-    "カロリー計算を、ひとつの数字で。",
-    "Calorie Count は、食べたカロリーと消費するカロリーを比べて、その差を表示します。食事の写真を撮ると、AIがカロリーを見積もります。表示するのは、その数字だけです。",
+    "減量はシンプル。このアプリもシンプルです。",
+    "減量は、むずかしく考えられがちです。消費するより少なく食べれば、体重は減ります。Calorie Count はそれをひとつの数字で表示し、食事の写真からAIがカロリーを見積もります。",
     '<span class="label">App Store と Google Play で近日公開</span>') + """
 
 <section aria-label="主な機能">
 """ + feature_rows([
-    ("/assets/screens/caloriecount-today.jpg", "今日の画面。1,045 kcal のマイナスで、摂取 1,165、消費 2,210 と表示されている。画面は英語です。", "画面には数字がひとつ", "メインの画面には、今日どれだけ下回っているか、上回っているかが表示されます。食べたカロリーと消費するカロリーを比べた数字です。毎日下回り続ければ、体重は減ります。"),
-    ("/assets/screens/caloriecount-entries.jpg", "今日食べた4つの記録の一覧。写真、説明、手入力で追加され、合計は 1,165 kcal。画面は英語です。", "写真からAIが見積もる", "食事の写真を撮るか、食べたものを短い言葉で入力すると、AIがカロリーを見積もります。数字を自分で入力することもできます。"),
+    ("/assets/screens/caloriecount-less-in.jpg", "最初の画面。「消費するより少なく食べる」と書かれている。画面は英語です。", "消費するより少なく食べる", "減量に必要なのは、それだけです。ポイントの計算も、食事プランも、栄養素の管理もありません。"),
+    ("/assets/screens/caloriecount-today.jpg", "今日の画面。1,045 kcal のマイナスで、摂取 1,165、消費 2,210 と表示されている。画面は英語です。", "画面には数字がひとつ", "メインの画面には、今日どれだけ下回っているか、上回っているかが表示されます。毎日下回り続ければ、体重は減ります。"),
+    ("/assets/screens/caloriecount-entries.jpg", "今日食べた4つの記録の一覧。写真、説明、手入力で追加され、合計は 1,165 kcal。画面は英語です。", "計算はAIにまかせる", "食事の写真を撮るか、食べたものを短い言葉で入力すると、AIがカロリーを見積もります。数字を自分で入力することもできます。"),
     ("/assets/screens/caloriecount-two-weeks.jpg", "2週間の画面。合計 3,790 kcal のマイナスで、日ごとの棒グラフと体重のグラフが並んでいる。画面は英語です。", "2週間をひと目で", "2週間の画面では、日ごとの差の合計を体重と並べて見られます。日をタップすると、その日に食べたものを見られます。"),
 ]) + """
 </section>
@@ -333,7 +334,7 @@ DELETE_ACCOUNT = """
 """
 
 PAGES_JA = {
-    "index.html": ("Calorie Count", "カロリー計算を、ひとつの数字で。食べた分と消費する分の差を表示します。食事の写真からAIがカロリーを見積もります。iPhone と Android で近日公開。", OVERVIEW_JA, "ja", "wrap app-page"),
+    "index.html": ("Calorie Count", "減量はシンプルです。消費するより少なく食べるだけ。Calorie Count はそれをひとつの数字で表示し、食事の写真からAIがカロリーを見積もります。iPhone と Android で近日公開。", OVERVIEW_JA, "ja", "wrap app-page"),
     "support.html": ("サポート", "Calorie Count のヘルプ：仕組み、ヘルスケアアプリ、サブスクリプション、お問い合わせ。", SUPPORT, "ja", "wrap page"),
     "privacy.html": ("プライバシーポリシー", "Calorie Count が取得する情報、その利用目的と提供先、お客様が選べること。", PRIVACY, "ja", "wrap page"),
     "terms.html": ("利用規約", "Calorie Count アプリと Premium サブスクリプションの利用規約。", TERMS, "ja", "wrap page"),
